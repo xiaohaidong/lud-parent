@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <!-- 部门类型管理 -->
+    <service name="index" theme="spliter/left-right" cache="true">
+        <config name="lat-class"><![CDATA[clearfix lud-cmbx-pt1x]]></config>
+        <config name="llat-class"><![CDATA[1eft]]></config>
+        <config name="llat-style"><![CDATA[float:left;width:48rem]]></config>
+        <config name="lrat-class"><![CDATA[right]]></config>
+        <config name="lrat-style"><![CDATA[margin-left:50rem]]></config>
+        <!-- 左侧工作区 -->
+        <content theme="wrap/content" for="left" flag="i">
+            <item wat-class="lud-comp-title-s"><![CDATA[${comp["title.1"]}]]></item>
+            <item wat-class="lud-chart-pannel-wrap" wat-lud-ep="1"><![CDATA[${comp["chart.1"]}]]></item>
+            <item wat-class="lud-chart-pannel-wrap lud-cmbx-mt2x" wat-lud-ep="1"><![CDATA[${comp["chart.2"]}]]></item>
+        </content>
+        <comp name="title.1" theme="view/title/simple/s" flag="i">
+            <config name="title"><![CDATA[部门信息统计表]]></config>
+            <config name="icon"><![CDATA[fab fa-hubspot]]></config>
+            <config name="subtitle"><![CDATA[截止到:${.now}]]></config>
+        </comp>
+        <comp name="chart.1" theme="chart/echart/pie/pie" flag="i">
+            <config name="at-class"><![CDATA[lud-chart-pannel]]></config>
+            <config name="at-style"><![CDATA[height:24rem;]]></config>
+            <config name="title"><![CDATA[该单位人数]]></config>
+            <config name="skin"><![CDATA[s]]></config>
+            <config name="data"><![CDATA[chart]]></config>
+            <config name="datax"><![CDATA[${item["content"]}]]></config>
+            <config name="datay"><![CDATA[${item["code_count"]}]]></config>
+        </comp>
+        <comp name="chart.2" theme="chart/echart/bar/bar" flag="i">
+            <config name="at-class"><![CDATA[lud-chart-pannel]]></config>
+            <config name="at-style"><![CDATA[height:24rem;]]></config>
+            <config name="title"><![CDATA[该单位人数]]></config>
+            <config name="skin"><![CDATA[s]]></config>
+            <config name="data"><![CDATA[chart]]></config>
+            <config name="datax"><![CDATA[${item["content"]}]]></config>
+            <config name="datay"><![CDATA[${item["code_count"]}]]></config>
+        </comp>
+        <data name="chart" type="jdbc" query="lud-core.lud_department_info_query" result="list" fields="codec,userc" limits="def,tj" flag="i"></data>
+        <!-- 右侧工作区 -->
+        <content theme="wrap/content" for="right" flag="i">
+            <item wat-class="lud-comp-title-s"><![CDATA[${comp["title.g"]}]]></item>
+            <item><![CDATA[${comp["searchbar"]}]]></item>
+        </content>
+        <comp name="title.g" theme="view/title/simple/s" flag="i">
+            <config name="title"><![CDATA[部门类别信息管理]]></config>
+            <config name="icon"><![CDATA[fab fa-buromobelexperte]]></config>
+            <config name="subtitle"><![CDATA[Department category information management ]]></config>
+        </comp>
+        <comp name="searchbar" theme="form/search/nor" wat-class="lud-bar-n clearfix" render="search" flag="i">
+            <config name="at-data-action"><![CDATA[/user/service/service/lud-core-human-department-info-data/i]]></config>
+            <config name="page-size"><![CDATA[10]]></config>
+            <config name="submit"><![CDATA[查询]]></config>
+            <config name="autosub"><![CDATA[1]]></config>
+            <detail control="input.normal" icon="fal fa-grip-vertical" name="w-l-content" title="名称" ></detail>
+        </comp>
+    </service>
+
+    <!-- DataList -->
+    <service name="data" theme="content/content" cache="true">
+        <content theme="wrap/content" flag="i">
+            <item wat-class="lud-com-actionlist-tool"><![CDATA[${comp["actions"]}]]></item>
+            <item wat-class="lud-tb-g"><![CDATA[${comp["list"]}]]></item>
+            <item wat-class="lud-comp-pager" wat-style="height:6rem"><![CDATA[${comp["page"]}]]></item>
+        </content>
+        <comp name="actions" theme="action/btn/list-role"  flag="i">
+            <detail title="添加" at-confirm="是否添加新的部门类别？" at-lud-exeu="/user/service/exe/lud-core-human-department-info-addnew/i" role="a" icon="fal fa-plus-circle"></detail>
+            <detail title="删除" at-confirm="是否删除您选择的部门类别？" at-lud-exet="/user/service/exe/lud-core-human-department-info-deletes/i" role="m" icon="fal fa-minus-circle"></detail>
+            <detail title="导出EXCEL" at-confirm="是否导出数据？这是一个很耗时的过程！" icon="fal fa-share-square" ></detail>
+        </comp>
+        <comp name="list" render="list" theme="datalist/table/list" data="data_list" flag="i">
+            <detail control="btn.check" edt="btn" width="5" title="ck" th-rowspan="2"><![CDATA[${item.id}]]></detail>
+            <detail width="6" name="code" role="m" title="编码" th-rowspan="2" control="input.normal" cat-lud-update="/user/service/exe/lud-core-human-department-info-update/code" cat-key="${item.id}" cat-ovalue="${item.code}"><![CDATA[${item.code}]]></detail>
+            <detail title="名称" name="content" role="m" td-class="tl" th-rowspan="2" control="input.normal" cat-lud-update="/user/service/exe/lud-core-human-department-info-update/content" cat-key="${item.id}"><![CDATA[${item.content}]]></detail>
+            <detail width="15"  title="缩写" name="content" role="m" td-class="tl" th-rowspan="2" control="input.normal" cat-lud-update="/user/service/exe/lud-core-human-department-info-update/shortname" cat-key="${item.id}"><![CDATA[${item.shortname}]]></detail>
+            <detail width="15"  title="类别" name="dpgroup_${item_index}" role="m" td-class="tl" th-rowspan="2" control="select.normal" data="groups" cat-lud-update="/user/service/exe/lud-core-human-department-info-update/depgroup" cat-key="${item.id}"><![CDATA[${item.depgroup}]]></detail>
+            <detail width="6"  title="管理组注册码"  th-rowspan="2" ><![CDATA[${item.sn}]]></detail>
+            <detail title="数据管理" th-class="nr" td-class="lud-cmcc-org" th-colspan="2" th-break="1" td-v="0"><![CDATA[]]></detail>
+            <detail width="5" control="btn.btn" edt="btn" role="m" th-class="nr fs1x" title="详情" icon="fab fa-jsfiddle" ><![CDATA[]]></detail>
+            <detail width="4" control="btn.btn" edt="btn" role="d" th-class="nr fs1x" title="删除" cat-confirm="是否删除部门:${item.content}？"  icon="far fa-minus-circle" cat-lud-exeu="/user/service/exe/lud-core-human-department-info-delete/i?id=${item.id}"><![CDATA[]]></detail>
+        </comp>
+        <comp name="page" theme="datalist/pager/normal" flag="i">
+            <config name="data"><![CDATA[data]]></config>
+        </comp>
+        <data name="data" type="jdbc" query="lud-core.lud_department_info_query" result="page" fields="def" limits="def" flag="i" autowhere="1"></data>
+        <data name="groups" type="jdbc" query="lud-core.lud_department_group_query" result="list" fields="codec" limits="def" flag="i"></data>
+    </service>
+    
+    <!-- 更新  -->
+    <service name="update">
+        <command name="lud-core.lud_department_info_updatecode" flag="code" islist="false" args="code:value,ovalue,id:key"><![CDATA[lud.comp.form.fresh(target);]]></command>
+        <command name="lud-core.lud_department_info_updatecontent" flag="content" islist="false" args="content:value,ovalue,id:key"><![CDATA[lud.comp.form.fresh(target);]]></command>
+        <command name="lud-core.lud_department_info_updateshortname" flag="shortname" islist="false" args="shortname:value,ovalue,id:key"><![CDATA[lud.comp.form.fresh(target);]]></command>
+        <command name="lud-core.lud_department_info_updatedepgroup" flag="depgroup" islist="false" args="depgroup:value,ovalue,id:key"><![CDATA[lud.comp.form.fresh(target);]]></command>
+    </service>
+    <!-- 新增数据 -->
+    <service name="addnew">
+        <command name="lud-core.lud_department_info_addnew" flag="i" islist="false" args=""><![CDATA[lud.comp.form.fresh(target);]]></command>
+    </service>
+    <!-- 删除单条 -->
+    <service name="delete">
+        <command name="lud-core.lud_department_info_delete" flag="i" islist="false" args="id"><![CDATA[lud.comp.form.fresh(target);]]></command>
+    </service>
+    <!-- 删除多选 -->
+    <service name="deletes">
+        <data name="data" type="jdbc" query="lud-core.lud_department_info_query" result="list" fields="id" where="  id in('{keys}') " limits="def,del" flag="i"></data>
+        <command name="lud-core.lud_department_info_delete" flag="i" args="id:.id" islist="true" dataname="data"><![CDATA[lud.comp.form.fresh(target);]]></command>
+    </service>
+</configuration>

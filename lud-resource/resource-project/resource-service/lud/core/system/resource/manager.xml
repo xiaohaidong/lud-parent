@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <service name="fresh" acl="public">
+        <command flag="i" invoke="com.lud.web.business.core.service.runtime.resources.fresh" islist="false" dataname="user"><![CDATA[$("#mudl_user_center_winx_comp_head_workspace_menu .actived").click();]]></command>
+    </service>
+</configuration>

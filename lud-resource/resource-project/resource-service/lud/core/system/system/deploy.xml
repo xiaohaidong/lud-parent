@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <!--部署状况 -->
+    <service name="index" theme="content/content" cache="true">
+        <content theme="wrap/content" flag="vm">
+            <item wat-class="lud-comp-title-s lud-cmbx-mt1x"><![CDATA[${comp["title"]}]]></item>
+        </content>
+        <content theme="wrap/content" flag="v">
+            <item wat-lud-render-target="#lud_core_system_system_main_index_navs_tab_content" wat-class="lud-com-actionlist-tool"><![CDATA[${comp["actionsv"]}]]></item>
+            <item wat-class="lud-cv-pannel"><![CDATA[${comp["deploy"]}]]></item>
+        </content>
+        <content theme="wrap/content" flag="s">
+            <item wat-class="lud-comp-title-s lud-cmbx-mt1x"><![CDATA[${comp["title"]}]]></item>
+            <item wat-class="lud-cv-pannel"><![CDATA[${comp["deploy"]}]]></item>
+        </content>
+        <content theme="wrap/content" flag="m">
+            <item wat-class="lud-com-actionlist-tool" wat-lud-render-target="#lud_core_system_system_main_index_navs_tab_content"><![CDATA[${comp["actionsm"]}]]></item>
+            <item wat-can="1" wat-class="lud-cv-pannel"><![CDATA[${comp["deploy"]}]]></item>
+        </content>
+        <comp name="actionsv" theme="action/btn/list-role"  flag="v">
+            <detail title="编辑部署图" at-lud-render-click="/user/service/service/lud-core-system-system-deploy-index/m" role="m" at-class="lud-cmcb-red" icon="fab fa-google-drive"><![CDATA[]]></detail>
+        </comp>
+        <comp name="actionsm" theme="action/btn/list-role"  flag="m">
+            <detail title="添加新设备" icon="fal fa-plus-circle"></detail>
+            <detail title="新增关系" icon="fab fa-mendeley"></detail>
+            <detail title="完成编辑" icon="fab fa-jsfiddle" at-lud-render-click="/user/service/service/lud-core-system-system-deploy-index/v" ></detail>
+        </comp>
+        <comp name="title" theme="view/title/simple/s" flag="vms">
+            <config name="title"><![CDATA[服务器部署状态分布图]]></config>
+            <config name="icon"><![CDATA[fad fa-truck-monster]]></config>
+            <config name="subtitle"><![CDATA[Server deployment status map ]]></config>
+        </comp>
+        <comp name="deploy" theme="canvas/normal/simple" flag="vms">
+            <config name="at-class"><![CDATA[lud-cv-n ]]></config>
+            <config name="at-style"><![CDATA[height:60rem]]></config>
+            <config name="des-title"><![CDATA[信息系统部署概要示意图]]></config>
+            <config name="des-entitle"><![CDATA[Server deployment status map [V1.0.0] ]]></config>
+            <config name="des-author"><![CDATA[SunQinqiu/ChengDu Ausix]]></config>
+            <config name="des-des"><![CDATA[填写描述信息]]></config>
+            <config name="nodes-callback"><![CDATA[lud.comp.drager.updatePostion]]></config>
+            <config name="nodes-update"><![CDATA[/user/service/exe/lud-core-system-system-deploy-updatepostion/i]]></config>
+            <config name="node-text"><![CDATA[${node["name"]}<br/>${node["bindip"]}]]></config>
+            <config name="node-top"><![CDATA[${node["cdny"]?string(".#")}]]></config>
+            <config name="node-left"><![CDATA[${node["cdnx"]?string(".#")}]]></config>
+            <config name="node-icon"><![CDATA[${node["icon"]}]]></config>
+            <config name="node-id"><![CDATA[${node["code"]}]]></config>
+            <config name="node-class"><![CDATA[${node["color"]}]]></config>
+            <config name="node-status"><![CDATA[status-${node["status"]}]]></config>
+            <config name="line-from"><![CDATA[${line["fp"]}]]></config>
+            <config name="line-to"><![CDATA[${line["tp"]}]]></config>
+            <config name="line-color"><![CDATA[${line["color"]}]]></config>
+            <config name="line-linw"><![CDATA[${line["width"]}]]></config>
+        </comp>
+        <data name="nodes" type="jdbc" query="lud-iot.lud_iot_device_info_query" result="list" fields="def" limits="def" args="" flag="vms"></data>
+        <data name="lines" type="jdbc" query="lud-iot.lud_iot_device_relation_query" result="list" fields="def" limits="def" args="" flag="vms"></data>
+    </service>
+    <service name="updatepostion" acl="public">
+        <command name="lud-iot.lud_iot_device_info_updatepostion" flag="i" islist="false" args="cdnx,cdny,code"><![CDATA[]]></command>
+    </service>
+</configuration>

@@ -1,0 +1,15 @@
+<div lud-render-target="#${compid}_content" <#include "/view-service/_include/comp/attrs/wat.html"/>>
+	<form id="${compid}_form" <#include "/view-service/_include/comp/attrs/at.html"/>>
+	    <input type="hidden" name="pager-size" value="${config["page-size"]}" />
+	    <input type="hidden" name="pager-index" value="1" />
+	    <input type="hidden" name="pager-order" value="${config["page-order"]}" />
+	    <#list detail as item>
+	    <div class="item">
+	    	<div class="txt"><#if item["icon"]><i class="${item["icon"]}"></i></#if><#if item["title"]><span>${item.title}：</span></#if></div>
+	    	<div class="ctl">${item.text}</div>
+	    	</div>
+	    </#list>
+	    <#if config["submit"]><div class="submit" <#if config["autosub"]> lud-oclick="this"</#if> lud-submit-form="this"><i class="fal fa-search"></i>${config["submit"]}</div></#if>
+	</form>
+</div>
+<div id="${compid}_content" data-forform="#${compid}_form" <#include "/view-service/_include/comp/attrs/cat.html"/>></div>

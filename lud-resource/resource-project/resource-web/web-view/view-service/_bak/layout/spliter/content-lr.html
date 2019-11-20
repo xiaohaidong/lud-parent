@@ -1,0 +1,12 @@
+<div class="lud-lysp-lr clearfix ${config["wap-class"]}" >
+    <div id="${serviceid}_left" class="left ${config["left-class"]}" lud-render-target="#${serviceid}_right" style="padding-right:3rem;width:${config["width"]}rem">
+        <#list contents as content>
+            <#if content["for"]=="left">${content.content}</#if>
+        </#list>
+    </div>
+    <div id="${serviceid}_right" class="${config["right-class"]}" style="margin-left:${config["width"]}rem;padding-left:3rem;">
+        <#list contents as content>
+            <#if content["for"]=="right">${content.content}</#if>
+        </#list>
+    </div>
+</div>

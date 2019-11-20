@@ -1,0 +1,30 @@
+<div canvas="${compid}_canvas" id="${compid}" <#include "/view-service/_include/comp/attrs/at.html"/>>
+    <div class="nodes" candraglist="1" <#list config?keys as key><#if key?starts_with("nodes")> ${key?substring(6)}="${config[key]}"</#if></#list>>
+    	<div class="lud-lyps-rf">
+    	<#noparse><#list nodes as node></#noparse>
+    	<div class="node ${config["node-class"]}" candrag="" node-id="${config["node-id"]}"  style="left:${config["node-left"]}rem;top:${config["node-top"]}rem">
+    		<div class="icon"><i class="${config["node-icon"]}"></i></div>
+    		<div class="text">${config["node-text"]}</div>
+    		<label ><span class="${config["node-status"]}" light=""></span></label>
+    	</div>
+    	<#noparse></#list></#noparse>
+    	</div>
+    </div>
+    <div id="${compid}_canvas" class="canvas"></div>
+    <div class="lines">
+    	<#noparse><#list lines as line></#noparse>
+    	<line data-from="${config["line-from"]}" data-to="${config["line-to"]}" data-color="${config["line-color"]}" data-linw="${config["line-linw"]}"></line>
+    	<#noparse></#list></#noparse>
+   	</div>
+    <#if config["des-title"]>
+    	<div class="description">
+	    	<table>
+	   		<tr><td class="title" colspan="2">${config["des-title"]}</td><tr>
+	   		<tr><td class="entitle" colspan="2">${config["des-entitle"]}</td><tr>
+	   		<tr><td class="tt">制作日期</td><td >${.now?string("yyyy-MM-dd hh:mm:ss")}</td><tr>
+	   		<tr><td class="tt">制作人员</td><td>${config["des-author"]}</td><tr>
+	   		<tr><td class="tt">制作描述</td><td>${config["des-des"]}</td><tr>
+	   		</table>
+   		</div>
+   	</#if>
+</div>

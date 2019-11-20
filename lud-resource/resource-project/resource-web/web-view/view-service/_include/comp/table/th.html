@@ -1,0 +1,1 @@
+<#if th.width>style="width:${th.width}rem"</#if> <#list th?keys as key><#if key?starts_with("th-")> ${key?substring(3)}="${th[key]}"</#if></#list>

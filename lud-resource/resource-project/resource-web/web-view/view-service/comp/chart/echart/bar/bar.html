@@ -1,0 +1,36 @@
+<div id="${compid}_chart" lud-echart="1"  <#include "/view-service/_include/comp/attrs/at.html"/>>
+	<script type="text/javascript">
+        var ${compid}_script={
+            tooltip : {
+                trigger: 'item',
+                formatter: "<b>${config["title"]}</b><br/>{b}:{c}"
+            },
+            xAxis: {
+            	top:0,
+                type: 'category',
+                data: [<#noparse><#list</#noparse> ${config.data} as item><#noparse><#if item_index gt 0>,</#if></#noparse>'${config.datax}'<#noparse></#list></#noparse>]
+            },
+            yAxis: {
+                type: 'value'
+            },
+            grid: {
+                bottom: 20,
+                top: 10,
+                left: 40,
+                right: 0,
+                borderWidth:0
+            },
+            itemStyle:{barBorderRadius:[5,5,0,0]},
+            series : [{
+            		barMaxWidth:10,
+                    name: '${config.name}',
+                    type: 'bar',
+                    data:[<#noparse><#list</#noparse> ${config.data} as item><#noparse><#if item_index gt 0>,</#if></#noparse>
+                        {value:${config.datay}, name:'${config.datax}'}<#noparse></#list></#noparse>
+                    ]
+                }
+            ]
+       };
+       lud.comp.echart.show("${compid}_chart","${config.skin}",${compid}_script);
+      </script>
+</div>

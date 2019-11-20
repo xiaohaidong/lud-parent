@@ -1,0 +1,19 @@
+<div class="lud-comp-title-n lftb">
+    <h2 class="main">用户登录<span>User Login</span></h2>
+</div>
+<form <#include "/view-service/_include/comp/attrs/at.html"/>>
+    <div class="text">用户名称 <span>[User ID]:</span></div>
+    <div class="ctrl"><input type="text" value="sysmanager" name="userid"/></div>
+    <div class="text">用户密码 <span>[User Password]:</span></div>
+    <div class="ctrl"><input type="password" value="sqq102720" name="userpwd"/></div>
+    <div class="text">用户组别<span>[User Group]:</span></div>
+    <div class="ctrl">
+    <select name="usergroup" style="width:auto">
+    <#noparse><#list</#noparse> ${config.usergroup} as item>
+    <option value="<#noparse>${item.code}"</#noparse> ${config.selected}<#noparse>>${item.name}</#noparse></option>
+    <#noparse></#list></#noparse></select></div>
+    <div class="lud-ele-btngroup clearfix" style="padding:2rem 0">
+        <lable class="lud-ele-btn lud-cmcb-red" lud-exe="1">用户登录(?)</lable>
+        <lable class="lud-ele-btn lud-cmcb-bludd">找回密码(?)</lable>
+    </div>
+</form>

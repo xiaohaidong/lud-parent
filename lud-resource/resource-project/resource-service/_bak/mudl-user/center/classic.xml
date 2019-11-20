@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <!-- head：头部文件 -->
+    <service name="head" layout="content/empty" acl="manager" cache="true">
+        <content theme="normal/empty" flag="i">
+            <item><![CDATA[${comp["cover"]}]]></item>
+            <item><![CDATA[${comp["boxs"]}]]></item>
+            <item><![CDATA[${comp["workspace"]}]]></item>
+        </content>
+        <comp name="cover" theme="content/pannel/pannel">
+            <config name="id"><![CDATA[true]]></config>
+            <config name="attr-class"><![CDATA[lud-msgbox-cover lud-lyps-full]]></config>
+        </comp>
+        <comp name="boxs" theme="content/pannel/pannel">
+            <config name="id"><![CDATA[true]]></config>
+            <config name="attr-class"><![CDATA[lud-msgbox-boxs]]></config>
+        </comp>
+        <comp name="workspace" theme="module/userpannel/workspace">
+            <config name="id"><![CDATA[true]]></config>
+            <config name="attr-class"><![CDATA[lud-lyps-full]]></config>
+        </comp>
+    </service>
+    <!-- content：菜单页 -->
+    <service name="menu" layout="content/empty" acl="public" cache="true">
+        <content theme="normal/empty" for="left" flag="i">
+            <item><![CDATA[${comp["user.menu"]}]]></item>
+        </content>
+        <comp name="user.menu" theme="personal/menu/app-menus">
+            <config name="item"><![CDATA[
+            <#if item.code?length==2>
+            	<li class="item-2" data-code="${item.code}"><i class="${item.icon}"></i> ${item.name}<span><i class="fal fa-angle-double-right"></i></span></li>
+            </#if>
+            <#if item.code?length==4>
+            	<li class="item-4" lud-render-click="${item.url}" lud-role="${menus.appinfo.code}:${item.code}" data-code="${item.code}"><i class="${item.icon}"></i> ${item.name}</li>
+            </#if>
+            ]]></config>
+            <config name="render-target"><![CDATA[#mudl_user_center_classic_head_workspace_content_work]]></config>
+            <config name="data"><![CDATA[menus.menus]]></config>
+            <config name="app"><![CDATA[menus.appinfo]]></config>
+            <config name="app-icon"><![CDATA[${app.icon}]]></config>
+            <config name="app-name"><![CDATA[${app.name}]]></config>
+            <config name="app-title"><![CDATA[${app.title}]]></config>
+        </comp>
+        <data name="menus" type="null" result="map" invoke="com.lud.web.business.core.render.user.center.main.getApplication" flag="i"></data>
+    </service>
+
+    <!-- content：内容页 -->
+    <service name="content" layout="content/empty" acl="manager" cache="true">
+        <content theme="normal/empty" flag="i">
+            <item><![CDATA[${comp["userpanel"]}]]></item>
+        </content>
+        <comp name="userpanel" theme="module/userpannel/pannel">
+            <config name="id"><![CDATA[true]]></config>
+            <config name="logo-img"><![CDATA[/web-userfile/project/${project.company}/${project.code}/website/default/logo-classic.png]]></config>
+            <config name="logo-text"><![CDATA[
+	        	<h2>${project.config["project.copyright.cn"]}</h2>
+	            <h3>${project.name}</h3>
+	            <h4>${project.enname}</h4>
+            ]]></config>
+            <config name="toolbar"><![CDATA[
+	            <span timer="hh:mm:ss">${.now?string("yyyy-MM-dd HH:mm:ss")}</span>
+	            <span>修改个人信息</span>
+	            <span>修改密码</span>
+	            <span>退出登录</span>
+            ]]></config>
+        </comp>
+        <data name="project" type="redis" result="map" query="com.lud.business.runtime.project/{project}" flag="i"></data>
+    </service>
+
+    <service name="apps" layout="content/empty" acl="manager" cache="true">
+        <content theme="normal/empty" flag="i">
+            <item><![CDATA[${comp["apps"]}]]></item>
+        </content>
+        <comp name="apps" theme="module/userpannel/pannel-apps">
+            <config name="data"><![CDATA[apps.applist]]></config>
+        </comp>
+        <data name="apps" type="null" result="map" invoke="com.lud.web.business.core.render.user.center.main.getApplicationList" flag="i"></data>
+    </service>
+
+    <!-- foot：底部文件 -->
+    <service name="foot" layout="content/empty" acl="manager" cache="true">
+    </service>
+</configuration>

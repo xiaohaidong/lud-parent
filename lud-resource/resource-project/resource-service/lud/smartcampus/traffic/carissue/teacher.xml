@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <service name="index" layout="workspace/classic" cache="true">
+        <content theme="normal/empty" flag="i">
+            <item><![CDATA[${comp["navs"]}]]></item>
+        </content>
+        <comp name="navs" theme="content/pannel/pannel">
+            <config name="attr-class"><![CDATA[color-pur lud-cmbx-zipper-btn]]></config>
+            <config name="attr-lud-render"><![CDATA[/user/service/service/mudl-user-workspace-content-classic/i]]></config>
+        </comp>
+        <content name="content" theme="normal/desc" flag="iw">
+            <config name="wap-attr-class"><![CDATA[lud-cmbx-p3x lud-cmcb-whitel ]]></config>
+            <config name="attr-class"><![CDATA[lud-comp-des-itc clearfix]]></config>
+            <config name="title"><![CDATA[私有车辆管理]]></config>
+            <config name="subtitle"><![CDATA[Short Message Box]]></config>
+            <config name="content"><![CDATA[私有车辆是指学校各类教职工及其家属登记在个人名下的车辆，学校各单位车辆属于单位车辆，交大附属幼儿园及中小学的家长非交大教职工的学生家长车辆属于家长车辆，校内各商家的车辆属于商家车辆，其他社会政府及事业单位车辆属于社会车辆，不同车辆管理方式不同，该菜单下属于教职工私有车辆。
+            ]]></config>
+            <item><![CDATA[${comp["content.navs"]}]]></item>
+        </content>
+        <comp name="content.navs" theme="navigation/tab/static-for-form" flag="iw">
+            <config name="attr-data-forform"><![CDATA[#lud_service_lud_shortmessage_info_index_content_form_form]]></config>
+            <config name="ul-attr-class"><![CDATA[lud-comp-nav-tab-nor b]]></config>
+            <config name="ul-attr-lud-tab"><![CDATA[cfr]]></config>
+            <config name="con-attr-class"><![CDATA[lud-cmbx-ptb1x]]></config>
+            <detail title="管理办法" icon="fal fa-swatchbook"><![CDATA[]]>
+            </detail>
+            <detail title="在册车辆" icon="fad fa-books"><![CDATA[]]>
+            </detail>
+        </comp>
+    </service>
+</configuration>

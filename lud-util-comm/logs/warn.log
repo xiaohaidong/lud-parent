@@ -1,0 +1,4 @@
+[18:38:52:269] [WARN] - com.lud.util.comm.util.Content.getText(Content.java:217) - java.lang.NullPointerException
+[18:51:18:233] [WARN] - com.lud.util.comm.util.Content.getText(Content.java:217) - java.lang.NullPointerException
+[18:52:12:814] [WARN] - com.lud.util.comm.util.Content.getText(Content.java:217) - java.lang.NullPointerException
+[18:53:16:389] [WARN] - com.lud.util.comm.util.Content.getText(Content.java:217) - java.lang.NullPointerException

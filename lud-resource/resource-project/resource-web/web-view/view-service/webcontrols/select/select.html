@@ -1,0 +1,12 @@
+<div class="lud-select-wrap">
+	<input type="hidden" name="${cfg.name}" value="${cfg.value}" /> 
+	<div class="value">请选择......</div>
+	<div class="select">
+		<input type="text" data-value="" />
+		<ul>
+			<#noparse><#list </#noparse>${cfg["data"]} as kvs>
+			<#noparse><li text="${kvs.content}" data-value="${kvs.code}">${kvs.content}</li></#noparse>
+			<#noparse></#list></#noparse>
+		</ul>
+	</div>
+</div>

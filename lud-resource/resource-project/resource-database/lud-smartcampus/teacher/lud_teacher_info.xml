@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <querys>
+        <item order="code">
+            <fileds>
+                <filed name="def"></filed>
+                <filed name="count"><![CDATA[ count(*) as num ]]></filed>
+            </fileds>
+            <limits>
+                <limit name="project" args="project"><![CDATA[ project=? ]]></limit>
+                <limit name="code" args="code"><![CDATA[ code=? ]]></limit>
+            </limits>
+        </item>
+    </querys>
+    <commands>
+        <item name="del">
+            <cmd args="id"><![CDATA[delete from {t} where id=?]]></cmd>
+        </item>
+        <item name="insert">
+            <cmd autoid="true" args="project,code,name,cardtype,cardid,cardisidentity,college,collegename,category,status,birthday"><![CDATA[insert into {t}(project,code,name,cardtype,cardid,cardisidentity,college,collegename,category,status,birthday)values(?,?,?,?,?,?,?,?,?,?,?)]]></cmd>
+            <cmd jdbc="lud-core" autoid="true" args="project,code,userpwd,name,cardtype,cardid,code,country,nativeplace,birthdaydate"><![CDATA[insert into lud_user_info(project,userid,userpwd,name,cardtype,cardid,usergroup,usergroupkey,userrole,country,nativeplace,birthday)values(?,?,?,?,?,?,'teacher',?,'2001',?,?,?)]]></cmd>
+        </item>
+    </commands>
+</configuration>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <service name="index" layout="workspace/classic" acl="public" cache="true">
+        <content theme="normal/empty" flag="i">
+            <item><![CDATA[${comp["navs"]}]]></item>
+        </content>
+        <comp name="navs" theme="content/pannel/pannel">
+            <config name="attr-class"><![CDATA[color-pur lud-cmbx-zipper-btn]]></config>
+            <config name="attr-lud-render"><![CDATA[/user/service/service/mudl-user-workspace-content-classic/i]]></config>
+        </comp>
+        <content theme="normal/empty" flag="i">
+            <item><![CDATA[${comp["wedges"]}]]></item>
+            <item><![CDATA[${comp["wedges-content"]}]]></item>
+        </content>
+        <comp name="wedges" theme="navigation/wedges/icons-data">
+            <config name="attr-class"><![CDATA[lud-cmbx-p3x lud-cmbx-pbn lu-cmcb-whitel]]></config>
+            <config name="wedges-attr-style"><![CDATA[width:${wedges.wedges?size*11}rem;margin:1rem auto]]></config>
+            <config name="wedges-attr-class"><![CDATA[lud-cmbx-mt2x ]]></config>
+            <config name="wedges-attr-lud-tab"><![CDATA[c]]></config>
+            <config name="wedges-attr-lud-oclick"><![CDATA[li:first]]></config>
+            <config name="wedges-attr-lud-render-target"><![CDATA[#mudl_user_user_wedge_index_wedges_content]]></config>
+            <config name="data"><![CDATA[wedges.wedges]]></config>
+            <config name="text"><![CDATA[${item.name}]]></config>
+            <config name="icon"><![CDATA[${item.icon}]]></config>
+            <config name="render"><![CDATA[${item.url}]]></config>
+            <config name="role"><![CDATA[${item.app}:${item.menu}]]></config>
+            <config name="paras"><![CDATA[
+            <#if item["app_application"]>lud-app="${item["app_application"]}"</#if>
+            <#if item["app_script"]>lud-app-script="${item["app_script"]}"</#if>
+            <#if item["app_css"]>lud-app-css="${item["app_css"]}"</#if>
+            ]]></config>
+            <config name="datalist"><![CDATA[<#list item.dataconfig as d><#if d_index gt 0>,</#if>${d.text}:${d.value}</#list>]]></config>
+        </comp>
+        <comp name="wedges-content" theme="content/pannel/pannel">
+            <config name="id"><![CDATA[true]]></config>
+        </comp>
+        <data name="wedges" type="null" result="map" invoke="com.lud.web.business.core.render.user.center.main.getWedge" flag="i"></data>
+    </service>
+</configuration>

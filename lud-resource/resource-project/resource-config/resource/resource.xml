@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <group name="message" root="/resource-project/resource-config/message">
+        <item name="message"><![CDATA[/message.xml]]></item>
+        <item name="error"><![CDATA[/error.xml]]></item>
+    </group>
+    <group name="resource" root="/resource-project/resource-config/resource">
+        <item name="resource"><![CDATA[/resource.xml]]></item>
+    </group>
+    <group name="conditions" root="/resource-project/resource-config/conditions">
+        <item name="data"></item>
+    </group>
+    <group name="server" root="/resource-system/config-server">
+        <item name="mongodb"><![CDATA[/config-mongodb.xml]]></item>
+        <item name="amqp"><![CDATA[/config-rabbit-amqp.xml]]></item>
+        <item name="mqtt"><![CDATA[/config-rabbit-mqtt.xml]]></item>
+    </group>
+    <group name="jdbc" root="/resource-system">
+        <item name="dir"><![CDATA[/config-jdbc]]></item>
+    </group>
+    <group name="database" root="/resource-project/resource-database">
+        <item name="data"></item>
+    </group>
+    <group name="view" root="/resource-project">
+        <item name="root"><![CDATA[/resource-web/web-view]]></item>
+        <item name="res"><![CDATA[/resource-web/web-resource]]></item>
+        <item name="service"><![CDATA[/resource-service]]></item>
+        <item name="webcontrol"><![CDATA[/resource-web/web-view/view-service/webcontrols]]></item>
+    </group>
+    <group name="project" root="/resource-system/config-project">
+        <item name="model"><![CDATA[/model]]></item>
+        <item name="config"><![CDATA[/project/{0}]]></item>
+    </group>
+    <group name="tempcontent" root="/template-content">
+        <item name="project"><![CDATA[/project]]></item>
+    </group>
+    <group name="webresource" root="/resource-project/resource-web/web-resource">
+        <item name="style"><![CDATA[/add-on/lud/style]]></item>
+    </group>
+</configuration>

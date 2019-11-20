@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <querys>
+        <item>
+            <fileds>
+                <filed name="def"><![CDATA[*]]></filed>
+                <filed name="count"><![CDATA[count(*)]]></filed>
+            </fileds>
+            <limits>
+                <limit name="def"><![CDATA[ 1=1 ]]></limit>
+                <limit name="nosucess"><![CDATA[ issucess=0 ]]></limit>
+                <limit name="issucess"><![CDATA[ issucess=1 ]]></limit>
+                <limit name="project" args="project,project,usr.userid"><![CDATA[ project=? and mobitel in(select mobitel from lud_user_mobitels where project=? and userid=?) ]]></limit>
+            </limits>
+        </item>
+    </querys>
+    <commands>
+        <item name="insert">
+            <cmd autoid="true" args="project,driver,mobitel,sendtime,content,issucess,message,sender"><![CDATA[insert into {t}(project,driver,mobitel,sendtime,content,issucess,message,sender)values(?,?,?,?,?,?,?,?)]]></cmd>
+        </item>
+    </commands>
+</configuration>

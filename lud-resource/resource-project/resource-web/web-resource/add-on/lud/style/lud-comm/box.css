@@ -1,0 +1,150 @@
+﻿/*
+ * Copyright 2018-2019 the original author or authors.
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+.lud-cmbx-p1x {
+	padding: 1rem;
+}
+
+.lud-cmbx-p2x {
+	padding: 1.5rem;
+}
+
+.lud-cmbx-p3x {
+	padding: 2rem;
+}
+
+.lud-cmbx-p4x {
+	padding: 3rem;
+}
+
+.lud-cmbx-ptb1x {
+	padding: 1rem 0;
+}
+
+.lud-cmbx-ptb2x {
+	padding: 1.5rem 0;
+}
+
+.lud-cmbx-ptb3x {
+	padding: 2rem 0;
+}
+
+.lud-cmbx-plr1x {
+	padding: 0 1rem;
+}
+
+.lud-cmbx-plr2x {
+	padding: 0 1.5rem;
+}
+
+.lud-cmbx-plr3x {
+	padding: 0 2rem;
+}
+
+.lud-cmbx-pl2x {
+	padding-left: 1.5rem;
+}
+
+.lud-cmbx-pl3x {
+	padding-left: 3rem;
+}
+
+.lud-cmbx-pr2x {
+	padding-right: 1.5rem;
+}
+
+.lud-cmbx-ptn {
+	padding-top: 0;
+}
+
+.lud-cmbx-pt2x {
+	padding-top: 1.5rem;
+}
+
+.lud-cmbx-pt1x {
+	padding-top: 1rem;
+}
+
+.lud-cmbx-pt0x {
+	padding-top: 0;
+}
+
+.lud-cmbx-pbn {
+	padding-bottom: 0;
+}
+
+.lud-cmbx-pb1x {
+	padding-bottom: 1rem;
+}
+
+.lud-cmbx-pb2x {
+	padding-bottom: 2rem;
+}
+
+.lud-cmbx-m1x {
+	margin: 1rem;
+}
+
+.lud-cmbx-m2x {
+	margin: 1.5rem;
+}
+
+.lud-cmbx-m3x {
+	margin: 2rem;
+}
+
+.lud-cmbx-mt0x {
+	margin-top: 0;
+}
+
+.lud-cmbx-mtx {
+	margin-top: 0.1rem;
+}
+
+.lud-cmbx-mt1x {
+	margin-top: 1rem;
+}
+
+.lud-cmbx-mt2x {
+	margin-top: 1.5rem;
+}
+
+.lud-cmbx-mt3x {
+	margin-top: 2.5rem;
+}
+
+.lud-cmbx-h1x {
+	height: 2rem;
+}
+
+.lud-cmbx-h2x {
+	height: 3rem;
+}
+
+.lud-cmbx-h3x {
+	height: 4rem;
+}
+
+.lud-cmbx-h100 {
+	height: 100%;
+}
+
+.lud-cmbx-sd {
+	box-shadow: 0 0 0.5rem #000;
+}
+
+.lud-cmbx-bl {
+	border-left: 1px dashed #666;
+}

@@ -1,0 +1,6 @@
+<#noparse><#assign</#noparse> value=${cfg["value"]}>
+
+<#noparse><#assign i=0><#list </#noparse>${cfg["data"]}<#noparse> as item>
+<#list value?split(",") as c>
+<#if item.code==c><#if i gt 0>，</#if>${item.content}<#assign i= i + 1></#if></#list></#list>
+</#noparse>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <application name="SmartCampusAppointmentService">
+        <menu name="0201" data=""><![CDATA[A01,D02]]></menu>
+        <menu name="0202" data=""><![CDATA[A01,D02]]></menu>
+        <menu name="0203" data=""><![CDATA[A01,D02]]></menu>
+    </application>
+</configuration>

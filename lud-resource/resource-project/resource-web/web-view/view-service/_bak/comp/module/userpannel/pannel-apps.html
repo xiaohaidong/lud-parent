@@ -1,0 +1,11 @@
+<#noparse><#assign</#noparse> data=${config["data"]}>
+<div class="applist">
+       <#noparse><#list data as item>
+       	<label class="item"><i class="${item.icon}"></i>${item.name} <span>${item.code}</span></label>
+       	<div class="apps clearfix"><ul>
+		<#list item.applications as app>
+			<li <#if app["code_application"]>lud-app="${app["code_application"]}"</#if> <#if app["code_script"]>lud-app-script="${app["code_script"]}"</#if> <#if app["code_css"]>lud-app-css="${app["code_css"]}"</#if> lud-render-click="/user/service/service/mudl-user-center-classic-menu/i?code=${app.code}"><div class="icon"><i class="${app.icon}"></i></div><label>${app.name}</label></li>
+		</#list></ul>
+		</div>
+	</#list></#noparse>
+</div>

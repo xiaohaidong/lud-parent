@@ -1,0 +1,13 @@
+[17:09:09:268] [INFO] - com.lud.util.comm.runtime.RuntimeCounter.count(RuntimeCounter.java:50) - TEST:DATAQUERY:CODE(nes.region.china):耗时:23ms
+[17:09:09:288] [INFO] - com.lud.util.comm.runtime.RuntimeCounter.count(RuntimeCounter.java:50) - TEST:DATAQUERY:CODE(nes.person.servicemen):耗时:16ms
+[17:09:09:304] [INFO] - com.lud.util.comm.runtime.RuntimeCounter.count(RuntimeCounter.java:50) - TEST:DATAQUERY:CODE(iac.dev.digit):耗时:15ms
+[17:09:09:322] [INFO] - com.lud.util.comm.runtime.RuntimeCounter.count(RuntimeCounter.java:50) - TEST:DATAQUERYF:CODE(nes.region.china):耗时:17ms
+[17:09:09:339] [INFO] - com.lud.util.comm.runtime.RuntimeCounter.count(RuntimeCounter.java:50) - TEST:DATAQUERYF:CODE(nes.person.servicemen):耗时:16ms
+[17:09:09:356] [INFO] - com.lud.util.comm.runtime.RuntimeCounter.count(RuntimeCounter.java:50) - TEST:DATAQUERYF:CODE(iac.dev.digit):耗时:16ms
+[17:09:09:438] [INFO] - com.lud.util.comm.runtime.RuntimeCounter.count(RuntimeCounter.java:50) - TEST:CodeService:CODE(nes.region.china):耗时:82ms
+[17:09:09:445] [INFO] - com.lud.util.comm.runtime.RuntimeCounter.count(RuntimeCounter.java:50) - TEST:CodeService:CODE(nes.person.servicemen):耗时:5ms
+[17:09:09:453] [INFO] - com.lud.util.comm.runtime.RuntimeCounter.count(RuntimeCounter.java:50) - TEST:CodeService:CODE(iac.dev.digit):耗时:7ms
+[17:09:09:489] [INFO] - com.lud.util.comm.runtime.RuntimeCounter.count(RuntimeCounter.java:50) - TEST:CodeService:CODE(nes.region.china):耗时:35ms
+[17:09:09:498] [INFO] - com.lud.util.comm.runtime.RuntimeCounter.count(RuntimeCounter.java:50) - TEST:CodeService:CODE(nes.person.servicemen):耗时:8ms
+[17:09:09:508] [INFO] - com.lud.util.comm.runtime.RuntimeCounter.count(RuntimeCounter.java:50) - TEST:CodeService:CODE(iac.dev.digit):耗时:9ms
+[17:09:09:608] [INFO] - com.lud.util.comm.runtime.RuntimeCounter.count(RuntimeCounter.java:50) - 计算：耗时:27ms

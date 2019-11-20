@@ -1,0 +1,10 @@
+<#include "/view-service/_include/role/role.html"/>
+<ul <#include "/view-service/_include/comp/attrs/wat.html"/>>
+	<#list detail as item>
+	 	<#if item["role"]>
+	 		<#noparse><#if</#noparse> roles?seq_contains("${item["role"]}")><#include "/view-service/comp/action/_include/li.html"/><#noparse></#if></#noparse>
+	 	<#else>
+	 		<#include "/view-service/comp/action/_include/li.html"/>
+	 	</#if>
+ 	</#list>
+</ul>

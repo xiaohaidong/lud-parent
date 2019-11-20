@@ -1,0 +1,10 @@
+<#noparse><#assign</#noparse> menu=${config.menu}>
+<#noparse><#assign</#noparse> app=${config.app}>
+<div class="app">
+	<i class="${config["app-icon"]}"></i>
+	<label class="name">${config["app-name"]}</label>
+	<label class="title">${config["app-title"]}</label>
+</div>
+<div class="menu">
+    <#noparse><ul lud-oclick=".item-2:first" lud-tab="c"><#list menu as item></#noparse> ${config.menurender}<#noparse></#list></ul></#noparse>
+</div>

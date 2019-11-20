@@ -1,0 +1,1 @@
+id="${compid}_comp_left" <#list config?keys as key><#if key?starts_with("lat-")> ${key?substring(4)}="${config[key]}"</#if></#list>

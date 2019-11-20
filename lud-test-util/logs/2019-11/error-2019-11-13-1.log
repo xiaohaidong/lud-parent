@@ -1,0 +1,4 @@
+[18:36:11:413] [ERROR] - com.lud.test.util.EntityClassTester.testEntity(EntityClassTester.java:95) - class java.lang.Class测试失败!java.lang.reflect.InvocationTargetException
+[18:36:11:417] [ERROR] - com.lud.test.util.EntityClassTester.testEntity(EntityClassTester.java:95) - class java.lang.Class测试失败!java.lang.reflect.InvocationTargetException
+[18:53:01:705] [ERROR] - com.lud.test.util.EntityClassTester.testEntity(EntityClassTester.java:95) - class java.lang.Class测试失败!java.lang.reflect.InvocationTargetException
+[18:53:01:709] [ERROR] - com.lud.test.util.EntityClassTester.testEntity(EntityClassTester.java:95) - class java.lang.Class测试失败!java.lang.reflect.InvocationTargetException

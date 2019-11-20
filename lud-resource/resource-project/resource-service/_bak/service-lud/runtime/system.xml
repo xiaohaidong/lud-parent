@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <!-- 资源文件 -->
+    <service name="index" layout="content/empty" acl="public" cache="true">
+        <content name="content" theme="normal/desc" flag="iw">
+            <config name="wap-attr-class"><![CDATA[lud-cmbx-p3x lud-cmcb-whitel]]></config>
+            <config name="attr-class"><![CDATA[lud-comp-des-itc clearfix]]></config>
+            <config name="title"><![CDATA[系统运行环境]]></config>
+            <config name="subtitle"><![CDATA[System Operating Environment]]></config>
+            <config name="content"><![CDATA[运行环境（英语：Runtime environment，又称“运行期系统”，run-time system），指一种把半编译的运行码在目标机器上运行的环境。]]></config>
+            <item><![CDATA[${comp["icon-navs"]}]]></item>
+        </content>
+        <comp name="icon-navs" theme="navigation/tab/static" flag="iw">
+            <config name="ul-attr-class"><![CDATA[lud-comp-nav-tab-nor b]]></config>
+            <detail title="系统部署状况" icon="fal fa-function"><![CDATA[/user/service/service/service-lud-runtime-system-device/i]]></detail>
+            <detail title="系统监测" icon="fal fa-fire"><![CDATA[/user/service/service/service-lud-runtime-system-info/i]]></detail>
+            <detail title="系统日志" icon="fal fa-cog"><![CDATA[/user/service/service/service-lud-resource-system-info/i]]></detail>
+        </comp>
+    </service>
+    <!--部署状况-->
+    <service name="device" layout="content/empty" acl="public" cache="true">
+        <content name="left" theme="normal/empty" flag="i">
+            <item><![CDATA[${comp["devices-title"]}]]></item>
+            <item><![CDATA[${comp["devices"]}]]></item>
+        </content>
+        <comp name="devices-title" theme="title/simple/s" flag="i">
+            <config name="class"><![CDATA[lud-comp-title-s lud-cmbx-mt2x]]></config>
+            <config name="title"><![CDATA[服务器部署状态分布图]]></config>
+            <config name="icon"><![CDATA[fad fa-truck-monster]]></config>
+            <config name="subtitle"><![CDATA[Server deployment status map ]]></config>
+        </comp>
+        <comp name="devices" theme="canvas/normal/simple" flag="i">
+            <config name="id"><![CDATA[true]]></config>
+            <config name="des-title"><![CDATA[信息系统部署概要示意图]]></config>
+            <config name="des-entitle"><![CDATA[Server deployment status map [V1.0.0] ]]></config>
+            <config name="des-author"><![CDATA[SunQinqiu/ChengDu Ausix]]></config>
+            <config name="des-des"><![CDATA[填写描述信息]]></config>
+            <config name="attr-class"><![CDATA[lud-cv-n ]]></config>
+            <config name="attr-style"><![CDATA[height:68rem]]></config>
+            <config name="nodes-callback"><![CDATA[lud.comp.drager.updatePostion]]></config>
+            <config name="nodes-update"><![CDATA[/web/service/exe/service-lud-runtime-system-updatepostion/i]]></config>
+            <config name="node-text"><![CDATA[${node["name"]}<br/>${node["bindip"]}]]></config>
+            <config name="node-top"><![CDATA[${node["cdny"]?string(".#")}]]></config>
+            <config name="node-left"><![CDATA[${node["cdnx"]?string(".#")}]]></config>
+            <config name="node-icon"><![CDATA[${node["icon"]}]]></config>
+            <config name="node-id"><![CDATA[${node["code"]}]]></config>
+            <config name="node-class"><![CDATA[${node["color"]}]]></config>
+            <config name="node-status"><![CDATA[status-${node["status"]}]]></config>
+            <config name="line-from"><![CDATA[${line["fp"]}]]></config>
+            <config name="line-to"><![CDATA[${line["tp"]}]]></config>
+            <config name="line-color"><![CDATA[${line["color"]}]]></config>
+            <config name="line-linw"><![CDATA[${line["width"]}]]></config>
+        </comp>
+        <data name="nodes" type="jdbc" query="lud-iot.lud_iot_device_info_query" result="list" fields="def" limits="def" args="" flag="i"></data>
+        <data name="lines" type="jdbc" query="lud-iot.lud_iot_device_relation_query" result="list" fields="def" limits="def" args="" flag="i"></data>
+    </service>
+    <!-- 服务命令 -->
+     <service name="updatepostion" acl="public">
+        <command name="lud-iot.lud_iot_device_info_updatepostion" flag="i" islist="false" args="cdnx,cdny,code"><![CDATA[]]></command>
+    </service>
+    <!-- 服务 -->
+    <service name="info" layout="spliter/content-lr" acl="public" cache="true">
+        <config name="width"><![CDATA[55]]></config>
+        <config name="wap-class"><![CDATA[lud-cmbx-mt3x]]></config>
+        <config name="right-class"><![CDATA[lud-cmbx-bl]]></config>
+        <content name="left" theme="normal/empty" flag="i" for="left">
+            <item><![CDATA[${comp["client-title"]}]]></item>
+            <item><![CDATA[${comp["client-list"]}]]></item>
+            <item><![CDATA[${comp["service-title"]}]]></item>
+            <item><![CDATA[${comp["service-list"]}]]></item>
+        </content>
+        <comp name="service-title" theme="title/simple/s" flag="i">
+            <config name="class"><![CDATA[lud-comp-title-s lud-cmbx-mt3x]]></config>
+            <config name="title"><![CDATA[DUBBO服务列表]]></config>
+            <config name="icon"><![CDATA[fab fa-mendeley]]></config>
+            <config name="subtitle"><![CDATA[Dubbo Service List]]></config>
+            <config name="more"><![CDATA[analyse]]></config>
+            <config name="url"><![CDATA[/]]></config>
+        </comp>
+        <comp name="service-list" theme="list/table/list" flag="i">
+            <config name="data">service</config>
+            <config name="wap-attr-class">lud-tb-g fs1x</config>
+            <detail width="3" title="ID"><![CDATA[${item_index+1}]]></detail>
+            <detail width="16" title="服务编码" td-class="tl b lud-cmcc-red "><![CDATA[${item["code"]}]]></detail>
+            <detail title="服务名称" td-class="tl "><![CDATA[${item["description"]}]]></detail>
+            <detail width="12" title="最后更新时间" td-class="lud-cmcc-blul "><![CDATA[${item["lastrun"]?string("yyyy-MM-dd HH:mm:ss")}]]></detail>
+            <detail width="4" title="RUN" td-class=""><![CDATA[<i class="<#if item["isrun"]=="1">lud-cmcc-grel fas fa-check-circle<#else>lud-cmcc-red fas fa-times-circle</#if>"></i>]]></detail>
+            <detail width="4" title="详细" td-class="lud-ele-hand lud-cmcc-red fs1x"><![CDATA[<i class="fas fa-list-ul"></i>]]></detail>
+        </comp>
+        <comp name="client-title" theme="title/simple/s" flag="i">
+            <config name="class"><![CDATA[lud-comp-title-s]]></config>
+            <config name="title"><![CDATA[服务器/SERVER环境]]></config>
+            <config name="icon"><![CDATA[fas fa-server]]></config>
+            <config name="subtitle"><![CDATA[Server Description]]></config>
+            <config name="more"><![CDATA[analyse]]></config>
+            <config name="render"><![CDATA[#service_lud_runtime_system_info_right]]></config>
+            <config name="url"><![CDATA[/]]></config>
+        </comp>
+        <comp name="client-list" theme="list/table/list" flag="i">
+            <config name="data">client</config>
+            <config name="wap-attr-class">lud-tb-g fs1x</config>
+            <config name="wap-attr-lud-oclick">td[lud-render-click]:first</config>
+            <detail width="3" title="ID"><![CDATA[${item_index+1}]]></detail>
+            <detail title="Client" td-class="tl b lud-cmcc-red "><![CDATA[${item["clientid"]}]]></detail>
+            <detail width="10" title="IP地址" td-class=""><![CDATA[${item["ip"]}]]></detail>
+            <detail width="12" title="最后更新" td-class="lud-cmcc-blul "><![CDATA[${item["lastrun"]?string("yyyy-MM-dd HH:mm:ss")}]]></detail>
+            <detail width="4" title="RUN" td-class=""><![CDATA[<i class="<#if item["isrun"]=="1">lud-cmcc-grel fas fa-check-circle<#else>lud-cmcc-red fas fa-times-circle</#if>"></i>]]></detail>
+            <detail width="4" title="详细" td-class="lud-ele-hand lud-cmcc-red fs1x np" td-lud-render-click="/user/service/service/service-lud-runtime-system-server-detail/i?server=${item.clientid}"><![CDATA[<span ><i class="fas fa-list-ul"></i></span>]]></detail>
+        </comp>
+        <content name="right" theme="normal/empty" flag="i" for="right"></content>
+        <data name="service" type="jdbc" query="lud-iot.lud_service_info_query" result="list" fields="def" limits="def" args="" flag="i"></data>
+        <data name="client" type="jdbc" query="lud-iot.lud_iot_client_query" result="list" fields="def" limits="def" args="" flag="i"></data>
+    </service>
+
+    <!-- -->
+    <service name="server-detail" layout="content/empty" acl="public" cache="true">
+        <content name="content" theme="normal/empty" flag="i">
+            <item><![CDATA[${comp["opr-title"]}]]></item>
+            <item><![CDATA[${comp["opr-info"]}]]></item>
+            <item><![CDATA[${comp["net-title"]}]]></item>
+            <item><![CDATA[${comp["net-list"]}]]></item>
+            <item><![CDATA[${comp["disk-title"]}]]></item>
+            <item><![CDATA[${comp["disk-list"]}]]></item>
+        </content>
+        <comp name="opr-title" theme="title/simple/s" flag="i">
+            <config name="class"><![CDATA[lud-comp-title-s]]></config>
+            <config name="title"><![CDATA[操作系统及硬件]]></config>
+            <config name="icon"><![CDATA[fab fa-squarespace]]></config>
+            <config name="subtitle"><![CDATA[Operating System]]></config>
+        </comp>
+        <comp name="opr-info" theme="list/table/kv" flag="i">
+            <config name="wap-attr-class">lud-tb-g fs1x</config>
+            <config name="header-width">3|10|12|</config>
+            <config name="header-title">ID|大项|子项|项目内容</config>
+            <detail rowspan="2|2||" colspan="|||" class="|b lud-cmcc-red|lud-cmcc-blul|tl "><![CDATA[1|操作系统|操作系统|${system.system.operating.manufacturer} ${system.system.operating.osname} ${system.system.operating.version} [${system.system.operating.bitness}位] / ${system.system.operating.buildNumber}]]></detail>
+            <detail rowspan="|" colspan="|" class="lud-cmcc-blul|tl "><![CDATA[电脑名称|${system.system.operating.domainName}]]></detail>
+            <detail rowspan="3|3||" colspan="|||" class="|b lud-cmcc-red|lud-cmcc-blul|tl "><![CDATA[2|主板信息|主板名称|${system.system.hardWear.baseboard.manufacturer} ${system.system.hardWear.baseboard.serialNumber} [${system.system.hardWear.baseboard.model}]]]></detail>
+            <detail rowspan="|" colspan="|" class="lud-cmcc-blul|tl "><![CDATA[主板版本|<#list system.system.hardWear.baseboard.baseboard?keys as key>${system.system.hardWear.baseboard.baseboard[key]} </#list>]]></detail>
+            <detail rowspan="|" colspan="|" class="lud-cmcc-blul|tl "><![CDATA[BIOS信息|<#list system.system.hardWear.baseboard.firmware?keys as key>${system.system.hardWear.baseboard.firmware[key]} </#list>]]></detail>
+            <detail rowspan="4|4||" colspan="|||" class="|b lud-cmcc-red|lud-cmcc-blul|tl "><![CDATA[3|CPU信息|CPU名称|${system.system.hardWear.cpu.name}]]></detail>
+            <detail rowspan="|" colspan="|" class="lud-cmcc-blul|tl "><![CDATA[CPU标注|${system.system.hardWear.cpu.vendor} / ${system.system.hardWear.cpu.identifier}]]></detail>
+            <detail rowspan="|" colspan="|" class="lud-cmcc-blul|tl "><![CDATA[CPU参数|${system.system.hardWear.cpu.frequency} / ${system.system.hardWear.cpu.physicalPackageCount} 颗CPU ${system.system.hardWear.cpu.physicalProcessorCount} 核心 ${system.system.hardWear.cpu.logicalProcessorCount} 线程]]></detail>
+            <detail rowspan="|" colspan="|" class="lud-cmcc-blul|tl "><![CDATA[内存信息|总内存：${system.system.hardWear.memory.total}G / 剩余内存：${system.system.hardWear.memory.free}G ]]></detail>
+        </comp>
+        <comp name="disk-title" theme="title/simple/s" flag="i">
+            <config name="class"><![CDATA[lud-comp-title-s  lud-cmbx-mt3x]]></config>
+            <config name="title"><![CDATA[存储信息]]></config>
+            <config name="icon"><![CDATA[fas fa-puzzle-piece]]></config>
+            <config name="subtitle"><![CDATA[HardDisk Infomation]]></config>
+        </comp>
+        <comp name="disk-list" theme="list/table/list" flag="i">
+            <config name="data">system.system.hardWear.disks</config>
+            <config name="wap-attr-class">lud-tb-g fs1x</config>
+            <config name="wap-attr-lud-oclick">td[lud-render-click]:first</config>
+            <detail width="3" title="ID"><![CDATA[${item_index+1}]]></detail>
+            <detail title="硬盘名称" td-class="b lud-cmcc-red tl"><![CDATA[${item["name"]}   <span class="lud-cmcc-blul">${item["serial"]}</span>]]></detail>
+            <detail width="8" title="总大小/G" td-class="lud-cmcc-blul "><![CDATA[${item["size"]}]]></detail>
+            <detail width="8" title="使用次数" td-class="lud-cmcc-blul "><![CDATA[${item["times"]}]]></detail>
+            <detail width="8" title="读大小/M" td-class="lud-cmcc-blul "><![CDATA[${item["readBytes"]}]]></detail>
+            <detail width="8" title="读次数" td-class="lud-cmcc-blul "><![CDATA[${item["reads"]}]]></detail>
+            <detail width="8" title="写大小/M" td-class="lud-cmcc-blul "><![CDATA[${item["writeBytes"]}]]></detail>
+            <detail width="8" title="写次数" td-class="lud-cmcc-blul "><![CDATA[${item["writes"]}]]></detail>
+        </comp>
+        <comp name="net-title" theme="title/simple/s" flag="i">
+            <config name="class"><![CDATA[lud-comp-title-s  lud-cmbx-mt3x]]></config>
+            <config name="title"><![CDATA[网络信息]]></config>
+            <config name="icon"><![CDATA[fas fa-recycle]]></config>
+            <config name="subtitle"><![CDATA[Network Infomation]]></config>
+        </comp>
+        <comp name="net-list" theme="list/table/list" flag="i">
+            <config name="data">system.system.network</config>
+            <config name="wap-attr-class">lud-tb-g fs1x</config>
+            <config name="wap-attr-lud-oclick">td[lud-render-click]:first</config>
+            <detail width="3" title="ID"><![CDATA[${item_index+1}]]></detail>
+            <detail width="14" title="MAC地址" td-class="b  lud-cmcc-red tl"><![CDATA[${item["mac"]}]]></detail>
+            <detail width="18" title="IP地址" td-class="b lud-cmcc-red tl"><![CDATA[${item["ip"]}]]></detail>
+            <detail title="网络名称" td-class="tl"><![CDATA[ <span class="lud-cmcc-blul">${item["name"]}</span>${item["title"]}]]></detail>
+            <detail width="6" title="MTU" td-class="lud-cmcc-blul "><![CDATA[${item["mtu"]}]]></detail>
+            <detail width="6" title="RECV" td-class="lud-cmcc-blul "><![CDATA[${item["recv"]}/${item["recverr"]}]]></detail>
+            <detail width="6" title="SENT" td-class="lud-cmcc-blul "><![CDATA[${item["sent"]}/${item["senterr"]}]]></detail>
+            <detail width="6" title="S/G" td-class="lud-cmcc-blul "><![CDATA[${item["speed"]}]]></detail>
+        </comp>
+        <data name="system" type="null" result="map" invoke="com.lud.web.business.core.service.runtime.system.system" flag="i"></data>
+    </service>
+</configuration>

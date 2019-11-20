@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <querys>
+        <item order="code">
+            <fileds>
+                <filed name="def"></filed>
+                <filed name="count"><![CDATA[ count(*) ]]></filed>
+            </fileds>
+            <limits>
+                <limit name="def" args="project"><![CDATA[ project=? ]]></limit>
+                <limit name="code" args="code"><![CDATA[ code=? ]]></limit>
+            </limits>
+        </item>
+    </querys>
+    <commands>
+        <item name="update">
+            <cmd args="date,code,project"><![CDATA[update {t} set lastrun=?,isrun='1' where code=? and project=?]]></cmd>
+        </item>
+        <item name="updatepostion">
+            <cmd args="cdnx,cdny,code,project"><![CDATA[update {t} set cdnx=?,cdny=? where code=? and project=?]]></cmd>
+        </item>
+    </commands>
+</configuration>

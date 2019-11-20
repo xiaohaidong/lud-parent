@@ -1,0 +1,8 @@
+<#noparse><#assign</#noparse> leftdata=${config["left-data"]}>
+<#noparse><#assign</#noparse> rightdata=${config["right-data"]}>
+<ul <#include "/view-service/_include/comp/attrs/left.html"/>>
+    <#noparse><#list leftdata as item></#noparse>${config["left-data-render"]}<#noparse></#list></#noparse>
+</ul>
+<ul <#include "/view-service/_include/comp/attrs/right.html"/>>
+    <#noparse><#list rightdata as item></#noparse>${config["right-data-render"]}<#noparse></#list></#noparse>
+</ul>

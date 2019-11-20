@@ -1,0 +1,24 @@
+<#include "/view-service/_include/role/role.html"/>
+<#noparse><#assign</#noparse> list=${config["data"]}>
+<table <#include "/view-service/_include/comp/attrs/at.html"/>>
+	<thead>
+		<tr>
+		<#list detail as th>
+			
+			<th <#include "/view-service/_include/comp/table/th.html"/>><#if th.title=="ck"><label class="i" lud-select="all"><i class="far fa-check-circle"></i></label><#else>${th.title}</#if></th>
+		  	<#if th["th-break"]=="1"></tr><tr></#if>
+	  	</#list>
+	  	<tr>
+	</thead>
+	<tbody>
+		<#noparse><#list list as item></#noparse>
+		<tr>
+		 	<#list detail as td>
+				<#if td["td-v"]!="0">
+				<td <#include "/view-service/_include/comp/table/td.html"/>>${td.text}</td></#if>
+				<#if item["td-break"]></tr><tr></#if>
+		 	</#list>
+ 		</tr>
+ 		<#noparse></#list></#noparse>
+	</tbody>
+</table>

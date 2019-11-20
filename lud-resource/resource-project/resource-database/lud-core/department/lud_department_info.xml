@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <querys>
+        <item order="code">
+            <fileds>
+                <filed name="def"></filed>
+                <filed name="codec"><![CDATA[ code ,shortname as content]]></filed>
+                <filed name="codecc"><![CDATA[ code ,content]]></filed>
+                <filed name="userc" type="c"><![CDATA[lud_user_info[count(*)]userdepartment=code:project=lud_department_info.project]]></filed>
+                <filed name="id"><![CDATA[id]]></filed>
+            </fileds>
+            <limits>
+                <limit name="def" args="project"><![CDATA[ project=? ]]></limit>
+                <limit name="tj" args="project"><![CDATA[ code in(select userdepartment from lud_user_info where project=? and userdepartment is not null) ]]></limit>
+                <limit name="del" args="project"><![CDATA[code not in(select userdepartment from lud_user_info where project=? and userdepartment is not null)]]></limit>
+            </limits>
+        </item>
+    </querys>
+    <commands>
+        <item name="updatecode">
+            <cmd args="random,code"><![CDATA[update {t} set code=? where code=?]]></cmd>
+            <cmd args="random,code"><![CDATA[update lud_user_info set userdepartment=? where userdepartment=?]]></cmd>
+            <cmd args="code,id"><![CDATA[update {t} set code=? where id=?]]></cmd>
+            <cmd args="code,ovalue"><![CDATA[update lud_user_info set userdepartment=? where userdepartment=?]]></cmd>
+        </item>
+        <item name="updatecontent">
+            <cmd args="content,id"><![CDATA[update {t} set content=? where id=?]]></cmd>
+        </item>
+        <item name="updateshortname">
+            <cmd args="shortname,id"><![CDATA[update {t} set shortname=? where id=?]]></cmd>
+        </item>
+        <item name="updatedepgroup">
+            <cmd args="depgroup,id"><![CDATA[update {t} set depgroup=? where id=?]]></cmd>
+        </item>
+        <item name="addnew">
+            <cmd args="project,random"><![CDATA[insert into {t} (project,code,sn) values(?,?,FLOOR(1000 + (RAND() * 8999)))]]></cmd>
+        </item>
+        <item name="delete">
+            <cmd args="id,project,project"><![CDATA[delete from {t} where id=? and project=? and code not in(select userdepartment from lud_user_info where project=?  and userdepartment is not null)]]></cmd>
+        </item>
+    </commands>
+</configuration>

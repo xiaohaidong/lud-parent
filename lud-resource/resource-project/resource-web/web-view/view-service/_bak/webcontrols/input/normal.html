@@ -1,0 +1,1 @@
+<input type="input" name="${cfg.name}" value="${cfg.value}" <#list cfg?keys as key><#if key?starts_with("attr")> ${key?substring(5)}="${cfg[key]}"</#if></#list>/>

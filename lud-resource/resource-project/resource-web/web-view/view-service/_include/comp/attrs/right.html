@@ -1,0 +1,1 @@
+id="${compid}_comp_right" <#list config?keys as key><#if key?starts_with("rat-")> ${key?substring(4)}="${config[key]}"</#if></#list>

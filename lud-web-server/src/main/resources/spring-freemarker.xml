@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:context="http://www.springframework.org/schema/context" xmlns:util="http://www.springframework.org/schema/util" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cache="http://www.springframework.org/schema/cache" xmlns:p="http://www.springframework.org/schema/p" xmlns:task="http://www.springframework.org/schema/task" xmlns:dubbo="http://dubbo.apache.org/schema/dubbo"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+     http://www.springframework.org/schema/beans/spring-beans.xsd
+     http://www.springframework.org/schema/mvc
+     http://www.springframework.org/schema/mvc/spring-mvc.xsd
+     http://www.springframework.org/schema/context 
+     http://www.springframework.org/schema/context/spring-context.xsd
+     http://www.springframework.org/schema/task
+     http://www.springframework.org/schema/task/spring-task.xsd
+     http://www.springframework.org/schema/util
+     http://www.springframework.org/schema/util/spring-util.xsd
+     http://dubbo.apache.org/schema/dubbo 
+     http://dubbo.apache.org/schema/dubbo/dubbo.xsd" default-lazy-init="true">
+    <!-- FreeMarker配置 -->
+    <mvc:annotation-driven>
+        <mvc:path-matching suffix-pattern="false" />
+        <mvc:message-converters>
+            <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+                <constructor-arg value="UTF-8" />
+            </bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+    <bean id="freemarkerConfiguration" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+        <property name="location" value="classpath:properties/freemarker.properties" />
+    </bean>
+    <bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+        <property name="freemarkerSettings" ref="freemarkerConfiguration" />
+        <property name="templateLoaderPath" value="" />
+        <property name="defaultEncoding" value="UTF-8" />
+        <property name="freemarkerVariables">
+            <map>
+                <entry key="escape" value-ref="freemarkerEscape" />
+            </map>
+        </property>
+    </bean>
+    <bean id="freemarkerEscape" class="freemarker.template.utility.XmlEscape" />
+    <bean id="freeMarkerViewResolver" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+        <property name="viewNames" value="*.html" />
+        <property name="contentType" value="text/html; charset=UTF-8" />
+        <property name="cache" value="false" />
+        <property name="suffix" value="" />
+        <property name="order" value="0" />
+        <property name="requestContextAttribute" value="request" />
+        <property name="exposeRequestAttributes" value="true" />
+        <property name="exposeSessionAttributes" value="true" />
+    </bean>
+</beans>

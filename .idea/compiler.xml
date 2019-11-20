@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="lud-iot-api" />
+        <module name="lud-iot-business-core-api" />
+        <module name="lud-iot-business-core-client" />
+        <module name="lud-iot-business-core-server" />
+        <module name="lud-iot-client" />
+        <module name="lud-iot-server" />
+        <module name="lud-iot-util" />
+        <module name="lud-service-business" />
+        <module name="lud-service-business-api" />
+        <module name="lud-service-core" />
+        <module name="lud-service-core-api" />
+        <module name="lud-service-open" />
+        <module name="lud-service-open-api" />
+        <module name="lud-service-smartcampus" />
+        <module name="lud-service-smartcampus-api" />
+        <module name="lud-test-util" />
+        <module name="lud-test-web" />
+        <module name="lud-util-comm" />
+        <module name="lud-util-content" />
+        <module name="lud-util-dubbo" />
+        <module name="lud-util-spring" />
+        <module name="lud-util-web" />
+        <module name="lud-web-api" />
+        <module name="lud-web-business-core" />
+        <module name="lud-web-business-iot" />
+        <module name="lud-web-business-smartcampus" />
+        <module name="lud-web-server" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="lud" target="1.8" />
+      <module name="lud-iot-api" target="1.8" />
+      <module name="lud-iot-business-core-api" target="1.8" />
+      <module name="lud-iot-business-core-client" target="1.8" />
+      <module name="lud-iot-business-core-server" target="1.8" />
+      <module name="lud-iot-client" target="1.8" />
+      <module name="lud-iot-server" target="1.8" />
+      <module name="lud-iot-util" target="1.8" />
+      <module name="lud-parent" target="1.8" />
+      <module name="lud-service-business" target="1.8" />
+      <module name="lud-service-business-api" target="1.8" />
+      <module name="lud-service-core" target="1.8" />
+      <module name="lud-service-core-api" target="1.8" />
+      <module name="lud-service-open" target="1.8" />
+      <module name="lud-service-open-api" target="1.8" />
+      <module name="lud-service-smartcampus" target="1.8" />
+      <module name="lud-service-smartcampus-api" target="1.8" />
+      <module name="lud-test-util" target="1.8" />
+      <module name="lud-test-web" target="1.8" />
+      <module name="lud-util-comm" target="1.8" />
+      <module name="lud-util-content" target="1.8" />
+      <module name="lud-util-dubbo" target="1.8" />
+      <module name="lud-util-spring" target="1.8" />
+      <module name="lud-util-web" target="1.8" />
+      <module name="lud-web-api" target="1.8" />
+      <module name="lud-web-business-core" target="1.8" />
+      <module name="lud-web-business-iot" target="1.8" />
+      <module name="lud-web-business-smartcampus" target="1.8" />
+      <module name="lud-web-server" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

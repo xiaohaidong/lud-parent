@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <!-- head：头部文件 -->
+    <service name="head" theme="content/content" acl="public" cache="true">
+        <content name="nav" theme="wrap/wrap-list" flag="i">
+            <item name="nav" wat-class="lud-cmcb-bla lud-cmcc-whitel lud-cmbx-h3x" at-class="lud-lyps-md lud-cmbx-h100"><![CDATA[${comp["nav"]}]]></item>
+            <item name="logo" wat-class="lud-cmcb-red lud-cmcc-whitel" at-class="lud-lyps-md"><![CDATA[${comp["logo"]}]]></item>
+        </content>
+        <comp name="nav" theme="nav/hori/top-left-right">
+            <config name="lat-class"><![CDATA[lud-lycm-fl lud-comp-nav-x  border]]></config>
+            <config name="rat-class"><![CDATA[lud-lycm-fr lud-comp-nav-x back lstn]]></config>
+            <config name="left-data"><![CDATA[links]]></config>
+            <config name="left-data-render"><![CDATA[<#if item["postion"]=="nav-l"><li><a <#if item.target>target="${item.target}"</#if> href="${item.url}">${item.text}</a></li></#if>]]></config>
+            <config name="right-data"><![CDATA[links]]></config>
+            <config name="right-data-render"><![CDATA[<#if item["postion"]=="nav-r"><li><a <#if item.target>target="${item.target}"</#if> href="${item.url}">${item.text}</a></li></#if>]]></config>
+        </comp>
+        <comp name="logo" theme="mudl/logo/normal">
+            <config name="wat-style"><![CDATA[height:12rem;background-image:url(/web-userfile/project/${project.company}/${project.project}/website/default/logo.png)]]></config>
+            <config name="wat-class"><![CDATA[lud-comp-logo]]></config>
+            <config name="at-class"><![CDATA[lud-comp-nav-pce lstn]]></config>
+            <config name="logo-text"><![CDATA[
+                <h5>${config["project.copyright.cn"]}</h5>
+                <h2>${project.name}</h2>
+                <h5>${project.enname}</h5>
+            ]]></config>
+            <config name="text-l"><![CDATA[10rem]]></config>
+            <config name="text-t"><![CDATA[3.2rem]]></config>
+            <config name="logo-link"><![CDATA[true]]></config>
+            <config name="link-r"><![CDATA[0]]></config>
+            <config name="link-t"><![CDATA[4.5rem]]></config>
+            <config name="link-data"><![CDATA[links]]></config>
+            <config name="link-render"><![CDATA[<#if item["postion"]=="nav-login-t"> <li><a href="${item.url}">${item.text}<br/>${item.entext}</a></li></#if>]]></config>
+        </comp>
+        <data name="project" type="redis" result="map" query="com.lud.business.project/{project}" flag="i"></data>
+        <data name="config" type="redis" result="map" query="com.lud.business.project.config/{project}" flag="i"></data>
+        <data name="links" type="jdbc" result="list" query="lud-core.lud_project_link_query" limits="project" flag="i"></data>
+    </service>
+
+    <!-- foot：底部文件 -->
+    <service name="foot" theme="content/content" acl="public" cache="true">
+        <content theme="wrap/wrap-list" flag="i">
+            <item wat-class="lud-cmbx-ptb3x lud-cmcb-red lud-cmcc-whitel" at-class="lud-lyps-md l-2"><![CDATA[${comp["foot"]}]]></item>
+        </content>
+        <comp name="foot" theme="view/text/content">
+            <config name="content"><![CDATA[
+                                    版权所有： © 2017-2019 ${config["project.copyright.cn"]}<br/>
+                  COPYRIGHT：${config["project.copyright.en"]} © 2017-2019  <br/>
+                  PROJECT：${project.enname}<br/>
+                                    通讯地址：${config["project.copyright.address"]}<br/>
+                                    联系方式：${config["project.copyright.contact"]}<br/>
+                                    最佳环境：WINDOWS8及以上操作系统，IE9+，分辨率1920*1080 
+            ]]></config>
+        </comp>
+        <data name="project" type="redis" result="map" query="com.lud.business.project/{project}" flag="i"></data>
+        <data name="config" type="redis" result="map" query="com.lud.business.project.config/{project}" flag="i"></data>
+    </service>
+</configuration>

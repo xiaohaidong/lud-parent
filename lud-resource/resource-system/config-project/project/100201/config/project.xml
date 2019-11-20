@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <item name="code"><![CDATA[100001]]></item>
+    <item name="login.theme"><![CDATA[default]]></item>
+    <item name="login.theme.color"><![CDATA[lu-cmcb-red]]></item>
+    <item name="copyright.cn"><![CDATA[西南交通大学远程与继续教育学院]]></item>
+    <item name="copyright.en"><![CDATA[Distance and Continuing Education College of SWJTU ]]></item>
+    <item name="copyright.address"><![CDATA[中国四川省成都市二环路北一段111号5#网络教育 ]]></item>
+    <item name="copyright.contact"><![CDATA[TEL +(86) 028-87634598]]></item>
+</configuration>

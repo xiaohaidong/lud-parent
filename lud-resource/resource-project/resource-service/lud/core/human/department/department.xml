@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <!-- 单位信息管理 -->
+    <service name="index" theme="content/content" cache="true">
+        <content theme="wrap/content" flag="i">
+            <item><![CDATA[${comp["navs"]}]]></item>
+        </content>
+    </service>
+    
+    <service name="type" theme="content/content" cache="true">
+        <content theme="wrap/content" flag="i">
+            <item><![CDATA[${comp["navs"]}]]></item>
+        </content>
+    </service>
+</configuration>

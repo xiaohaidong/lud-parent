@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <service name="head" layout="content/none" acl="public" cache="true">
+        <content theme="normal/none" flag="i"><![CDATA[${comp["link"]}${comp["logo"]}${comp["apps"]}]]></content>
+    </service>
+</configuration>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/lud-web-server" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/lud-iot-server/pom.xml" />
+        <option value="$PROJECT_DIR$/lud-iot-util/pom.xml" />
+        <option value="$PROJECT_DIR$/lud-iot-client/pom.xml" />
+        <option value="$PROJECT_DIR$/lud-iot-business-core-server/pom.xml" />
+        <option value="$PROJECT_DIR$/lud-iot-business-core-client/pom.xml" />
+        <option value="$PROJECT_DIR$/lud-service-business-api/pom.xml" />
+        <option value="$PROJECT_DIR$/lud-iot-api/pom.xml" />
+        <option value="$PROJECT_DIR$/lud-service-business/pom.xml" />
+        <option value="$PROJECT_DIR$/lud-iot-business-core-api/pom.xml" />
+        <option value="$PROJECT_DIR$/lud-service-core/pom.xml" />
+        <option value="$PROJECT_DIR$/lud-service-core-api/pom.xml" />
+        <option value="$PROJECT_DIR$/lud-service-open/pom.xml" />
+        <option value="$PROJECT_DIR$/lud-service-open-api/pom.xml" />
+        <option value="$PROJECT_DIR$/lud-service-smartcampus/pom.xml" />
+        <option value="$PROJECT_DIR$/lud-service-smartcampus-api/pom.xml" />
+        <option value="$PROJECT_DIR$/lud-test-util/pom.xml" />
+        <option value="$PROJECT_DIR$/lud-test-web/pom.xml" />
+        <option value="$PROJECT_DIR$/lud-util-comm/pom.xml" />
+        <option value="$PROJECT_DIR$/lud-util-content/pom.xml" />
+        <option value="$PROJECT_DIR$/lud-util-dubbo/pom.xml" />
+        <option value="$PROJECT_DIR$/lud-util-spring/pom.xml" />
+        <option value="$PROJECT_DIR$/lud-util-web/pom.xml" />
+        <option value="$PROJECT_DIR$/lud-web-api/pom.xml" />
+        <option value="$PROJECT_DIR$/lud-web-business-core/pom.xml" />
+        <option value="$PROJECT_DIR$/lud-web-business-iot/pom.xml" />
+        <option value="$PROJECT_DIR$/lud-web-business-smartcampus/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/classes" />
+  </component>
+  <component name="SvnBranchConfigurationManager">
+    <option name="myConfigurationMap">
+      <map>
+        <entry key="$PROJECT_DIR$">
+          <value>
+            <SvnBranchConfiguration>
+              <option name="trunkUrl" value="http://192.168.0.161/svn/slht/WRICS/WRICS.BFRAME/lud-parent" />
+            </SvnBranchConfiguration>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="mySupportsUserInfoFilter" value="true" />
+  </component>
+</project>

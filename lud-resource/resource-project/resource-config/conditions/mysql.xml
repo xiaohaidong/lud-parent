@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <item key="d"><![CDATA[ {0}=? ]]></item>
+    <item key="l" value="%{0}%"><![CDATA[ {0} like ? ]]></item>
+</configuration>

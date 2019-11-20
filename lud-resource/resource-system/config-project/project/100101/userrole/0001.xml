@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <application name="Developer">
+        <menu name="0101" data=""><![CDATA[A01,D02]]></menu>
+        <menu name="0102" data=""><![CDATA[A01,D02]]></menu>
+        <menu name="0103" data=""><![CDATA[A01,D02]]></menu>
+        <menu name="0104" data=""><![CDATA[A01,D02]]></menu>
+    </application>
+    <application name="SmartCampusSafeCampus">
+        <menu name="0101" data=""><![CDATA[0101,A01,D02]]></menu>
+        <menu name="0102" data=""><![CDATA[0102,A01,D02]]></menu>
+        <menu name="0103" data=""><![CDATA[0103,A01,D02]]></menu>
+        <menu name="0201" data=""><![CDATA[0201,A01,D02]]></menu>
+        <menu name="0202" data=""><![CDATA[0202,A01,D02]]></menu>
+        <menu name="0203" data=""><![CDATA[0203,A01,D02]]></menu>
+    </application>
+    <application name="SettingManager">
+        <menu name="0101" data=""><![CDATA[m,a,d,e,v]]></menu>
+        <menu name="0102" data=""><![CDATA[0102,A01,D02]]></menu>
+        <menu name="0103" data=""><![CDATA[0103,A01,D02]]></menu>
+        <menu name="ZZ01" data=""><![CDATA[ZZ01,A01,D02]]></menu>
+        <menu name="ZZ02" data=""><![CDATA[ZZ02,A01,D02]]></menu>
+        <menu name="ZZ03" data=""><![CDATA[ZZ03,A01,D02]]></menu>
+        <menu name="ZZ99" data=""><![CDATA[ZZ99,A01,D02]]></menu>
+    </application>
+    <application name="OfficeManager">
+        <menu name="0101" data=""><![CDATA[0101,A01,D02]]></menu>
+        <menu name="0102" data=""><![CDATA[0102,A01,D02]]></menu>
+        <menu name="0103" data=""><![CDATA[0103,A01,D02]]></menu>
+        <menu name="0201" data=""><![CDATA[0201,A01,D02]]></menu>
+        <menu name="0202" data=""><![CDATA[0202,A01,D02]]></menu>
+        <menu name="0203" data=""><![CDATA[0203,A01,D02]]></menu>
+    </application>
+    <application name="HumanManager">
+        <menu name="0101" data="department"><![CDATA[a,m,d,v]]></menu>
+        <menu name="0102" data=""><![CDATA[0102,A01,D02]]></menu>
+        <menu name="0103" data=""><![CDATA[0103,A01,D02]]></menu>
+        <menu name="0201" data=""><![CDATA[0201,A01,D02]]></menu>
+        <menu name="0202" data=""><![CDATA[0202,A01,D02]]></menu>
+        <menu name="0203" data=""><![CDATA[0203,A01,D02]]></menu>
+        <menu name="0Z01" data="department"><![CDATA[a,m,d,v,c]]></menu>
+        <menu name="0Z02" data=""><![CDATA[0203,A01,D02]]></menu>
+        <menu name="ZZ01" data=""><![CDATA[0203,A01,D02]]></menu>
+    </application>
+    <application name="SmartCampusSafeCampus">
+        <menu name="0101" data=""><![CDATA[a,m,d,v]]></menu>
+        <menu name="0102" data=""><![CDATA[0102,A01,D02]]></menu>
+        <menu name="0103" data=""><![CDATA[0103,A01,D02]]></menu>
+        <menu name="0201" data=""><![CDATA[0201,A01,D02]]></menu>
+        <menu name="0202" data=""><![CDATA[0202,A01,D02]]></menu>
+        <menu name="0203" data=""><![CDATA[0203,A01,D02]]></menu>
+        <menu name="0Z01" data=""><![CDATA[a,m,d]]></menu>
+        <menu name="0Z02" data=""><![CDATA[0203,A01,D02]]></menu>
+        <menu name="Z001" data=""><![CDATA[a,m,d,v]]></menu>
+    </application>
+</configuration>

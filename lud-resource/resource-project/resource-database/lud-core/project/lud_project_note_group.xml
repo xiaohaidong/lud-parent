@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <querys>
+        <item order="sort">
+            <fileds>
+                <filed name="def"></filed>
+            </fileds>
+            <limits>
+                <limit name="def"><![CDATA[ ispub='1' ]]></limit>
+                <limit name="project" args="project"><![CDATA[ project=? ]]></limit>
+                <limit name="groupx" args="groupx"><![CDATA[ groupx=? ]]></limit>
+            </limits>
+        </item>
+    </querys>
+</configuration>

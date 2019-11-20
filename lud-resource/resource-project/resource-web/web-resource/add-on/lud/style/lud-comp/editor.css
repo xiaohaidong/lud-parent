@@ -1,0 +1,88 @@
+﻿/*
+ * Copyright 2018-2019 the original author or authors.
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+.lud-edt-pannel {
+	padding: 2rem 0
+}
+
+.lud-edt-pannel .title {
+	font-size: 2.4rem;
+	text-align: center;
+	font-family: Calibri, "华文中宋";
+    padding-bottom:2rem;
+    font-weight:bold;
+}
+
+.lud-edt-pannel .subtitle {
+	text-align: center;
+	border-bottom: 2px solid #303643;
+	padding-bottom: 0.6rem;
+}
+
+.lud-edt-pannel .editcontent {
+	margin-top: 1px;
+	border-top: 1px solid #303643;
+	padding-top: 1rem;
+}
+/**/
+.lud-edt-pannel .lud-edt-form table {
+	border: none;
+	width: 100%;
+	font-family: Calibri, "宋体";
+	font-size: 1.2rem;
+}
+
+.lud-edt-pannel .lud-edt-form table>thead>tr>th {
+	width: 10%;
+	height: 0;
+}
+
+.lud-edt-pannel .lud-edt-form table > tbody > tr > td {
+    border: 1px solid #303643;
+    height: 3rem;
+    line-height: 3rem;
+    padding: 0.2rem 1rem;
+}
+
+
+.lud-edt-pannel .lud-edt-form table>thead>tr>th {
+	width: 14.2%
+}
+
+.lud-edt-pannel .lud-edt-form table>tbody>tr>td.txt {
+	text-align: center;
+	font-weight: bold;
+}
+
+.lud-edt-pannel .lud-edt-form table > tbody > tr > td.con {
+    text-align: left;
+}
+.lud-edt-pannel .lud-edt-form table > tbody > tr > td.con .select2-selection--single, .lud-edt-pannel .lud-edt-form table > tbody > tr > td.con .select2-selection--single select2 {
+    background-color: transparent;
+    border: none;
+}
+
+.lud-edt-pannel .lud-edt-form table > tbody > tr > td.con > input[type=text], .lud-edt-pannel .lud-edt-form table > tbody > tr > td.con >select {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.lud-doc-form {
+    margin: 2rem auto;
+    padding: 4rem 3rem;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    width: 116rem;
+}

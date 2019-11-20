@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <querys>
+        <item order="sort">
+            <fileds>
+                <filed name="def"><![CDATA[app,menu,icon,name,url,dataconfig,sort]]></filed>
+                <filed name="app" type="c"><![CDATA[lud_application_info[application,script,css]code=app]]></filed>
+            </fileds>
+            <limits>
+                <limit name="app" args="app"><![CDATA[ app=? ]]></limit>
+            </limits>
+        </item>
+    </querys>
+</configuration>

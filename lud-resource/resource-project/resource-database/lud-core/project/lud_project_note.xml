@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <querys>
+        <item order="istopic desc,adddate desc">
+            <fileds>
+                <filed name="def"></filed>
+                <filed name="list"><![CDATA[ id,title,picture,abstract,adddate,author,department ]]></filed>
+            </fileds>
+            <limits>
+                <limit name="def"><![CDATA[ 1=1 ]]></limit>
+                <limit name="project" args="project"><![CDATA[ project=? ]]></limit>
+                <limit name="groupx" args="groupx"><![CDATA[ groupx=? ]]></limit>
+                <limit name="public"><![CDATA[ ispublic=1 ]]></limit>
+                <limit name="id" args="id"><![CDATA[ id=? ]]></limit>
+            </limits>
+        </item>
+    </querys>
+</configuration>

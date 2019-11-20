@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <querys>
+        <item order="sort">
+            <fileds>
+                <filed name="def"><![CDATA[{t}.*]]></filed>
+                <filed name="codec"><![CDATA[ usergroup as code,groupname as content ]]></filed>
+                <filed name="userc" type="c"><![CDATA[lud_user_info[count(*)]usergroup=usergroup:project=lud_user_group.project]]></filed>
+            </fileds>
+            <limits>
+                <limit name="def" ><![CDATA[ 1=1 ]]></limit>
+                <limit name="project" args="project"><![CDATA[ project=? ]]></limit>
+            </limits>
+        </item>
+    </querys>
+    <commands>
+        <item name="updategroupname">
+            <cmd args="groupname,id"><![CDATA[update {t} set groupname=? where id=?]]></cmd>
+        </item>
+        <item name="updatesort">
+            <cmd args="sort,id"><![CDATA[update {t} set sort=? where id=?]]></cmd>
+        </item>
+    </commands>
+</configuration>

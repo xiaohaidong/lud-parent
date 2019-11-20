@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <!-- 内容项 -->
+    <service name="content" theme="content/content">
+        <content theme="wrap/content" flag="i">
+            <item wat-id="mudl_user_center_classic_content_userpanel" wat-class="lud-lyps-full" wat-lud-layout="center"><![CDATA[${comp["userpanel"]}]]></item>
+        </content>
+        <comp name="userpanel" theme="mudl/user/winx/pannel">
+            <config name="logo-img"><![CDATA[/web-userfile/project/${project.company}/${project.project}/website/default/logo-classic.png]]></config>
+            <config name="logo-text"><![CDATA[
+	        	<h2>${project.config["project.copyright.cn"]}</h2>
+	            <h3>${project.name}</h3>
+	            <h4>${project.enname}</h4>
+            ]]></config>
+            <config name="toolbar"><![CDATA[
+	            <span timer="hh:mm:ss">${.now?string("HH:mm:ss")}</span>
+	            <span>修改个人信息</span>
+	            <span>修改密码</span>
+	            <span>退出登录</span>
+            ]]></config>
+        </comp>
+        <data name="project" type="redis" result="map" query="com.lud.business.project/{project}" flag="i"></data>
+    </service>
+</configuration>

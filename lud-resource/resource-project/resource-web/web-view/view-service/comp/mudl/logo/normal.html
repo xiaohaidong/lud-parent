@@ -1,0 +1,13 @@
+<#noparse><#assign</#noparse> data=${config["link-data"]}>
+<div <#include "/view-service/_include/comp/attrs/wat.html"/>>
+    <#if config["logo-text"]>
+        <div class="text" style="left:${config["text-l"]};top:${config["text-t"]};">${config["logo-text"]}</div>
+    </#if>
+    <#if config["logo-link"]=="true">
+        <div class="link" style="right:${config["link-r"]};top:${config["link-t"]};">
+            <ul <#include "/view-service/_include/comp/attrs/at.html"/>>
+                <#noparse><#list data as item></#noparse>${config["link-render"]}<#noparse></#list></#noparse>
+            </ul>
+        </div>
+    </#if>
+</div>

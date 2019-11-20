@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <item name="code"><![CDATA[100202]]></item>
+    <item name="login.theme"><![CDATA[default]]></item>
+    <item name="login.theme.color"><![CDATA[lud-cmcb-red]]></item>
+    <item name="copyright.cn"><![CDATA[西南交通大学保卫处]]></item>
+    <item name="copyright.en"><![CDATA[Southwest Jiaotong University Security Office  ]]></item>
+    <item name="copyright.address"><![CDATA[犀浦校区：四川省成都市郫县犀浦镇犀安路999号西南交通大学西一门旁保卫处办公楼<br/>九里堤校区：四川省成都市二环路北一段111号西南交通大学行政楼1楼 ]]></item>
+    <item name="copyright.contact"><![CDATA[TEL +86-028-87600110/+86-028-66366110]]></item>
+</configuration>

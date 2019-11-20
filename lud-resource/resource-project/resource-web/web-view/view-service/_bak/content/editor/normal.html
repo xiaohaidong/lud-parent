@@ -1,0 +1,5 @@
+<div <#if config.id>id="${compid}"</#if> <#list config?keys as key><#if key?starts_with("attr")> ${key?substring(5)}="${config[key]}"</#if></#list>>
+   	<div class="title">${config["title"]}</div>
+   	<div class="subtitle">${config["subtitle"]}</div>
+   	<div class="editcontent"><#list items as item>${item.text}</#list></div>
+</div>

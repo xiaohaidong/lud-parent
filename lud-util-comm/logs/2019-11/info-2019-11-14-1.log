@@ -1,0 +1,76 @@
+[12:33:04:166] [INFO] - com.lud.test.util.comm.io.FileUtilTest.test(FileUtilTest.java:41) - false
+[12:33:05:537] [INFO] - com.lud.test.util.comm.io.W3CXMLTest.test(W3CXMLTest.java:50) - false
+[12:33:05:538] [INFO] - com.lud.test.util.comm.io.W3CXMLTest.test(W3CXMLTest.java:52) - <?xml version="1.0" encoding="utf-8" standalone="no"?>
+<xml>
+<xx>2</xx>
+<dx>3</dx>
+<cx>4</cx>
+<ax>1</ax>
+<sign>&lt;?xml version="1.0" encoding="utf-8" standalone="no"?&gt;&#13;
+&lt;xml&gt;&#13;
+&lt;xx&gt;2&lt;/xx&gt;&#13;
+&lt;dx&gt;3&lt;/dx&gt;&#13;
+&lt;cx&gt;4&lt;/cx&gt;&#13;
+&lt;ax&gt;1&lt;/ax&gt;&#13;
+&lt;sign&gt;B49E16C86279507429F12B439D5B4772&lt;/sign&gt;&#13;
+&lt;/xml&gt;</sign>
+</xml>
+
+[12:33:05:587] [INFO] - com.lud.test.util.comm.io.W3CXMLTest.test(W3CXMLTest.java:53) - {"xx":"2","dx":"3","cx":"4","ax":"1","sign":"<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?>\r\n<xml>\r\n<xx>2</xx>\r\n<dx>3</dx>\r\n<cx>4</cx>\r\n<ax>1</ax>\r\n<sign>B49E16C86279507429F12B439D5B4772</sign>\r\n</xml>"}
+[12:35:38:682] [INFO] - com.lud.test.util.comm.io.FileUtilTest.test(FileUtilTest.java:41) - false
+[12:35:39:931] [INFO] - com.lud.test.util.comm.io.W3CXMLTest.test(W3CXMLTest.java:50) - false
+[12:35:39:934] [INFO] - com.lud.test.util.comm.io.W3CXMLTest.test(W3CXMLTest.java:52) - <?xml version="1.0" encoding="utf-8" standalone="no"?>
+<xml>
+<xx>2</xx>
+<dx>3</dx>
+<cx>4</cx>
+<ax>1</ax>
+<sign>&lt;?xml version="1.0" encoding="utf-8" standalone="no"?&gt;&#13;
+&lt;xml&gt;&#13;
+&lt;xx&gt;2&lt;/xx&gt;&#13;
+&lt;dx&gt;3&lt;/dx&gt;&#13;
+&lt;cx&gt;4&lt;/cx&gt;&#13;
+&lt;ax&gt;1&lt;/ax&gt;&#13;
+&lt;sign&gt;B49E16C86279507429F12B439D5B4772&lt;/sign&gt;&#13;
+&lt;/xml&gt;</sign>
+</xml>
+
+[12:35:39:983] [INFO] - com.lud.test.util.comm.io.W3CXMLTest.test(W3CXMLTest.java:53) - {"xx":"2","dx":"3","cx":"4","ax":"1","sign":"<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?>\r\n<xml>\r\n<xx>2</xx>\r\n<dx>3</dx>\r\n<cx>4</cx>\r\n<ax>1</ax>\r\n<sign>B49E16C86279507429F12B439D5B4772</sign>\r\n</xml>"}
+[12:46:49:799] [INFO] - com.lud.test.util.comm.io.FileUtilTest.test(FileUtilTest.java:41) - false
+[12:46:50:887] [INFO] - com.lud.test.util.comm.io.W3CXMLTest.test(W3CXMLTest.java:50) - false
+[12:46:50:889] [INFO] - com.lud.test.util.comm.io.W3CXMLTest.test(W3CXMLTest.java:52) - <?xml version="1.0" encoding="utf-8" standalone="no"?>
+<xml>
+<xx>2</xx>
+<dx>3</dx>
+<cx>4</cx>
+<ax>1</ax>
+<sign>&lt;?xml version="1.0" encoding="utf-8" standalone="no"?&gt;&#13;
+&lt;xml&gt;&#13;
+&lt;xx&gt;2&lt;/xx&gt;&#13;
+&lt;dx&gt;3&lt;/dx&gt;&#13;
+&lt;cx&gt;4&lt;/cx&gt;&#13;
+&lt;ax&gt;1&lt;/ax&gt;&#13;
+&lt;sign&gt;B49E16C86279507429F12B439D5B4772&lt;/sign&gt;&#13;
+&lt;/xml&gt;</sign>
+</xml>
+
+[12:46:50:940] [INFO] - com.lud.test.util.comm.io.W3CXMLTest.test(W3CXMLTest.java:53) - {"xx":"2","dx":"3","cx":"4","ax":"1","sign":"<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?>\r\n<xml>\r\n<xx>2</xx>\r\n<dx>3</dx>\r\n<cx>4</cx>\r\n<ax>1</ax>\r\n<sign>B49E16C86279507429F12B439D5B4772</sign>\r\n</xml>"}
+[12:47:27:947] [INFO] - com.lud.test.util.comm.io.FileUtilTest.test(FileUtilTest.java:41) - false
+[12:47:28:919] [INFO] - com.lud.test.util.comm.io.W3CXMLTest.test(W3CXMLTest.java:50) - false
+[12:47:28:921] [INFO] - com.lud.test.util.comm.io.W3CXMLTest.test(W3CXMLTest.java:52) - <?xml version="1.0" encoding="utf-8" standalone="no"?>
+<xml>
+<xx>2</xx>
+<dx>3</dx>
+<cx>4</cx>
+<ax>1</ax>
+<sign>&lt;?xml version="1.0" encoding="utf-8" standalone="no"?&gt;&#13;
+&lt;xml&gt;&#13;
+&lt;xx&gt;2&lt;/xx&gt;&#13;
+&lt;dx&gt;3&lt;/dx&gt;&#13;
+&lt;cx&gt;4&lt;/cx&gt;&#13;
+&lt;ax&gt;1&lt;/ax&gt;&#13;
+&lt;sign&gt;B49E16C86279507429F12B439D5B4772&lt;/sign&gt;&#13;
+&lt;/xml&gt;</sign>
+</xml>
+
+[12:47:28:983] [INFO] - com.lud.test.util.comm.io.W3CXMLTest.test(W3CXMLTest.java:53) - {"xx":"2","dx":"3","cx":"4","ax":"1","sign":"<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?>\r\n<xml>\r\n<xx>2</xx>\r\n<dx>3</dx>\r\n<cx>4</cx>\r\n<ax>1</ax>\r\n<sign>B49E16C86279507429F12B439D5B4772</sign>\r\n</xml>"}

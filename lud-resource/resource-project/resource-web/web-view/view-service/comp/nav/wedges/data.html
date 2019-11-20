@@ -1,0 +1,12 @@
+<#noparse><#assign</#noparse> data=${config["data"]}>
+<ul <#include "/view-service/_include/comp/attrs/wat.html"/>>
+<#noparse><#list data as item></#noparse>
+<li <#include "/view-service/_include/comp/attrs/at-n.html"/>>
+    <div class="icon"><i class="${config["icon"]}"></i></div>
+    <div class="des">
+	    <div class="text"><h5>${config["text"]}</h5></div>
+	    <div class="data"><h6>${config["datalist"]}</h6></div>
+    </div>
+</li>
+<#noparse></#list></#noparse>
+</ul>

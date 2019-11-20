@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <service name="index" theme="content/content" cache="true">
+        <content theme="wrap/content" flag="i">
+            <item wat-class="color-pur" wat-lud-render="/user/service/service/mudl-user-center-public-comp-nav/i"></item>
+            <item wat-class="lud-cmbx-p3x lud-cmcb-whitel"><![CDATA[${comp["navs"]}]]></item>
+        </content>
+        <comp name="navs" theme="nav/tab/data" flag="i">
+            <config name="at-lud-oclick"><![CDATA[li:first]]></config>
+            <config name="at-lud-tab"><![CDATA[c]]></config>
+            <config name="at-class"><![CDATA[lud-comp-nav-tab-nor]]></config>
+            <config name="cat-class"><![CDATA[lud-cmbx-pt1x]]></config>
+            <detail data="data" title="${iitem.name}" icon="${iitem.icon}"><![CDATA[/user/service/service/lud-smartcampus-traffic-park-main-main/i?code=${iitem.code}]]></detail>
+            <detail title="设备监测" icon="fab fa-creative-commons-sa"><![CDATA[/user/service/service/lud-core-system-system-deploy-index/s]]></detail>
+         </comp>
+         <data name="data" type="jdbc" query="lud-smartcampus.lud_traffic_park_query" result="list" fields="def" limits="project" flag="i"></data>
+    </service>
+    <!-- 各个园区 -->
+    <service name="main" theme="spliter/left-right" cache="true">
+        <config name="lat-class"><![CDATA[clearfix lud-cmbx-pt1x]]></config>
+        <config name="llat-class"><![CDATA[1eft]]></config>
+        <config name="llat-style"><![CDATA[float:left;width:52rem]]></config>
+        <config name="lrat-class"><![CDATA[right]]></config>
+        <config name="lrat-style"><![CDATA[margin-left:54rem]]></config>
+        <!-- 左侧区 -->
+        <content theme="wrap/content" for="left" flag="i">
+            
+        </content>
+        <!-- 右侧地图 -->
+        <content theme="wrap/content" for="right" flag="i">
+            <item wat-class="lud-comp-map-wrap" wat-style="height:70rem">${comp["map"]}</item>
+        </content>
+        <comp name="map" theme="view/map/simple" flag="i">
+            <config name="at-class"><![CDATA[lud-comp-map]]></config>
+            <config name="at-data-lng"><![CDATA[${data.lng}]]></config>
+            <config name="at-data-lat"><![CDATA[${data.lat}]]></config>
+            <config name="at-data-zoom"><![CDATA[${data.zoom}]]></config>
+        </comp>
+        <data name="data" type="jdbc" query="lud-smartcampus.lud_traffic_park_query" result="map" fields="def" limits="project,code"  args="code" flag="i"></data>
+    </service>
+</configuration>

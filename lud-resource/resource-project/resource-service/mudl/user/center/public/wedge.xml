@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <service name="index" theme="content/content" acl="user" cache="true">
+        <content theme="wrap/content" flag="i">
+            <item wat-class="color-pur" wat-lud-render="/user/service/service/mudl-user-center-public-comp-nav/i"></item>
+        </content>
+        <content theme="wrap/wrap-list" flag="i">
+            <item at-class="lud-comp-nav-wedges" wat-class="lud-cmbx-ptb1x"><![CDATA[${comp["wedges"]}]]></item>
+            <item at-id="mudl_user_user_wedge_index_wedges_content" wat-class="lud-cmcb-whitel lud-cmbx-p3x"><![CDATA[]]></item>
+        </content>
+        <comp name="wedges" theme="nav/wedges/data">
+            <config name="wat-lud-tab"><![CDATA[c]]></config>
+            <config name="wat-lud-oclick"><![CDATA[li:first]]></config>
+            <config name="wat-lud-render-target"><![CDATA[#mudl_user_user_wedge_index_wedges_content]]></config>
+            <config name="at-lud-render-click"><![CDATA[${item.url}]]></config>
+            <config name="role"><![CDATA[${item.app}:${item.menu}]]></config>
+            <config name="at-class"><![CDATA[item]]></config>
+            <config name="data"><![CDATA[wedges.wedges]]></config>
+            <config name="text"><![CDATA[${item.name}]]></config>
+            <config name="icon"><![CDATA[${item.icon}]]></config>
+            <config name="paras"><![CDATA[
+            <#if item["app_application"]>lud-app="${item["app_application"]}"</#if>
+            <#if item["app_script"]>lud-app-script="${item["app_script"]}"</#if>
+            <#if item["app_css"]>lud-app-css="${item["app_css"]}"</#if>
+            ]]></config>
+            <config name="datalist"><![CDATA[<#list item.dataconfig as d><#if d_index gt 0>,</#if>${d.text}:${d.value}</#list>]]></config>
+        </comp>
+        <data name="wedges" type="null" result="map" invoke="com.lud.web.business.core.render.user.center.main.getWedge" flag="i"></data>
+    </service>
+</configuration>

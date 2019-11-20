@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <!-- -->
+    <service name="index" theme="content/content" cache="true">
+        <content theme="wrap/list" flag="i">
+            <item at-class="color-pur lud-cmbx-zipper-btn" at-lud-render="/user/service/service/mudl-user-center-public-comp-nav/i"></item>
+        </content>
+        <content name="content" theme="wrap/wrap-list" flag="iw">
+            <config name="wap-attr-class"><![CDATA[lud-cmbx-p3x lud-cmcb-whitel ]]></config>
+            <config name="attr-class"><![CDATA[lud-comp-des-itc clearfix]]></config>
+            <config name="icon"><![CDATA[fab fa-codiepie]]></config>
+            <config name="title"><![CDATA[个人信息管理]]></config>
+            <config name="subtitle"><![CDATA[Short Message Box]]></config>
+            <config name="content"><![CDATA[个人信息信息包括个人基础信息和所属用户组的信息，请尽量完善个人基础信息。]]></config>
+            <item><![CDATA[${comp["content.navs"]}]]></item>
+        </content>
+        <comp name="content.navs" theme="navigation/tab/static" flag="iw">
+            <config name="ul-attr-class"><![CDATA[lud-comp-nav-tab-nor b]]></config>
+            <config name="ul-attr-lud-tab"><![CDATA[cfr]]></config>
+            <detail title="基础信息" icon="fad fa-books"><![CDATA[/user/service/service/service-lud-user-info-info/v]]></detail>
+        </comp>
+    </service>
+
+    <!-- -->
+    <service name="info" layout="workspace/classic" cache="true">
+        <content theme="editor/normal" flag="aevp">
+            <config name="attr-class"><![CDATA[lud-edt-pannel]]></config>
+            <config name="title"><![CDATA[用户基本信息登记表]]></config>
+            <config name="subtitle"><![CDATA[User Basic Information Registration Form]]></config>
+            <item><![CDATA[${comp["user"]}]]></item>
+        </content>
+        <comp name="user" theme="editor/form-table-7" render="edit" flag="aevp">
+            <detail title="基础信息" tdclass="h" th-rowspan="8"><![CDATA[]]>
+            </detail>
+            <detail title="账号" filed="userid"><![CDATA[]]>
+            </detail>
+            <detail title="姓名" filed="name"><![CDATA[]]>
+            </detail>
+            <detail title="姓名[E]" filed="enname" break="avep"><![CDATA[]]>
+            </detail>
+            <detail title="拼音" filed="pinyin"><![CDATA[]]>
+            </detail>
+            <detail title="曾用名" filed="usedname"><![CDATA[]]>
+            </detail>
+            <detail title="性别" filed="sex" data="sex" break="avep"><![CDATA[{0}]]></detail>
+            <detail title="出生日期" filed="birthday"><![CDATA[]]>
+            </detail>
+            <detail title="民族" filed="nation" data="nation"><![CDATA[]]>
+            </detail>
+            <detail title="宗教" filed="religion" break="avep"><![CDATA[]]>
+            </detail>
+            <detail title="婚姻状况" filed="marriage" data="marriage"><![CDATA[]]>
+            </detail>
+            <detail title="政治面貌" filed="political" data="political" td-colspan="3" break="avep"><![CDATA[]]>
+            </detail>
+            <detail title="国家" filed="country" data="country" td-colspan="2"><![CDATA[]]>
+            </detail>
+            <detail title="籍贯" control="special.code62" data="nativeplace" filed="nativeplace" td-colspan="2" break="avep"><![CDATA[]]>
+            </detail>
+            <detail title="证件类型" filed="cardtype" data="cardtype"><![CDATA[]]>
+            </detail>
+            <detail title="证件号码" filed="cardid" td-colspan="3" break="avep"><![CDATA[]]>
+            </detail>
+            <detail title="用户组别" filed="usergroup" data="usergroup"><![CDATA[]]>
+            </detail>
+            <detail title="所属部门" filed="userdepartment" data="department" td-colspan="3" break="avep"><![CDATA[]]>
+            </detail>
+            <detail title="权限组别" filed="userrole" control="check.box" data="role" td-colspan="5" break="avep"><![CDATA[]]>
+            </detail>
+
+            <detail title="联系方式" tdclass="h" th-rowspan="3"><![CDATA[]]>
+            </detail>
+            <detail title="联络地址" control="special.code62" data="nativeplace" filed="contactcity" td-colspan="2"><![CDATA[]]>
+            </detail>
+            <detail title="具体地址" filed="contactaddress" break="avep" td-colspan="2"><![CDATA[]]>
+            </detail>
+            <detail title="邮政编码" filed="contactpostcode"><![CDATA[]]>
+            </detail>
+            <detail title="移动电话" filed="contactmobile"><![CDATA[]]>
+            </detail>
+            <detail title="座机" filed="contacttelephone" break="avep"><![CDATA[]]>
+            </detail>
+            <detail title="电子信箱" filed="contactemail" td-colspan="2"><![CDATA[]]>
+            </detail>
+            <detail title="微信号码" filed="contactweixin" td-colspan="2" break="avep"><![CDATA[]]>
+            </detail>
+            <detail title="办公地址" tdclass="h" th-rowspan="2"><![CDATA[]]>
+            </detail>
+            <detail title="办公地址" control="special.code62" data="nativeplace" filed="officecity" td-colspan="2"><![CDATA[]]>
+            </detail>
+            <detail title="具体地址" filed="officeaddress" break="avep" td-colspan="2"><![CDATA[]]>
+            </detail>
+            <detail title="邮政编码" filed="officepostcode"><![CDATA[]]>
+            </detail>
+            <detail title="办公电话" filed="officetelephone" td-colspan="3"><![CDATA[]]>
+            </detail>
+        </comp>
+        <data name="user" type="jdbc" query="lud-core.lud_user_info_query" result="map" fields="def" limits="info" flag="vep"></data>
+        <data name="department" type="jdbc" query="lud-core.lud_department_info_query" result="list" fields="codec" limits="def" flag="avep"></data>
+        <data name="role" type="jdbc" query="lud-core.lud_user_role_query" result="list" fields="codec" limits="user" flag="avep"></data>
+        <data name="usergroup" type="jdbc" query="lud-core.lud_runtime_project_usergroup_query" result="list" fields="codec" limits="project" flag="avep"></data>
+        <data name="sex" type="code" query="nes.person.sex" flag="avep"></data>
+        <data name="marriage" type="code" query="nes.person.marriage" flag="avep"></data>
+        <data name="political" type="code" query="nes.person.political" flag="avep"></data>
+        <data name="cardtype" type="code" query="nes.person.cardtype" flag="avep"></data>
+        <data name="country" type="code" query="nes.region.country" flag="avep"></data>
+        <data name="nation" type="code" query="nes.person.nation" flag="avep"></data>
+        <data name="nativeplace" type="code" query="nes.region.china" flag="avep"></data>
+    </service>
+</configuration>

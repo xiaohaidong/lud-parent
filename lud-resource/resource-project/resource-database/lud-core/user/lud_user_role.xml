@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <querys>
+        <item order="project,code">
+            <fileds>
+                <filed name="def"><![CDATA[project,code,name,usergroup]]></filed>
+                <filed name="codec"><![CDATA[code,name as content]]></filed>
+            </fileds>
+            <limits>
+                <limit name="def"><![CDATA[ 1=1 ]]></limit>
+                <limit name="user" args="project,usr.group"><![CDATA[ project=? and usergroup=? ]]></limit>
+                <limit name="groups" args="project,usergroup"><![CDATA[ project=? and usergroup=? ]]></limit>
+            </limits>
+        </item>
+    </querys>
+</configuration>

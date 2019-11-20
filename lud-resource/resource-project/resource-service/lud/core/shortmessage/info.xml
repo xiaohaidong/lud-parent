@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <service name="index" layout="workspace/classic" cache="true">
+        <content theme="normal/empty" flag="i">
+            <item><![CDATA[${comp["navs"]}]]></item>
+        </content>
+        <comp name="navs" theme="content/pannel/pannel">
+            <config name="attr-class"><![CDATA[color-pur lud-cmbx-zipper-btn]]></config>
+            <config name="attr-lud-render"><![CDATA[/user/service/service/mudl-user-workspace-content-classic/i]]></config>
+        </comp>
+        <content name="content" theme="normal/desc" flag="iw">
+            <config name="wap-attr-class"><![CDATA[lud-cmbx-p3x lud-cmcb-whitel ]]></config>
+            <config name="attr-class"><![CDATA[lud-comp-des-itc clearfix]]></config>
+            <config name="icon"><![CDATA[fal fa-comments-alt]]></config>
+            <config name="title"><![CDATA[短信管理]]></config>
+            <config name="subtitle"><![CDATA[Short Message Box]]></config>
+            <config name="content"><![CDATA[通过手机获取到的信息，由于网络原因可能部分消息无法获取，请根据需要在此处检查相关的消息。]]></config>
+            <item><![CDATA[${comp["content.navs"]}]]></item>
+            <item><![CDATA[${comp["content.form"]}]]></item>
+        </content>
+        <comp name="content.navs" theme="navigation/tab/static-for-form" flag="iw">
+            <config name="attr-data-forform"><![CDATA[#lud_service_lud_shortmessage_info_index_content_form_form]]></config>
+            <config name="ul-attr-class"><![CDATA[lud-comp-nav-tab-nor b]]></config>
+            <config name="ul-attr-lud-tab"><![CDATA[cfr]]></config>
+            <config name="con-attr-class"><![CDATA[lud-cmbx-ptb1x]]></config>
+            <detail title="已发送短信" icon="fad fa-layer-group"><![CDATA[]]>
+            </detail>
+            <detail title="未发送短信" icon="fab fa-artstation"><![CDATA[]]>
+            </detail>
+        </comp>
+        <comp name="content.form" render="search" theme="form/search/item-page" flag="iw">
+            <config name="form-attr-data-action"><![CDATA[/user/service/service/service-lud-shortmessage-info-detail/i]]></config>
+            <config name="form-attr-class"><![CDATA[lud-cmbx-ptb1x lud-ele-form-search]]></config>
+            <config name="cont-attr-class"><![CDATA[lud-cmbx-ptb1x]]></config>
+            <config name="filed-layout"><![CDATA[]]>
+            </config>
+            <config name="ation-submit"><![CDATA[检索]]></config>
+            <detail name="w_d_" title="发送日期" type="control" control="date.normal" icon="fal fa-calendar-alt"><![CDATA[]]>
+            </detail>
+        </comp>
+    </service>
+
+    <service name="detail" layout="content/empty" cache="true">
+        <content name="content" theme="normal/empty" flag="i">
+            <item><![CDATA[${comp["content.list"]}]]></item>
+            <item><![CDATA[${comp["content.page"]}]]></item>
+        </content>
+        <comp name="content.list" theme="list/ptc/ptc-n" flag="i">
+            <config name="data"><![CDATA[datas_list]]></config>
+            <config name="wap-attr-class"><![CDATA[lud-lst-ptc clearfix]]></config>
+            <config name="item-icon"><![CDATA[fal fa-cubes]]></config>
+            <config name="item-title"><![CDATA[
+            <i class="fal fa-calendar-edit"></i>${item.sendtime?string("yyyy-MM-dd HH:mm:ss")}
+             <i class="fal fa-comments"></i>${item.mobitel}
+            ]]></config>
+            <config name="item-content"><![CDATA[${item.content}]]></config>
+        </comp>
+        <comp name="content.page" theme="content/pager/normal" flag="i">
+            <config name="data"><![CDATA[datas]]></config>
+            <config name="class"><![CDATA[g]]></config>
+        </comp>
+        <data name="datas" type="jdbc" query="lud-core.lud_shortmessage_info_query" result="page" fields="def" limits="project" args="" flag="i"></data>
+    </service>
+</configuration>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <!-- 资源文件 -->
+    <service name="index" theme="content/content" cache="true">
+        <content theme="wrap/content" flag="i">
+            <item wat-class="color-pur" wat-lud-render="/user/service/service/mudl-user-center-public-comp-nav/i"></item>
+            <item wat-class="lud-cmbx-p3x lud-cmcb-whitel"><![CDATA[${comp["navs"]}]]></item>
+        </content>
+        <comp name="navs" theme="nav/tab/static" flag="iw">
+            <config name="at-lud-oclick"><![CDATA[li:first]]></config>
+            <config name="at-lud-tab"><![CDATA[c]]></config>
+            <config name="at-class"><![CDATA[lud-comp-nav-tab-nor b]]></config>
+            <config name="cat-class"><![CDATA[lud-cmbx-ptb2x]]></config>
+            <detail title="Brands" icon="fab fa-battle-net"><![CDATA[/user/service/service/lud-core-system-resource-icon-icons/b]]></detail>
+            <detail title="Solid" icon="fas fa-user-headset"><![CDATA[/user/service/service/lud-core-system-resource-icon-icons/s]]></detail>
+            <detail title="Regular" icon="far fa-temperature-hot"><![CDATA[/user/service/service/lud-core-system-resource-icon-icons/r]]></detail>
+            <detail title="Light" icon="fal fa-analytics"><![CDATA[/user/service/service/lud-core-system-resource-icon-icons/l]]></detail>
+            <detail title="Duotone" icon="fad fa-atom"><![CDATA[/user/service/service/lud-core-system-resource-icon-icons/d]]></detail>
+        </comp>
+    </service>
+    <!-- 显示资源 -->
+    <service name="icons" theme="content/content" acl="public" cache="true">
+        <content name="content" theme="wrap/content" flag="srldb">
+            <item wat-class="luda-iconlist"><![CDATA[${comp["icons"]}${comp["iconr"]}${comp["iconb"]}${comp["icond"]}${comp["iconl"]}]]></item>
+        </content>
+        <comp name="icons" theme="_data/icons/fas" flag="s"></comp>
+        <comp name="iconr" theme="_data/icons/far" flag="r"></comp>
+        <comp name="iconb" theme="_data/icons/fab" flag="b"></comp>
+        <comp name="icond" theme="_data/icons/fad" flag="d"></comp>
+        <comp name="iconl" theme="_data/icons/fal" flag="l"></comp>
+    </service>
+</configuration>

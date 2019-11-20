@@ -1,0 +1,77 @@
+﻿.lud-comp-title-n {
+	position: relative;
+}
+
+.lud-comp-title-n .main a {
+	position: absolute;
+	bottom: 1.5rem;
+	right: 0.5rem;
+	font-size: 1.4rem;
+	color: #AAA;
+}
+
+.lud-comp-title-n .main span {
+	font-size: 1.4rem;
+	padding-left: 1rem;
+	color: #AAA;
+}
+
+.lud-comp-title-n.lftb .main {
+	border-left: 0.5rem solid #ff6a00;
+	padding-left: 1.5rem;
+}
+
+.lud-comp-title-n.bb {
+	padding-bottom: 1.4rem;
+	border-bottom: 1px solid #bbb;
+	margin-bottom: 1rem;
+}
+
+.lud-comp-title-picture {
+	margin-bottom: -4rem;
+}
+
+.lud-comp-title-n-p {
+	background-color: #fff;
+	opacity: 0.9;
+	height: 4rem;
+	padding: 0.5rem 0;
+}
+
+.lud-comp-title-s {
+    height: 3rem;
+    position: relative;
+    color: #262c37;
+    font-size:1.5rem;
+}
+
+.lud-comp-title-s i {
+    font-size: 1.5rem;
+    padding-right: 0.8rem;
+}
+
+.lud-comp-title-s label {
+	font-weight: bold;
+	padding-right: 0.8rem;
+}
+
+.lud-comp-title-s span.sub {
+	font-size: 1.2rem;
+	color: #bbb;
+}
+
+.lud-comp-title-s span.more {
+	font-size: 1.2rem;
+	color: #DDD;
+	padding: 0 0.5rem;
+	position: absolute;
+	right: 0;
+	bottom: 0.5rem;
+	cursor: pointer;
+	border-radius: 3rem;
+}
+
+.lud-comp-title-s span.more:hover {
+	background-color: #bbb;
+	color: #fff;
+}

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <!-- "toplist"：读取前几条数据 -->
+    <service name="list" theme="content/content" acl="public" cache="true">
+        <content name="content" theme="wrap/list" flag="tp">
+            <item at-class="lud-comp-pictext lud-cmbx-ptb1x"><![CDATA[${comp["list"]}]]></item>
+            <item><![CDATA[${comp["page"]}]]></item>
+        </content>
+        <comp name="list" theme="text/article/vertical-list" flag="tp">
+            <config name="iat-class"><![CDATA[item]]></config>
+            <config name="iat-style"><![CDATA[height:11.5rem]]></config>
+            <config name="data"><![CDATA[notes_list]]></config>
+            <config name="picture"><![CDATA[${item.picture}]]></config>
+            <config name="picture-width"><![CDATA[16rem]]></config>
+            <config name="h3"><![CDATA[<a href="/?bin=/web/service/service/mudl-website-login-default-newsread/i?id=${item.id}" target="_blank">${item.title}</a>]]></config>
+            <config name="h3-attr-class"><![CDATA[lud-cmcc-red]]></config>
+            <config name="h3-attr-style"><![CDATA[height:2.8rem;margin-top:-0.2rem]]></config>
+            <config name="h6"><![CDATA[${item.abstract}]]></config>
+            <config name="h6-attr-class"><![CDATA[fs fs1x]]></config>
+            <config name="h6-attr-style"><![CDATA[max-height:6rem;line-height:2rem;]]></config>
+            <config name="h5"><![CDATA[<label>日期:</label><span>${item.adddate?string("yyyy-MM-dd")}</span><label>部门:</label><span>${item.department}</span><label>发布:</label><span>${item.author}</span>]]></config>
+            <config name="h5-attr-class"><![CDATA[fs fs1x lud-ele-keyvalue lud-cmcc-redd]]></config>
+            <config name="h5-attr-style"><![CDATA[height:2rem;line-height:2rem;]]></config>
+        </comp>
+        <comp name="page" theme="content/pager/normal" flag="p">
+            <config name="data"><![CDATA[notes]]></config>
+        </comp>
+        <data name="notes_list" type="jdbc" query="lud-core.lud_project_note_query" result="list" fields="list" limits="project,groups,public" args="groups:code" flag="t" top="4"></data>
+        <data name="notes" type="jdbc" query="lud-core.lud_project_note_query" result="page" fields="list" limits="project,groups,public" args="groups:code" flag="p"></data>
+    </service>
+    
+    <service name="channel" theme="spliter/right-left" acl="public" cache="true" lat-class="lud-lysp-lr clearfix lud-lyps-md lud-cmbx-ptb2x" llat-class="left" llat-style="width:86.5rem" lrat-class="right" lrat-style="width:32rem">
+        <content theme="public/content-wrap" for="left" flag="i">
+            <item wat-class="lud-cmcb-whitel lud-cmbx-p3x lud-ele-img-wap"><![CDATA[${comp["banner"]}]]></item>
+            <item wat-class="lud-cmcb-whitel lud-cmbx-p3x lud-cmbx-pt1x"><![CDATA[${comp["title"]}]]></item>
+            <item><![CDATA[${comp["form"]}]]></item>
+        </content>
+        <comp name="banner" theme="element/images/normal">
+            <config name="at-src"><![CDATA[/web-userfile/project/${project.company}/${project.project}/website/default/${channel.code}.jpg]]></config>
+        </comp>
+        <comp name="title" theme="title/binder/title-bind-form">
+             <config name="wat-class"><![CDATA[clearfix]]></config>
+            <config name="tat-class"><![CDATA[lud-comp-title-n lftb bb]]></config>
+            <config name="at-class"><![CDATA[lud-comp-nav lud-comp-nav-x lud-comp-nav-subt]]></config>
+            <config name="at-lud-tab"><![CDATA[cfr]]></config>
+            <config name="at-lud-oclick"><![CDATA[li:first]]></config>
+            <config name="title"><![CDATA[<h2 class="main">${channel.name}<span>News && Notes</span></h2>]]></config>
+            <config name="subtitle-attr-class"><![CDATA[lud-comp-nav lud-comp-nav-x lud-comp-nav-subt]]></config>
+            <config name="subtitle-attr-data-forform"><![CDATA[#lud_mudl_website_login_default_news_news_form_form]]></config>
+            <config name="subtitle-attr-data-forinput"><![CDATA[code]]></config>
+            <config name="data"><![CDATA[notelinks]]></config>
+            <config name="text"><![CDATA[${item.name}]]></config>
+            <config name="value"><![CDATA[${item.code}]]></config>
+        </comp>
+        <comp name="form" theme="form/search/filed">
+            <config name="cont-attr-class"><![CDATA[lud-cmcb-whitel lud-cmbx-p3x lud-cmbx-ptn]]></config>
+            <config name="form-attr-data-action"><![CDATA[/web/service/service/service-lud-project-note-list/p]]></config>
+            <config name="page-size"><![CDATA[10]]></config>
+            <detail name="code"></detail>
+        </comp>
+        <content theme="public/content-wrap" for="right" flag="i">
+            <item><![CDATA[${comp["news.datetitle"]}]]></item>
+            <item><![CDATA[${comp["news.date"]}]]></item>
+        </content>
+        <comp name="news.datetitle" theme="title/picture/normal">
+            <config name="wap-attr-class"><![CDATA[lud-cmcb-whitel lud-cmbx-p3x lud-cmbx-pbn]]></config>
+            <config name="title-attr-class"><![CDATA[lud-comp-title-n lud-comp-title-n-p lftb ]]></config>
+            <config name="title-main"><![CDATA[<h2 class="main">最新资讯<span>News Timeline</span></h2>]]></config>
+            <config name="picture"><![CDATA[/web-userfile/project/${project.company}/${project.code}/website/default/picture/1.jpg]]></config>
+        </comp>
+        <comp name="news.date" theme="content/timeline/date">
+            <config name="wap-attr-class"><![CDATA[lud-cmcb-whitel lud-cmbx-p3x  lud-comp-timeline-note]]></config>
+            <config name="data"><![CDATA[notes]]></config>
+            <config name="date"><![CDATA[item.adddate?string("yyyy-MM-dd")]]></config>
+            <config name="title"><![CDATA[<a href="/?bin=/web/service/service/mudl-website-login-default-newsread/i?id=${item.id}">${item.title}</a>]]></config>
+        </comp>        
+        <data name="channel" type="jdbc" query="lud-core.lud_project_note_channel_query" result="map" fields="def" limits="project,code" args="code:groups" flag="i"></data>
+        <data name="notelinks" type="jdbc" query="lud-core.lud_project_note_group_query" result="list" fields="def" limits="project,groups" args="groups" flag="i"></data>
+        <data name="notes" type="jdbc" query="lud-core.lud_project_note_query" top="8" result="list" fields="list" limits="project,public" flag="i" order="adddate"></data>
+        <data name="project" type="redis" result="map" query="com.lud.business.project/{project}" flag="i"></data>
+    </service>
+</configuration>

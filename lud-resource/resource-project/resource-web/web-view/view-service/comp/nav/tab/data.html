@@ -1,0 +1,14 @@
+<div id="${compid}_tab_nav" lud-render-target="#${compid}_tab_content" <#include "/view-service/_include/comp/attrs/wat.html"/>>
+    <ul <#include "/view-service/_include/comp/attrs/at.html"/>><#list detail as item>
+    	<#if item["data"]>
+    		<#noparse><#assign</#noparse> data=${item.data}>
+    		<#noparse><#list data as iitem></#noparse> 
+    			<li lud-render-click="${item["text"]}"><i class="${item["icon"]}"></i> ${item["title"]}</li>
+    		<#noparse></#list></#noparse>
+    	<#else>
+    		<li lud-render-click="${item["text"]}"><i class="${item["icon"]}"></i> ${item["title"]}</li>
+    	</#if>
+    	</#list>
+    </ul>
+</div>
+<div id="${compid}_tab_content" <#include "/view-service/_include/comp/attrs/cat.html"/>></div>

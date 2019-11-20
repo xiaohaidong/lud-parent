@@ -1,0 +1,21 @@
+<#noparse><#assign</#noparse> list=${config["data"]}>
+<div <#if config.id>id="${compid}"</#if> <#list config?keys as key><#if key?starts_with("wap-attr")> ${key?substring(9)}="${config[key]}"</#if></#list>>
+    <table>
+    <thead>
+    	<tr>
+		    <#list detail as th>
+		    	<th <#if th.width>style="width:${th.width}rem"</#if> <#list th?keys as key><#if key?starts_with("th-")> ${key?substring(3)}="${th[key]}"</#if></#list>>${th.title}</th>
+		    	<#if item["td-break"]></tr><tr></#if>
+		    </#list>
+	    <tr>
+    </thead>
+    <tbody>
+	    <#noparse><#list list as item></#noparse><tr>
+	    <#list detail as td>
+	    	<td <#list td?keys as key><#if key?starts_with("td-")> ${key?substring(3)}="${td[key]}"</#if></#list>>${td.text}</td>
+	    	<#if item["td-break"]></tr><tr></#if>
+	    </#list></tr>
+	    <#noparse></#list></#noparse>
+    </tbody>
+    </table>
+</div>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <querys>
+        <item order="sort">
+            <fileds>
+                <filed name="def"></filed>
+            </fileds>
+            <limits>
+                <limit name="def"><![CDATA[ 1=1 ]]></limit>
+            </limits>
+        </item>
+    </querys>
+</configuration>

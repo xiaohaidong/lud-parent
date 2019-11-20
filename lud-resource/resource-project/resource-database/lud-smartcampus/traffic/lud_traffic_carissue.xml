@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <querys>
+        <item order="ownerregeid">
+            <fileds>
+                <filed name="def"></filed>
+                <filed name="count"><![CDATA[ count(*) as num ]]></filed>
+                <filed name="operatordate"><![CDATA[ operatordate ]]></filed>
+            </fileds>
+            <limits>
+                <limit name="project" args="project"><![CDATA[ project=? ]]></limit>
+                <limit name="issureid" args="issureid"><![CDATA[ issureid=? ]]></limit>
+                <limit name="ownerbyteacher" args="usr.userid"><![CDATA[ ownerid=? and ownertype='teacher' ]]></limit>
+            </limits>
+        </item>
+    </querys>
+    <commands>
+        <item name="del">
+            <cmd args="id" flag=""><![CDATA[delete from {t} where id=?]]></cmd>
+        </item>
+        <item name="insert">
+            <cmd args="project,ownerregeid,ownername,ownerdepartment,ownermobitel,cartype,carnumber,carncolor,issureid,issuretype,issurebegindate,issureenddate,issurebalance,issuredeposit,issurepostion,issurenote,operatoruser,operatordate,operatororg,carregeid" autoid="true"><![CDATA[insert into {t}(project,ownerregeid,ownername,ownerdepartment,ownermobitel,cartype,carnumber,carncolor,issureid,issuretype,issurebegindate,issureenddate,issurebalance,issuredeposit,issurepostion,issurenote,operatoruser,operatordate,operatororg,carregeid)values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)]]></cmd>
+        </item>
+        <item name="asyc">
+            <cmd args="issuretype,issurebegindate,issureenddate,issurebalance,issuredeposit,issurepostion,issurenote,operatoruser,operatordate,operatororg,carregeid,issureid"><![CDATA[update {t} set issuretype=?,issurebegindate=?,issureenddate=?,issurebalance=?,issuredeposit=?,issurepostion=?,issurenote=?,operatoruser=?,operatordate=?,operatororg=?,carregeid=? where issureid=?]]></cmd>
+        </item>
+    </commands>
+</configuration>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <!-- 资源文件 -->
+    <service name="index" layout="content/empty" acl="public" cache="true">
+        <content name="content" theme="normal/desc" flag="iw">
+            <config name="wap-attr-class"><![CDATA[lud-cmbx-p3x lud-cmcb-whitel]]></config>
+            <config name="attr-class"><![CDATA[lud-comp-des-itc clearfix]]></config>
+            <config name="title"><![CDATA[关于图标说明]]></config>
+            <config name="subtitle"><![CDATA[About Fontawesome]]></config>
+            <config name="content"><![CDATA[News and information from Font Awesome – the internet's favorite icon set – mixed with musings and nerdery from the team behind it.]]></config>
+            <item><![CDATA[${comp["icon-navs"]}]]></item>
+        </content>
+        <comp name="icon-navs" theme="navigation/tab/static" flag="iw">
+            <config name="ul-attr-class"><![CDATA[lud-comp-nav-tab-nor b]]></config>
+            <config name="con-attr-class"><![CDATA[lud-cmbx-ptb2x]]></config>
+            <detail title="Brands" icon="fab fa-battle-net"><![CDATA[/user/service/service/service-lud-resource-icon-icons/b]]></detail>
+            <detail title="Solid" icon="fas fa-user-headset"><![CDATA[/user/service/service/service-lud-resource-icon-icons/s]]></detail>
+            <detail title="Regular" icon="far fa-temperature-hot"><![CDATA[/user/service/service/service-lud-resource-icon-icons/r]]></detail>
+            <detail title="Light" icon="fal fa-analytics"><![CDATA[/user/service/service/service-lud-resource-icon-icons/l]]></detail>
+            <detail title="Duotone" icon="fad fa-atom"><![CDATA[/user/service/service/service-lud-resource-icon-icons/d]]></detail>
+        </comp>
+    </service>
+    <!-- 显示资源 -->
+    <service name="icons" layout="content/empty" acl="public" cache="true">
+        <content name="content" theme="normal/empty" flag="srldb">
+            <item><![CDATA[<div class="luda-iconlist">${comp["icons"]}${comp["iconr"]}${comp["iconb"]}${comp["icond"]}${comp["iconl"]}</div>]]></item>
+        </content>
+        <comp name="icons" theme="staticpage/icons/fas" flag="s"></comp>
+        <comp name="iconr" theme="staticpage/icons/far" flag="r"></comp>
+        <comp name="iconb" theme="staticpage/icons/fab" flag="b"></comp>
+        <comp name="icond" theme="staticpage/icons/fad" flag="d"></comp>
+        <comp name="iconl" theme="staticpage/icons/fal" flag="l"></comp>
+    </service>
+</configuration>

@@ -1,0 +1,312 @@
+﻿.lud-comp-nav li {
+    cursor: pointer;
+}
+/*横向*/
+.lud-comp-nav-x {
+    display: block;
+    height: 100%;
+}
+
+.lud-comp-nav-x li {
+    float: left;
+    margin: 1.1rem 0;
+    padding: 0 1.2rem;
+}
+
+.lud-comp-nav-x.border li {
+    border-right: 1px solid #000;
+    border-left: 1px solid #666;
+}
+
+.lud-comp-nav-x.border li:first-child {
+    border-left: none;
+    padding-left: 1rem;
+}
+
+.lud-comp-nav-x.border li:last-child {
+    border-right: none;
+    padding-right: 0;
+}
+
+.lud-comp-nav-x.back li {
+    background-color: #444;
+    padding: 0 2rem;
+    color: #fff;
+    height: 3rem;
+    line-height: 3rem;
+    margin: 0.5rem;
+    box-shadow: 0 0 4px #000;
+}
+
+.lud-comp-nav-x.back li:hover {
+    background-color: #ff6a00;
+}
+
+.lud-comp-nav-x.lstn li:last-child {
+    margin-right: 0;
+}
+
+.lud-comp-nav-subt li {
+    margin: 0;
+    padding-left: 0;
+    padding-right: 1.5rem;
+    border-right: 1px solid #bbb;
+    margin-right: 1.5rem;
+}
+
+.lud-comp-nav-subt li:last-child {
+    border-right: none;
+}
+
+.lud-comp-nav-subt li.actived {
+    color: #ff6a00;
+}
+/*图文英文两列*/
+.lud-comp-nav-pce li {
+    float: left;
+    padding: 0 2rem;
+    border-left: 1px dashed #FFF;
+}
+
+.lud-comp-nav-pce li:first-child {
+    border: none;
+}
+
+.lud-comp-nav-pce.lstn li:last-child {
+    padding-right: 0;
+}
+/*背景颜色*/
+.lud-comp-nav-bcc li {
+    background-color: #50697d;
+    color: #fff;
+    margin: 0 0.8rem 0 0;
+    padding: 0.4rem 1rem;
+}
+
+.lud-comp-nav-bcc li.actived {
+    background-color: #900;
+}
+
+.lud-comp-nav-backc.bigx2 li {
+    width: 48.5%;
+    padding: 1.5rem 1rem 1.3rem 5rem;
+    margin: 0.5rem 0;
+    margin-right: 3%;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-position: 2rem center;
+}
+
+.lud-comp-nav-backc.bigx2 li:nth-child(2n) {
+    margin-right: 0;
+}
+
+.lud-comp-pager {
+    height: 4rem;
+    padding-top: 1rem;
+}
+
+.lud-comp-pager ul li {
+    color: #666;
+    background-color: #fff;
+    border: 1px solid #AAA;
+    padding: 0.5rem 0.9rem;
+    cursor: pointer;
+    margin-right: 0.4rem;
+    display: inline-block;
+}
+
+
+.lud-comp-pager ul li:hover {
+    background-color: #b7c605;
+    border: none;
+    color: #fff;
+    box-shadow: 0.1rem 0.1rem 0.2rem #000 inset;
+    padding: 0.6rem 1rem;
+}
+.lud-comp-pager ul li.actived {
+    background-color: #ff6a00;
+    border: none;
+    color: #fff;
+    padding: 0.6rem 1rem;
+}
+/*
+KEY-VALUE
+*/
+.lud-comp-kvlist {
+    line-height: 2.5rem;
+}
+
+.lud-comp-kvlist li span {
+    font-weight: bold;
+}
+/**/
+.lud-comp-iconmenu li.item_4 {
+    width: 8.8rem;
+    border: 1px solid #50697d;
+    float: left;
+    margin-right: 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    text-align: center;
+    padding: 0.8rem 1rem;
+    margin-top: 0.5rem;
+    color: #303643;
+}
+
+.lud-comp-iconmenu li.item_4.actived {
+    color: #fff;
+    border: 1px solid #900;
+    background-color: #900
+}
+
+.lud-comp-iconmenu li.item_4 div.icon {
+    font-size: 2.5rem;
+}
+
+.lud-comp-iconmenu div.item_2 {
+    clear: both;
+    height: 4.5rem;
+    display: block;
+    font-size: 1.5rem;
+    padding-top: 2rem;
+}
+
+.lud-comp-iconmenu div.item_2 div.icon {
+    display: none;
+}
+
+.lud-comp-iconmenu div.item_2 div.text {
+    color: #303643;
+    font-weight: bold;
+}
+
+.lud-comp-iconmenu div.item_2 div.text span {
+    font-size: 1.2rem;
+    border-left: 1px solid #ddd;
+    margin-left: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+.lud-comp-iconmenu div.item_2 div {
+    display: inline-block;
+}
+
+.lud-comp-nav-workspace-classic {
+    color: #fff;
+    padding: 1.8rem 2rem;
+    height: 8rem;
+}
+
+.lud-comp-nav-workspace-classic div.icon {
+    float: left;
+    padding: 0.6rem;
+    border-radius: 0.5rem;
+    background-color: #7d0202;
+    color: #fff;
+    text-align: center;
+    font-size: 2.4rem;
+    width: 4.2rem;
+    height: 4.2rem;
+    cursor: pointer;
+}
+
+.lud-comp-nav-workspace-classic div.desciption {
+    margin-left: 5.8rem;
+}
+
+.lud-comp-nav-workspace-classic div.desciption h4 {
+    font-weight: bold;
+    padding-top: 0.2rem;
+}
+
+.lud-comp-nav-workspace-classic div.desciption h4 span {
+    font-size: 1.2rem;
+    padding-left: 0.4rem;
+}
+
+.lud-comp-nav-workspace-classic div.desciption h6 {
+    padding-top: 0.3rem;
+}
+/**/
+.lud-comp-nav-wedges {
+    overflow: hidden;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+
+.lud-comp-nav-wedges li.item {
+    float: left;
+    margin-right: 1rem;
+    color: #FFF;
+    cursor: pointer;
+    background-color: #045a85;
+    padding: 0.8rem 1.2rem;
+}
+
+.lud-comp-nav-wedges li.item.actived {
+    background-color: #ff6a00;
+}
+
+.lud-comp-nav-wedges li.item > div.icon {
+    float: left;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.lud-comp-nav-wedges li.item > div.des {
+    float: left;
+    padding-left: 0.5rem;
+}
+
+.lud-comp-nav-wedges li.item > div.des h5 {
+    font-size: 1.6rem;
+}
+/**/
+.lud-comp-nav-tab-nor {
+    height: 3.6rem;
+    border-bottom: 2px solid #303643;
+    overflow: visible;
+    color: #303643;
+}
+
+.lud-comp-nav-tab-nor li {
+    float: left;
+    height: 3.6rem;
+    cursor: pointer;
+    padding: 0.9rem 1.5rem;
+}
+
+.lud-comp-nav-tab-nor li i {
+    font-size: 1.4rem;
+    padding-right: 0.3rem;
+}
+
+.lud-comp-nav-tab-nor li.actived {
+    background-color: #303643;
+    color: #fff;
+}
+/**/
+.lud-comp-nav-tab-toolbar {
+    height: 4.6rem;
+    overflow: hidden;
+    background-color: #303643;
+    padding-top: 0.6rem;
+    padding-left: 1rem;
+}
+
+.lud-comp-nav-tab-toolbar li {
+    float: left;
+    height: 4rem;
+    line-height: 4rem;
+    padding: 0 1.5rem;
+    cursor: pointer;
+    margin-right: 0.4rem;
+    color: #FFF;
+}
+
+.lud-comp-nav-tab-toolbar li.actived {
+    background-color: #fff;
+    color: #ff6a00;
+    font-weight: bold;
+}

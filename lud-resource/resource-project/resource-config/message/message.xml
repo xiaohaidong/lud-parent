@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <group name="1000" root="System LauncherLoader:">
+        <item name="0001"><![CDATA[data.LauncherLoader is error]]></item>
+    </group>
+    <group name="2000" root="用户登录:">
+        <item name="0001"><![CDATA[不存在该账号！]]></item>
+        <item name="0002"><![CDATA[密码错误！]]></item>
+        <item name="0003"><![CDATA[登录成功！]]></item>
+    </group>
+    <group name="sm.car.issues">
+        <item name="note"><![CDATA[{user}您好,您的车辆${carid}于{date}到期，请您务必在此之前登录西南交通大学保卫处网站进行缴纳。]]></item>
+    </group>
+</configuration>

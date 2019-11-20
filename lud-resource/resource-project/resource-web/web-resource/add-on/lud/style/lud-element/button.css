@@ -1,0 +1,60 @@
+﻿.lud-ele-btn {
+	padding: 1rem 2rem;
+	color: #fff;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.lud-ele-btn:hover {
+	background-color: #0275c8;
+	color: #fff;
+}
+
+.lud-ele-btngroup {
+	padding-top: 1rem;
+}
+
+.lud-ele-btngroup .lud-ele-btn {
+	margin-right: 0.5rem;
+}
+
+.lud-ele-btngroup .lud-ele-btn:last-child {
+	margin-right: 0;
+}
+
+.lud-ele-hand {
+	cursor: pointer;
+}
+
+.lud-ele-btn-ful {
+	height: 100%;
+	width: 100%;
+}
+
+.lud-com-actionlist-tool {
+    overflow: hidden;
+    height:4rem;
+    overflow:hidden;
+    padding:0.5rem 0;
+}
+.lud-com-actionlist-tool ul li {
+    height:3rem;
+    overflow:hidden;
+    line-height:2rem;
+    padding:0.4rem 0.9rem;
+    float:left;
+    margin-right:0.4rem;
+    cursor:pointer;
+    background-color:#EEE;
+    border:1px solid #CCC;
+}
+.lud-com-actionlist-tool ul li:last-child {
+    margin-right:0;
+}
+.lud-com-actionlist-tool ul li:hover {
+    background-color: #0275c8;
+    box-shadow: 0.1rem 0.1rem 0.2rem #000 inset;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border:none;
+}

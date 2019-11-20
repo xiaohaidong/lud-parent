@@ -1,0 +1,5 @@
+<select name="${cfg.name}" <#list cfg?keys as key><#if key?starts_with("cat-")> ${key?substring(4)}="${cfg[key]}"</#if></#list>>
+<#noparse><#list </#noparse>${cfg["data"]} as kvs>
+<#noparse><option value="${kvs.code}" <#if kvs.code==</#noparse>${cfg["valuev"]}<#noparse>>selected="selected"</#if>>${kvs.content}</option></#noparse>
+<#noparse></#list></#noparse>
+</select>

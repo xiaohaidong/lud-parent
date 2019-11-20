@@ -1,0 +1,11 @@
+<#include "/view-service/comp/title/_include/title.html"/>
+<#if config["data"]>
+<#noparse><#assign</#noparse> data=${config["data"]}>
+    <div  <#include "/view-service/_include/comp/attrs/wat.html"/>>
+        <ul <#include "/view-service/_include/comp/attrs/at.html"/>>
+            <#noparse><#list data as item></#noparse>
+                <li data-value="${config["value"]}">${config["text"]}</li>
+            <#noparse></#list></#noparse>
+        </ul>
+    </div>
+</#if>

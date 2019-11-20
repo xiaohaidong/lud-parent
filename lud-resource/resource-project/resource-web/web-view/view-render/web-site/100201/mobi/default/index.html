@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<#include "/template-view/page-title/project-website.html"/>
+<#include "/template-view/page-device/phone-utf8.html"/>
+<#include "/template-view/page-style/style-web-plugin.html"/>
+<#include "/template-view/page-style/style-phone-service.html"/>
+<link rel="stylesheet" type="text/css" href="/web-resource/lud-service/web-site/${site.project}/${site.code}/${site.skin}/style/main.css" />
+<#include "/template-view/page-script/script-phone-service.html"/>
+<script type="text/javascript" src="/web-resource/lud-service/web-site/${site.project}/${site.code}/${site.skin}/script/main.js"></script>
+</head>
+<body>
+    <#include "/view-render/web-site/"+site.project+"/"+site.code+"/"+site.skin+"/_include/head.html"/>
+    <div id="content" lud-render="/web/service/service/service-nec-website-website-list/t"  class="clearfix"></div>
+</body>
+</html>

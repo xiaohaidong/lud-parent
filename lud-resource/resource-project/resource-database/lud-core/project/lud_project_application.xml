@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <querys>
+        <item order="sort">
+            <fileds>
+                <filed name="def"></filed>
+                <filed name="project"><![CDATA[code,title,picture,name,icon]]></filed>
+                <filed name="app" type="c"><![CDATA[lud_application_info[application,script,css]code=code]]></filed>
+            </fileds>
+            <limits>
+                <limit name="project" args="project,applicationgroup"><![CDATA[ project=? and applicationgroup=?]]></limit>
+            </limits>
+        </item>
+    </querys>
+</configuration>

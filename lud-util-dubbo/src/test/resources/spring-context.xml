@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:task="http://www.springframework.org/schema/task" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context" xmlns:dubbo="http://dubbo.apache.org/schema/dubbo" xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd 
+    http://www.springframework.org/schema/context   
+    http://www.springframework.org/schema/context/spring-context.xsd  
+    http://www.springframework.org/schema/task  
+    http://www.springframework.org/schema/task/spring-task.xsd
+    http://dubbo.apache.org/schema/dubbo 
+    http://dubbo.apache.org/schema/dubbo/dubbo.xsd">
+    <task:annotation-driven />
+    <context:component-scan base-package="com.lud" />
+    <dubbo:annotation package="com.lud" />
+    <dubbo:application name="lud-util-dubbo" />
+    <dubbo:config-center address="zookeeper://192.168.0.161:3579" />
+</beans>

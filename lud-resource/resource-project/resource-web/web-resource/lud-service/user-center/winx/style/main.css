@@ -1,0 +1,364 @@
+﻿html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    background-color: #303643;
+    font-family: Calibri, "微软雅黑", "宋体";
+    font-size: 1.4rem;
+}
+
+#lud_user_center_foot {
+    z-index: -1;
+}
+#lud_user_center_header,
+#lud_user_center_content,
+#lud_user_center_foot {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#mudl_user_center_classic_content_userpanel {
+    width: 104rem;
+    height: 58rem;
+    background-color: #2a303c;
+    opacity: 0;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem #000;
+}
+
+#mudl_user_center_classic_content_userpanel .widget {
+    height: 100%;
+    width: 15rem;
+    background-color: #20252f;
+    box-shadow: 0.1rem 0 0.3rem #000;
+    overflow: hidden;
+}
+
+
+#mudl_user_center_classic_content_userpanel .widget .logo-wap {
+    padding-top: 5.2rem;
+    padding-bottom: 2rem;
+}
+
+#mudl_user_center_classic_content_userpanel .widget .logo-wap-btn {
+    background-color: #151921;
+    height: 0.1rem;
+    margin: 0 auto;
+    width: 64%;
+    border-radius: 1rem;
+}
+
+#mudl_user_center_classic_content_userpanel .widget .logo-icon {
+    border-top:1px solid  #2a303c;
+    height: 0.1rem;
+    margin: 0 auto;
+    width: 64%;
+    border-radius: 1rem;
+}
+#mudl_user_center_classic_content_userpanel .widget .logo-icon ul {
+    display: block;
+    width: 0px;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+#mudl_user_center_classic_content_userpanel .widget .logo-icon ul li {
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    border-radius: 5rem;
+    box-shadow: inset 0.1rem 0.1rem 0.3rem #0f1218;
+    width: 4.5rem;
+    height: 4.5rem;
+    margin-left: -2rem;
+    background-color: #20252f;
+    font-size: 2rem;
+    color: #3d4351;
+    padding: 1.2rem;
+    text-align: center;
+}
+#mudl_user_center_classic_content_userpanel .widget .logo-icon ul li.actived {
+    background-color: #1a1f29;
+    color: #7c8498;
+}
+#mudl_user_center_classic_content_userpanel .widget .logo {
+    margin: 0 auto;
+    text-align: center;
+    width: 9.1rem;
+    padding: 0.8rem;
+    border-radius: 10rem;
+    box-shadow: inset 0 0 0.3rem #000;
+}
+
+#mudl_user_center_classic_content_userpanel .content {
+    height: 100%;
+    width: 86rem;
+    color: #fff;
+    padding-top: 7rem;
+}
+
+#mudl_user_center_classic_content_userpanel .content .logo h2 {
+    font-size: 1.6rem;
+}
+
+#mudl_user_center_classic_content_userpanel .content .logo h3 {
+    font-size: 2.4rem;
+}
+
+#mudl_user_center_classic_content_userpanel .content .logo h4 {
+    font-size: 1.6rem;
+}
+
+#mudl_user_center_classic_content_userpanel .content .toolbar {
+    height: 3.2rem;
+    padding-top: 0.5rem;
+}
+
+#mudl_user_center_classic_content_userpanel .content .toolbar span {
+    background-color: #900303;
+    padding: 0.2rem 1.2rem;
+    margin-right: 0.3rem;
+    float: left;
+    cursor: pointer;
+    box-shadow: inset 0.1rem 0.1rem 0.3rem #000;
+}
+
+#mudl_user_center_classic_content_userpanel .content .toolbar span:hover {
+    background-color: #710101;
+}
+
+#mudl_user_center_classic_content_userpanel .content .toolbar span:first-child {
+    border-top-left-radius: 3rem;
+    border-bottom-left-radius: 3rem;
+}
+
+#mudl_user_center_classic_content_userpanel .content .spliter {
+    height: 0.5rem;
+    background-color: #a30101;
+    width: 95%;
+    box-shadow: inset 0.1rem 0.1rem 0.3rem #000;
+    border-radius: 0.5rem;
+}
+
+#mudl_user_center_classic_content_userpanel .content .workspace {
+    margin-top: 2rem;
+    height: 38rem;
+    overflow: auto;
+    scrollbar-highlight-color: #2a303c;
+    scrollbar-face-color: #2a303c;
+    scrollbar-arrow-color: #20252f;
+    scrollbar-shadow-color: #2a303c;
+    scrollbar-base-color: #2a303c;
+}
+
+#mudl_user_center_classic_content_userpanel .content .workspace .applist .item {
+    overflow: hidden;
+    clear: both;
+    display: inline-block;
+    cursor: pointer;
+    color: #4f5563;
+}
+#mudl_user_center_classic_content_userpanel .content .workspace .applist .item span {
+    color: #3d4351;
+    padding-left:0.5rem;
+    font-size:1.2rem;
+}
+#mudl_user_center_classic_content_userpanel .content .workspace .applist .item i {
+    margin-right: 0.5rem;
+    padding: 0.1rem;
+    border-radius: 3rem;
+}
+
+#mudl_user_center_classic_content_userpanel .content .workspace .applist .apps {
+    clear: both;
+    padding-bottom: 1rem;
+}
+
+#mudl_user_center_classic_content_userpanel .content .workspace .applist .apps ul li {
+    color: #949bae;
+    text-align: center;
+    float: left;
+    padding: 1.6rem 1.5rem 1.2rem 1.5rem;
+    margin-top: 0.8rem;
+    margin-right: 0.8rem;
+    cursor: pointer;
+    border-radius: 1rem;
+    background-color: #303643;
+    border:1px solid #222;
+
+}
+#mudl_user_center_classic_content_userpanel .content .workspace .applist .apps ul li div.icon {
+    text-align: center;
+    display: inline-block;
+    height: 3.4rem;
+    line-height: 3.4rem;
+    text-align: center;
+}
+#mudl_user_center_classic_content_userpanel .content .workspace .applist .apps ul li i {
+    font-size: 3.2rem;
+}
+
+#mudl_user_center_classic_content_userpanel .content .workspace .applist .apps ul li label {
+    display: block;
+}
+
+#mudl_user_center_classic_content_userpanel .content .workspace .applist .apps ul li:hover {
+    background-color: #710101;
+    color: #fff;
+}
+
+#mudl_user_center_winx_comp_head_workspace {
+    display: none;
+    z-index: 1;
+}
+
+#mudl_user_center_winx_comp_head_workspace_menu {
+    width: 19rem;
+    background-color: #303643;
+    height: 100%;
+    position: absolute;
+    box-shadow: 0 0 0.5rem #000;
+    z-index: 1;
+    overflow: hidden;
+    color: #adb4c4;
+}
+
+#mudl_user_center_winx_comp_head_workspace_menu .app {
+    height: 5.5rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 3px #000;
+    background-color: #900303;
+    color: #fff;
+}
+
+#mudl_user_center_winx_comp_head_workspace_menu .app i {
+    font-size: 3rem;
+    position: absolute;
+    left: 0.7rem;
+    top: 1.3rem;
+}
+
+#mudl_user_center_winx_comp_head_workspace_menu .app .name {
+    position: absolute;
+    left: 4.5rem;
+    top: 1.2rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+#mudl_user_center_winx_comp_head_workspace_menu .app .title {
+    position: absolute;
+    left: 4.5rem;
+    top: 2.9rem;
+    font-size: 1.2rem;
+    font-family: Calibri,"宋体";
+}
+
+#mudl_user_center_winx_comp_head_workspace_content {
+    background-color: #ecf0f5;
+    height: 100%;
+    margin-left: 19rem;
+    overflow: auto;
+}
+
+#mudl_user_center_winx_comp_head_workspace_content > .toolbar {
+    height: 5.5rem;
+    line-height: 5.5rem;
+    background-color: #fff;
+    box-shadow: 0 0 0.2rem #000;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+#mudl_user_center_winx_comp_head_workspace_content > .toolbar i {
+    padding-right: 0.5rem;
+}
+
+#mudl_user_center_winx_comp_head_workspace_content > .toolbar > .menu {
+    float: left;
+}
+
+#mudl_user_center_winx_comp_head_workspace_content > .toolbar li {
+    cursor: pointer;
+    padding-left: 1.5rem;
+    float: left;
+    padding-right: 1.5rem;
+}
+
+#mudl_user_center_winx_comp_head_workspace_content > .toolbar li:hover {
+    background-color: #eee;
+}
+
+#mudl_user_center_winx_comp_head_workspace_content > .toolbar .chat, #mudl_user_center_winx_comp_head_workspace_content > .toolbar .note {
+    float: right;
+}
+
+#mudl_user_center_winx_comp_head_workspace_content > .toolbar .chat {
+    padding: 0 1rem;
+    padding-top: 0.2rem;
+    cursor: pointer;
+}
+
+#mudl_user_center_winx_comp_head_workspace_content > .toolbar .chat:hover {
+    color: #900303;
+}
+
+#mudl_user_center_winx_comp_head_workspace_content > .toolbar .chat i {
+    padding: 0;
+    font-size: 2rem;
+}
+#mudl_user_center_winx_comp_head_workspace_menu .menu ul li {
+    cursor: pointer;
+    height: 3.2rem;
+    line-height: 3.2rem;
+}
+#mudl_user_center_winx_comp_head_workspace_menu .menu ul li i {
+    width: 2rem;
+}
+#mudl_user_center_winx_comp_head_workspace_menu .menu ul li.item-2 {
+    padding-left: 2rem;
+    font-weight: bold;
+    height: 4rem;
+    line-height: 4rem;
+}
+#mudl_user_center_winx_comp_head_workspace_menu .menu ul li.item-2 span {
+    float: right;
+    display: inline-block;
+    margin-right: 0.5rem;
+    color: #565c69;
+}
+#mudl_user_center_winx_comp_head_workspace_menu .menu ul li.item-4 {
+    padding-left: 4.4rem;
+    display: none;
+    color: #7b808a;
+    font-size: 1.2rem;
+}
+#mudl_user_center_winx_comp_head_workspace_menu .menu ul li.actived {
+    color: #fb7003;
+}
+#mudl_user_center_winx_comp_head_workspace_menu .menu ul li.selected {
+    background-color: #262c37;
+}
+#mudl_user_center_winx_comp_head_workspace_content_work {
+    margin: 1.5rem;
+    overflow:hidden;
+}
+
+.lud-comp-nav-workspace-classic {
+    height:5.3rem;
+    color:#2a303c;
+    padding:0;
+}
+.lud-comp-nav-workspace-classic div.icon {
+    cursor: pointer;
+    background-color: #900303;
+}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=3idfcfHC0i6y4kIbdd3UsWYMNIwuGYcT"></script>
+<#include "/template-view/page-device/pc-utf8-ie9.html"/>
+<#include "/template-view/page-title/company-project.html"/>
+<#include "/template-view/page-script/script-user-service.html"/>
+<script type="text/javascript">var GLBDATA={theme:"${usergroup.theme}"}</script>
+<script type="text/javascript" src="/web-resource/lud-service/user-center/public/script/main.js"></script>
+<link href="http://api.map.baidu.com/library/TrafficControl/1.4/src/TrafficControl_min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://api.map.baidu.com/library/TrafficControl/1.4/src/TrafficControl_min.js?v=20130220" ></script>
+</head>
+<body>
+    <div id="lud_user_center_header" lud-render="/user/service/service/mudl-user-center-${usergroup.theme}-comp-head/i"></div>
+    <div id="lud_user_center_content" lud-render="/user/service/service/mudl-user-center-${usergroup.theme}-main-content/i"></div>
+    <div id="lud_user_center_foot" lud-render="/user/service/service/mudl-user-center-${usergroup.theme}-comp-foot/i"></div>
+</body>
+</html>

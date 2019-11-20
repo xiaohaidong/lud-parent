@@ -1,0 +1,1 @@
+[18:53:24:993] [ERROR] - com.lud.util.spring.util.SpringServiceInvoker.invoke(SpringServiceInvoker.java:68) - no this bean:com.lud.test.comm.bean.SpringServicex

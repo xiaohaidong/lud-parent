@@ -1,0 +1,29 @@
+<div id="${compid}_chart" lud-echart="1" <#include "/view-service/_include/comp/attrs/at.html"/>>
+	<script type="text/javascript">
+        var ${compid}_script={
+            tooltip : {
+                trigger: 'item',
+                formatter: "<b>${config["title"]}</b><br/>{b}:{c}({d}%)"
+            },
+            legend: {
+            	type:"scroll",
+                left:0,
+                top:0,
+                icon:"circle",
+                orient: 'vertical',
+                data: [<#noparse><#list</#noparse> ${config.data} as item><#noparse><#if item_index gt 0>,</#if></#noparse>'${config.datax}'<#noparse></#list></#noparse>]
+            },
+            series : [{
+                    name: '${config.name}',
+                    center : ['60%', '50%'],
+                    type: 'pie',
+                    radius: ['49%', '80%'],
+                    data:[<#noparse><#list</#noparse> ${config.data} as item><#noparse><#if item_index gt 0>,</#if></#noparse>
+                        {value:${config.datay}, name:'${config.datax}'}<#noparse></#list></#noparse>
+                    ]
+                }
+            ]
+       };
+       lud.comp.echart.show("${compid}_chart","${config.skin}",${compid}_script);
+      </script>
+</div>

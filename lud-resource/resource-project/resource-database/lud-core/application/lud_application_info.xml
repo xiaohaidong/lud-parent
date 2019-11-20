@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <querys>
+        <item>
+            <fileds>
+                <filed name="def"></filed>
+                <filed name="cache"><![CDATA[ code,name,title,application,icon,para,type,usergroup,enname ]]></filed>
+            </fileds>
+            <limits>
+                <limit name="def"><![CDATA[ 1=1 ]]></limit>
+                <limit name="cache"><![CDATA[ status=1 ]]></limit>
+            </limits>
+        </item>
+    </querys>
+</configuration>

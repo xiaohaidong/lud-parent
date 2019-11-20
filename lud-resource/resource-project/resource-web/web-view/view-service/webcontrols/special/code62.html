@@ -1,0 +1,8 @@
+<#noparse><#assign</#noparse> value=${cfg["valuev"]}>
+<#noparse><#if value?length==6></#noparse>
+<#noparse><#list </#noparse>${cfg["data"]}<#noparse> as item>
+<#if item.code==value?substring(0,2)>${item.content}</#if>
+<#if item.code==value?substring(0,4)>，${item.content}</#if>
+<#if item.code==value>，${item.content}</#if></#list>
+</#noparse>
+<#noparse></#if></#noparse>

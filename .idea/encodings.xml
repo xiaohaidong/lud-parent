@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" addBOMForNewFiles="with NO BOM">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lud-iot-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lud-iot-business-core-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lud-iot-business-core-client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lud-iot-business-core-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lud-iot-client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lud-iot-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lud-iot-util" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lud-service-business" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lud-service-business-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lud-service-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lud-service-core-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lud-service-open" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lud-service-open-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lud-service-smartcampus" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lud-service-smartcampus-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lud-test-util" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lud-test-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lud-util-comm" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lud-util-content" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lud-util-dubbo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lud-util-spring" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lud-util-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lud-web-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lud-web-business-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lud-web-business-iot" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lud-web-business-smartcampus" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lud-web-server" charset="UTF-8" />
+  </component>
+</project>

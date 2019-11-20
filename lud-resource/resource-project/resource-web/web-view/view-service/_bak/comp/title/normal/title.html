@@ -1,0 +1,13 @@
+<div <#if config.id>id="${compid}"</#if> <#list config?keys as key><#if key?starts_with("wap-attr-")> ${key?substring(9)}="${config[key]}"</#if></#list>>
+    <#include "/view-service/comp/title/include/title.html"/>
+    <#if config["subtitle-data"]>
+    <#noparse><#assign</#noparse> data=${config["subtitle-data"]}>
+        <div class="clearfix" lud-render-target="#${compid}_content">
+            <ul lud-tab="c" lud-oclick="li:first" <#list config?keys as key><#if key?starts_with("subtitle-attr-")> ${key?substring(14)}="${config[key]}"</#if></#list>>
+                <#noparse><#list data as item></#noparse>
+                    <li lud-oclick-render="${config["subtitle-url"]}">${config["subtitle-text"]}</li>
+                <#noparse></#list></#noparse>
+            </ul>
+        </div>
+    </#if>
+</div>

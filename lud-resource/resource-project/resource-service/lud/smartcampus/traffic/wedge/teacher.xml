@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <service name="index" theme="content/content" cache="true">
+        <content theme="wrap/list" flag="i">
+            <item><![CDATA[${}]]></item>
+        </content>
+        <comp name="title" theme="navigation/tab/static" flag="i">
+            <config name="ul-attr-class"><![CDATA[lud-comp-nav-tab-nor b]]></config>
+        </comp>
+    </service>
+</configuration>

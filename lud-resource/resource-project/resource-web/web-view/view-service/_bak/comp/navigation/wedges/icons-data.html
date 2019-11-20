@@ -1,0 +1,14 @@
+<#noparse><#assign</#noparse> data=${config["data"]}>
+<div <#if config.id>id="${compid}"</#if> <#list config?keys as key><#if key?starts_with("attr")> ${key?substring(5)}="${config[key]}"</#if></#list>>
+    <div class="lud-comp-nav-wedges">
+        <ul  <#if config.id>id="${compid}_"</#if> <#list config?keys as key><#if key?starts_with("wedges-attr")> ${key?substring(12)}="${config[key]}"</#if></#list>>
+        <#noparse><#list data as item></#noparse>
+        <li class="content" lud-render-click="${config["render"]}" lud-role="${config["role"]}" ${config["paras"]}>
+            <div class="icon"><i class="${config["icon"]}"></i></div>
+            <div class="text"><h5 class="b">${config["text"]}</h5></div>
+            <div class="data"><h6>${config["datalist"]}</h6></div>
+        </li>
+        <#noparse></#list></#noparse>
+        </ul>
+    </div>
+</div>

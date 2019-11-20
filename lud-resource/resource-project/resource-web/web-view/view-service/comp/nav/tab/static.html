@@ -1,0 +1,6 @@
+<div id="${compid}_tab_nav" lud-render-target="#${compid}_tab_content" <#include "/view-service/_include/comp/attrs/wat.html"/>>
+    <ul <#include "/view-service/_include/comp/attrs/at.html"/>><#list detail as item>
+    	<li lud-render-click="${item["text"]}"><i class="${item["icon"]}"></i> ${item["title"]}</li></#list>
+    </ul>
+</div>
+<div id="${compid}_tab_content" <#include "/view-service/_include/comp/attrs/cat.html"/>></div>

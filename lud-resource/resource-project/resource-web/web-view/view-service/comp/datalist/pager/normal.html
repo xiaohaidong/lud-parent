@@ -1,0 +1,11 @@
+<#noparse><#assign</#noparse> data=${config.data}>
+<ul class="lud-comp-ul-hx" data-forinput="pager-index" lud-tab="ncf"><#noparse>
+    <li data-value="1">首页</li>
+    <li data-value="<#if data.pageIndex gt 1>${data.pageIndex-1}<#else>1</#if>">< </li>
+    <#list data.pageIndex-5..data.pageIndex+5 as page><#if page gt 0 && page lt data.pagerCount+1>
+        <li data-value="${page}" <#if page==data.pageIndex>class="actived"</#if>>${page}</li></#if>
+    </#list>
+    <li data-value="<#if data.pageIndex lt data.pagerCount>${data.pageIndex+1}<#else>${data.pagerCount}</#if>"> ></li>
+    <li data-value="${data.pagerCount}">尾页</li>
+    <li data-value="${data.pagerCount}">一共有${data.dataCount}条数据</li></#noparse>
+</ul>

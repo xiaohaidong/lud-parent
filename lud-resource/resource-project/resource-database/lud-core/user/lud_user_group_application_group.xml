@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <querys>
+        <item order="sort">
+            <fileds>
+                <filed name="def"></filed>
+                <filed name="cache"><![CDATA[code,name,icon,description,usergroup]]></filed>
+            </fileds>
+            <limits>
+                <limit name="project" args="project,usergroup"><![CDATA[ project=? and usergroup=? and canuse=1]]></limit>
+            </limits>
+        </item>
+    </querys>
+    <commands>
+        <item name="del">
+            <cmd args="id" flag=""><![CDATA[delete from {t} where id=?]]></cmd>
+        </item>
+    </commands>
+</configuration>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <querys>
+        <item name="login">
+            <fileds>
+                <filed name="def"><![CDATA[*]]></filed>
+                <filed name="group" type="c"><![CDATA[lud_user_group[groupname]usergroup=usergroup:project=lud_user_info.project]]></filed>
+                <filed name="department" type="c"><![CDATA[lud_department_info[shortname]code=userdepartment:project=lud_user_info.project]]></filed>
+            </fileds>
+            <limits>
+                <limit name="def" args="project,userid,usergroup"><![CDATA[ project=? and userid=? and usergroup=? ]]></limit>
+            </limits>
+        </item>
+        <item order="userdepartment desc,office,post">
+            <fileds>
+                <filed name="def"><![CDATA[*]]></filed>
+                <filed name="department" type="c"><![CDATA[lud_department_info[shortname]code=userdepartment:project=lud_user_info.project]]></filed>
+                <filed name="office" type="c"><![CDATA[lud_department_office[content]code=office:project=lud_user_info.project and department=lud_user_info.userdepartment]]></filed>
+                <filed name="post" type="c"><![CDATA[lud_department_post[content]code=post:project=lud_user_info.project]]></filed>
+            </fileds>
+            <limits>
+                <limit name="self" args="project,usr.userid"><![CDATA[ project=? and userid=? ]]></limit>
+                <limit name="info" args="project,userid"><![CDATA[ project=? and userid=? ]]></limit>
+                <limit name="def" args="project"><![CDATA[ project=? ]]></limit>
+                <limit name="usergroup" args="usergroup"><![CDATA[ usergroup=? ]]></limit>
+                <limit name="department" args="usr.department"><![CDATA[ userdepartment=?  ]]></limit>
+            </limits>
+        </item>
+    </querys>
+</configuration>

@@ -1,0 +1,14 @@
+<div <#if config.id>id="${compid}"</#if> <#list config?keys as key><#if key?starts_with("attr")> ${key?substring(5)}="${config[key]}"</#if></#list>>
+    <div class="title"><span class="main">${config["title"]}</span><span class="sub">${config["subtitle"]}</span></div>
+    <div class="card lud-cmbx-pt1x ">
+        <div class="pic lud-ele-img-wap"><img src="${config["card-img"]}" /></div>
+        <div class="content">${config["card-content"]}</div>
+    </div>
+    <div class="actions">
+        <ul>
+            <li>预先充值</li>
+            <li>修改密码</li>
+            <li>登出账号</li>
+        </ul>
+    </div>
+</div>

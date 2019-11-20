@@ -1,0 +1,121 @@
+﻿/*
+ * Copyright 2018-2019 the original author or authors.
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+.lud-tb-g table {
+    border: none;
+    width: 100%;
+    border-top: 3px solid #303643;
+    border-bottom: 2px solid #303643;
+}
+
+.lud-tb-g table td, .lud-tb-g th {
+    border: 1px solid #303643;
+    padding: 0 0.8rem;
+    height: 3.2rem;
+}
+.lud-tb-g th {
+    height: 4rem;
+}
+.lud-tb-g table th {
+    text-align: center;
+}
+
+.lud-tb-g table th.nr {
+    height: 3rem;
+    padding: 0;
+}
+.lud-tb-g table th label.i{
+    cursor:pointer;
+}
+.lud-tb-g table td.npd {
+    padding: 0;
+}
+
+.lud-tb-g table td.edt {
+    background-color: #fffff6;
+}
+
+.lud-tb-g table td.edt:hover {
+    background-color: #066ece;
+    color: #fff;
+}
+
+.lud-tb-g table td.edt:hover input{
+    color: #fff;
+}
+
+.lud-tb-g table td.edt input, .lud-tb-g table td.edt select {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    height: 3rem;
+    line-height: 3rem;
+    padding-left: 1rem;
+    font-family: Calibri,"微软雅黑";
+}
+.lud-tb-g table td.edt .select2-selection--single {
+    background-color: transparent;
+    border: none;
+}
+.lud-tb-g table td.btn {
+    padding: 0;
+}
+
+.lud-tb-g table td.btn label {
+    cursor: pointer;
+    color: #044c82;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.2rem;
+}
+
+.lud-tb-g table td.btn label:hover {
+    color: #ff6a00;
+}
+
+.lud-tb-g table tr td:first-child, .lud-tb-g th:first-child {
+    border-left: none;
+}
+
+.lud-tb-g table tr td:last-child, .lud-tb-g th:last-child {
+    border-right: none;
+}
+/*list*/
+.lud-lst-ptc .item h4 {
+    line-height: 3rem;
+    border-bottom: 1px solid #808080;
+    color: #000;
+    border-radius: 0.5rem;
+}
+
+.lud-lst-ptc .item h4 i {
+    font-weight: 100;
+    padding-right: 0.6rem;
+    padding-left: 1rem
+}
+
+.lud-lst-ptc .item h5 {
+    font-family: Calibri, "宋体";
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    padding: 1rem 3rem
+}
+
+.lud-tb-g table td.np {
+    padding: 0;
+}
+
+.lud-tb-g table td.np div.lud-ele-btn-ful {
+    display: table-column;
+}

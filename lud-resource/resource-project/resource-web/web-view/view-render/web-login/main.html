@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<#include "/template-view/page-title/company-project.html"/>
+<#include "/template-view/page-device/pc-utf8-ie9.html"/>
+<#include "/template-view/page-style/style-web-service.html"/>
+<link rel="stylesheet" type="text/css" href="/web-resource/lud-service/web-login/${project.config["project.login.theme"]}/style/main.css" />
+<#include "/template-view/page-script/script-web-service.html"/>
+</head>
+<body>
+    <div lud-render="/web/service/service/mudl-user-login-${project.config["project.login.theme"]}-main-head/i"></div>
+    <div lud-render="${req["bin"]!"/web/service/service/mudl-user-login-"+project.config["project.login.theme"]+"-index-content/i"}"  class="clearfix"></div>
+    <div lud-render="/web/service/service/mudl-user-login-${project.config["project.login.theme"]}-main-foot/i"></div>
+</body>
+</html>

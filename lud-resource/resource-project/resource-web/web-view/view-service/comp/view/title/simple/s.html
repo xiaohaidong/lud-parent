@@ -1,0 +1,4 @@
+	<#if config["icon"]><i class="${config["icon"]}"></i></#if>
+	<#if config["title"]><label>${config["title"]}</label></#if>
+	<#if config["subtitle"]><span class="sub">${config["subtitle"]}</span></#if>
+	<#if config["more"]><span class="more" <#if config["url"]>lud-render-click="${config["url"]}"</#if>>${config["more"]}</span></#if>

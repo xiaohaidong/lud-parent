@@ -1,0 +1,9 @@
+<#noparse><#assign</#noparse> data=${config.data}>
+<#noparse><#assign</#noparse> pdate="">
+<div <#if config.id>id="${compid}"</#if> <#list config?keys as key><#if key?starts_with("wap-attr-")> ${key?substring(9)}="${config[key]}"</#if></#list>>
+    <#noparse><ul><#list data as item></#noparse>
+    <#noparse><#assign</#noparse> date=${config.date}>
+    <#noparse><#if date!=pdate><#assign pdate=date><li class="date"><label>Date:${date}</label></li></#if></#noparse>
+    <li class="item"><span></span>${config.title}</li>
+    <#noparse></#list></ul></#noparse>
+</div>

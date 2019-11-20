@@ -1,0 +1,5 @@
+<div <#if config.id>id="${compid}_wap"</#if> <#list config?keys as key><#if key?starts_with("wap-attr")> ${key?substring(9)}="${config[key]}"</#if></#list>>
+    <div <#if config.id>id="${compid}"</#if> <#list config?keys as key><#if key?starts_with("attr")> ${key?substring(5)}="${config[key]}"</#if></#list>>
+        ${config.content}
+    </div>
+</div>

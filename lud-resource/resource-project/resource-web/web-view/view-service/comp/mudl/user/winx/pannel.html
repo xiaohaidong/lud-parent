@@ -1,0 +1,18 @@
+    <div <#if config.id>id="${compid}_widget"</#if> class="widget lud-lycm-fl">
+        <div class="logo-wap"><div class="logo lud-ele-img-wap"><img src="${config["logo-img"]}"/></div></div>
+        <div class="logo-wap-btn"></div>
+        <div class="logo-icon">
+        	<ul lud-oclick="li:first" lud-render-target="#${compid}_content_workspace" lud-tab="c">
+        		<li lud-render-click="/user/service/service/mudl-user-center-winx-comp-apps/i"><i class="fad fa-box-full"/></li>
+        		<li><i class="fad fa-chevron-double-down"/></li>
+        		<li><i class="fad fa-atom"/></li>
+        		<li><i class="fad fa-temperature-hot"/></li>
+        	</ul>
+        </div>
+    </div>
+    <div id="${compid}_content" class="content lud-lycm-fr">
+        <div class="logo">${config["logo-text"]}</div>
+        <div class="toolbar">${config["toolbar"]}</div>
+        <div class="spliter"></div>
+        <div class="workspace" lud-render-target="#mudl_user_center_winx_comp_head_workspace_menu" id="${compid}_content_workspace"></div>
+	</div>

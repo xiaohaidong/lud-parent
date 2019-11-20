@@ -1,0 +1,9 @@
+<#noparse><#assign</#noparse> data=${config.data}>
+<#noparse><#assign</#noparse> pdate="">
+<div <#include "/view-service/_include/comp/attrs/wat.html"/>>
+    <#noparse><ul><#list data as item></#noparse>
+    <#noparse><#assign</#noparse> date=${config.date}>
+    <#noparse><#if date!=pdate><#assign pdate=date><li class="date"><label>${date}</label></li></#if></#noparse>
+    <li class="item"><span></span>${config.title}</li>
+    <#noparse></#list></ul></#noparse>
+</div>

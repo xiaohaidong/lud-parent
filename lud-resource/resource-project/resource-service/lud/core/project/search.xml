@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <!-- "info"：info -->
+    <service name="info" layout="content/none" acl="public" cache="true">
+        <content name="content" theme="normal/none" flag="i"><![CDATA[
+            ${comp["search.pic"]}
+            ${comp["search.title"]}
+        ]]></content>
+        <comp name="search.pic" theme="picture/normal/main">
+            <config name="css"><![CDATA[lud-size-p-20 lud-color-b-ll]]></config>
+            <config name="pic"><![CDATA[${search.picture}]]></config>
+        </comp>
+        <comp name="search.title" theme="article/title/forurl">
+            <config name="css"><![CDATA[lud-size-plr-20 lud-color-b-ll]]></config>
+            <config name="title"><![CDATA[${search.name}<span>${search.enname}</span>]]></config>
+            <config name="titledata"><![CDATA[urls]]></config>
+            <config name="titletext"><![CDATA[${item.name}]]></config>
+            <config name="titleurl"><![CDATA[${item.url}]]></config>
+        </comp>
+        <data name="search" type="jdbc" query="lud-core.lud_project_search_query" result="map" fields="def" args="code" limits="project,code" flag="i"></data>
+        <data name="urls" type="jdbc" query="lud-core.lud_project_search_url_query" result="list" fields="def" limits="project,search" args="search:code" flag="i"></data>
+    </service>
+</configuration>

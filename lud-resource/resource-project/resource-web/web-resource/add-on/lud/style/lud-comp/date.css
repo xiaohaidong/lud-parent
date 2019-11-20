@@ -1,0 +1,36 @@
+﻿.lud-comp-timeline-note ul li.date {
+	font-size: 1.4rem;
+	border-radius: 1.6rem;
+	overflow: hidden;
+	background-color: #ffd800;
+	width: 10rem;
+    margin-top:1rem;
+}
+
+.lud-comp-timeline-note ul li.date label {
+	background-color: #b70303;
+	padding: 0.6rem 1.4rem;
+	color: #fff;
+}
+
+.lud-comp-timeline-note ul li.item {
+	position: relative;
+	padding-top: 1rem;
+	height: 3rem;
+	overflow: hidden;
+}
+
+.lud-comp-timeline-note ul li.item span {
+	display: block;
+	width: 0.5rem;
+	height: 0.5rem;
+	background-color: #057597;
+	border-radius: 0.5rem;
+	position: absolute;
+	top: 1.7rem;
+}
+
+.lud-comp-timeline-note ul li.item a {
+	margin-left: 1.4rem;
+	display: block;
+}

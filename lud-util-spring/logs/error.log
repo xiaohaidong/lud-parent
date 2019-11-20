@@ -1,0 +1,4 @@
+[14:33:33:423] [ERROR] - com.lud.util.spring.util.SpringServiceInvoker.invoke(SpringServiceInvoker.java:68) - no this bean:com.lud.test.comm.bean.SpringServicex
+[14:33:47:504] [ERROR] - com.lud.util.spring.util.SpringServiceInvoker.invoke(SpringServiceInvoker.java:68) - no this bean:com.lud.test.comm.bean.SpringServicex
+[14:58:44:350] [ERROR] - com.lud.util.spring.util.SpringServiceInvoker.invoke(SpringServiceInvoker.java:68) - no this bean:com.lud.test.comm.bean.SpringServicex
+[14:59:02:706] [ERROR] - com.lud.util.spring.util.SpringServiceInvoker.invoke(SpringServiceInvoker.java:68) - no this bean:com.lud.test.comm.bean.SpringServicex

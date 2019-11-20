@@ -1,0 +1,2 @@
+[12:48:05:692] [ERROR] - com.lud.test.util.EntityClassTester.testEntity(EntityClassTester.java:95) - class java.lang.Class测试失败!java.lang.IllegalArgumentException
+[12:48:30:702] [ERROR] - com.lud.test.util.EntityClassTester.testEntity(EntityClassTester.java:95) - class java.lang.Class测试失败!java.lang.IllegalArgumentException

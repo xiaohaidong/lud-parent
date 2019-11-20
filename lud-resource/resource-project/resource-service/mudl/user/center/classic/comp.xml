@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <!-- head：头部文件 -->
+    <service name="head" theme="content/content" acl="manager" cache="true">
+        <content theme="wrap/content" flag="i">
+            <item wat-class="lud-msgbox-cover lud-lyps-full"></item>
+            <item wat-class="lud-msgbox-boxs"></item>
+            <item wat-lud-render-target="#lud_user_center_menu" wat-lud-tab="c" wat-lud-oclick="li:first" wat-class="color-pur lud-cmcc-whitel"><![CDATA[${comp["logo"]}]]></item>
+        </content>
+        <comp name="logo" theme="mudl/logo/normal">
+            <config name="wat-style"><![CDATA[height:12rem;background-image:url(/web-userfile/project/${project.company}/${project.project}/website/default/logo.png)]]></config>
+            <config name="wat-class"><![CDATA[lud-comp-logo lud-lyps-md]]></config>
+            <config name="at-class"><![CDATA[lud-comp-nav-pce lstn]]></config>
+            <config name="logo-text"><![CDATA[
+                <h5>${config["project.copyright.cn"]}</h5>
+                <h2>${project.name}</h2>
+                <h5>${project.enname}</h5>
+            ]]></config>
+            <config name="text-l"><![CDATA[10rem]]></config>
+            <config name="text-t"><![CDATA[3.2rem]]></config>
+            <config name="logo-link"><![CDATA[true]]></config>
+            <config name="link-r"><![CDATA[0]]></config>
+            <config name="link-t"><![CDATA[4.5rem]]></config>
+            <config name="link-data"><![CDATA[apps.list]]></config>
+            <config name="link-render"><![CDATA[<#list item.applications as app><li class="lud-ele-hand lud-ele-menu-top" lud-render-click="/user/service/service/mudl-user-center-classic-comp-menu/i?code=${app.code}"><div class="icon lud-lycm-fl"><i class="${app.icon}"></i></div><div class="lud-lycm-fl">${app.name}<br/>${app.title}</div></li></#list>]]></config>
+        </comp>
+        <data name="project" type="redis" result="map" query="com.lud.business.project/{project}" flag="i"></data>
+        <data name="config" type="redis" result="map" query="com.lud.business.project.config/{project}" flag="i"></data>
+        <data name="apps" type="null" result="map" invoke="com.lud.web.business.core.render.user.center.main.getApplicationList" flag="i"></data>
+    </service>
+    <!-- foot：底部文件 -->
+    <service name="foot" theme="content/content" acl="public" cache="true">
+        <content theme="wrap/wrap-list" flag="i">
+            <item wat-class="lud-cmbx-ptb3x color-pur lud-cmcc-whitel" at-class="lud-lyps-md l-2"><![CDATA[${comp["foot"]}]]></item>
+        </content>
+        <comp name="foot" theme="view/text/content">
+            <config name="content"><![CDATA[
+                                    版权所有： © 2017-2019 ${config["project.copyright.cn"]}<br/>
+                  COPYRIGHT：${config["project.copyright.en"]} © 2017-2019  <br/>
+                  PROJECT：${project.enname}<br/>
+                                    通讯地址：${config["project.copyright.address"]}<br/>
+                                    联系方式：${config["project.copyright.contact"]}<br/>
+                                    最佳环境：WINDOWS8及以上操作系统，IE9+，分辨率1920*1080 
+            ]]></config>
+        </comp>
+        <data name="project" type="redis" result="map" query="com.lud.business.project/{project}" flag="i"></data>
+        <data name="config" type="redis" result="map" query="com.lud.business.project.config/{project}" flag="i"></data>
+    </service>
+
+    <!-- 菜单项 -->
+    <service name="menu" theme="content/content" at-style="margin-top:-2rem;" acl="public" cache="true">
+        <content theme="wrap/content" flag="i">
+            <item wat-style="margin-top:-2rem"><![CDATA[${comp["menu"]}]]></item>
+        </content>
+        <comp name="menu" theme="mudl/user/classic/menu">
+            <config name="at-class"><![CDATA[clearfix]]></config>
+            <config name="at-lud-tab"><![CDATA[c]]></config>
+            <config name="at-lud-oclick"><![CDATA[.item_4:first]]></config>
+            <config name="at-lud-render-target"><![CDATA[#mudl_user_center_workspace]]></config>
+            <config name="render"><![CDATA[<<#if item.code?length==2>div<#else>li lud-render-click="${item.url}" lud-menu="${app.application.code}:${item.code}"</#if> class="item_${item.code?length}"><div class="icon"><i class="${item.icon}"/></div><div class="text">${item.name} <#if item.code?length==2><span>${item.enname}</span></#if></div></<#if item.code?length==2>div<#else>li</#if>>]]></config>
+            <config name="data"><![CDATA[app.menulist]]></config>
+        </comp>
+        <data name="app" type="null" result="map" invoke="com.lud.web.business.core.render.user.center.main.getApplication" flag="i"></data>
+    </service>
+</configuration>

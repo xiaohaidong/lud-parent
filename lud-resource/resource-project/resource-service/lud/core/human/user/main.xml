@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <!-- 资源文件 -->
+    <service name="index" theme="content/content" cache="true">
+        <content theme="wrap/content" flag="i">
+            <item wat-class="color-pur" wat-lud-render="/user/service/service/mudl-user-center-public-comp-nav/i"></item>
+            <item wat-class="lud-cmbx-p3x lud-cmcb-whitel"><![CDATA[${comp["navs"]}]]></item>
+        </content>
+        <comp name="navs" theme="nav/tab/data" flag="i">
+            <config name="at-lud-oclick"><![CDATA[li:first]]></config>
+            <config name="at-lud-tab"><![CDATA[c]]></config>
+            <config name="at-class"><![CDATA[lud-comp-nav-tab-nor]]></config>
+            <config name="cat-class"><![CDATA[lud-cmbx-pt1x]]></config>
+            <detail data="data" title="${iitem.groupname}" icon="${iitem.icon}"><![CDATA[/user/service/service/lud-core-human-user-${iitem.usergroup}-index/i]]></detail>
+            <detail title="人员总览" icon="fab fa-creative-commons-sa"><![CDATA[/user/service/service/lud-core-human-user-group-index/i]]></detail>
+         </comp>
+        <data name="data" type="jdbc" query="lud-core.lud_user_group_query" result="list" fields="def" limits="project" flag="i"></data>
+    </service>
+</configuration>

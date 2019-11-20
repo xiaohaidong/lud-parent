@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <service name="white" layout="content/empty" acl="public" cache="true">
+        <content theme="normal/empty" flag="i">
+            <item><![CDATA[${comp["navs"]}]]></item>
+        </content>
+        <comp name="navs" theme="navigation/workspace/classic">
+            <config name="attr-class"><![CDATA[lud-comp-nav-workspace-classic clearfix]]></config>
+            <config name="icon"><![CDATA[${menu.menu["icon"]}]]></config>
+            <config name="title"><![CDATA[${menu.menu["name"]}<span>${menu.menu["enname"]}</span>]]></config>
+            <config name="description"><![CDATA[当前位置：${menu.appinfo["name"]} ▶  ${menu.pmenu["name"]} ▶  ${menu.menu["name"]} / ${menu.menu["description"]}]]></config>
+        </comp>
+        <data name="menu" type="null" result="map" invoke="com.lud.web.business.core.render.user.center.main.getMenu" flag="i"></data>
+    </service>
+
+    <service name="classic" layout="content/empty" acl="public" cache="true">
+        <content theme="normal/empty" flag="i">
+            <item><![CDATA[${comp["navs"]}]]></item>
+        </content>
+        <comp name="navs" theme="navigation/workspace/classic">
+            <config name="attr-class"><![CDATA[lud-comp-nav-workspace-classic  clearfix]]></config>
+            <config name="icon"><![CDATA[${menu.menu["icon"]}]]></config>
+            <config name="title"><![CDATA[${menu.menu["name"]}<span>${menu.menu["enname"]}</span>]]></config>
+            <config name="description"><![CDATA[当前位置：${menu.appinfo["name"]} ▶  ${menu.pmenu["name"]} ▶  ${menu.menu["name"]} / ${menu.menu["description"]}]]></config>
+        </comp>
+        <data name="menu" type="null" result="map" invoke="com.lud.web.business.core.render.user.center.main.getMenu" flag="i"></data>
+    </service>
+</configuration>

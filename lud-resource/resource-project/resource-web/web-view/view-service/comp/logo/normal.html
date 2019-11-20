@@ -1,0 +1,17 @@
+<#noparse><#assign</#noparse> data=${config["link-data"]}>
+<div <#if config.id>id="${compid}_logo"</#if> class="lud-comp-logo lud-lyps-md" <#list config?keys as key><#if key?starts_with("logo-attr")> ${key?substring(10)}="${config[key]}"</#if></#list> style="height:${config["logo-height"]};background-image: url(${config.logo})">
+    <#if config["logo-text"]=="true">
+        <div class="text" style="left:${config["text-l"]};top:${config["text-t"]};">
+            <h5>${config["text-1"]}</h5>
+            <h2>${config["text-2"]}</h2>
+            <h5>${config["text-3"]}</h5>
+        </div>
+    </#if>
+    <#if config["logo-link"]=="true">
+        <div class="link" style="right:${config["link-r"]};top:${config["link-t"]};">
+            <ul class="lud-comp-nav-pce lstn" <#if config["render-target"]>lud-oclick="li:first" lud-render-target="${config["render-target"]}"</#if>>
+                <#noparse><#list data as item></#noparse>${config["link-render"]}<#noparse></#list></#noparse>
+            </ul>
+        </div>
+    </#if>
+</div>

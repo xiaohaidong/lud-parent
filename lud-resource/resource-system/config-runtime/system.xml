@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <group name="licence">
+        <item name="name"><![CDATA[SERVER-LUD]]></item>
+        <item name="licence"><![CDATA[SERVER-LUD]]></item>
+    </group>
+    <group name="server">
+        <item name="debug"><![CDATA[1]]></item>
+    </group>
+    <group name="resource">
+        <item name="resourcepath"><![CDATA[/resource-project/resource-config/resource/resource.xml]]></item>
+        <item name="redisconfig"><![CDATA[/resource-system/config-server/config-redis.xml]]></item>
+        <item name="jdbc"><![CDATA[local]]></item>
+    </group>
+</configuration>

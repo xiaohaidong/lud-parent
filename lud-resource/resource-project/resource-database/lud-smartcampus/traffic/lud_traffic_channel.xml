@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <querys>
+        <item order="code">
+            <fileds>
+                <filed name="def"></filed>
+                <filed name="count"><![CDATA[ count(*) as num ]]></filed>
+            </fileds>
+            <limits>
+                <limit name="project" args="project"><![CDATA[ project=? ]]></limit>
+                <limit name="code" args="code"><![CDATA[ code=? ]]></limit>
+            </limits>
+        </item>
+    </querys>
+    <commands>
+        <item name="del">
+            <cmd args="id" flag=""><![CDATA[delete from {t} where id=?]]></cmd>
+        </item>
+        <item name="insert">
+            <cmd args="project,code,num,name,park,direction" autoid="true"><![CDATA[insert into {t}(project,code,num,name,park,direction)values(?,?,?,?,?,?)]]></cmd>
+        </item>
+    </commands>
+</configuration>

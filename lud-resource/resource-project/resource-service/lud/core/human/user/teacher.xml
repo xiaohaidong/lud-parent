@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <!-- 部门类型管理 -->
+    <service name="index" theme="content/content" cache="true">
+         <!-- 右侧工作区 -->
+        <content theme="wrap/content" for="right" flag="i">
+            <item wat-class="lud-comp-title-s lud-cmbx-mt1x"><![CDATA[${comp["title.g"]}]]></item>
+            <item><![CDATA[${comp["searchbar"]}]]></item>
+        </content>
+        <comp name="title.g" theme="view/title/simple/s" flag="i">
+            <config name="title"><![CDATA[管理人员信息表]]></config>
+            <config name="icon"><![CDATA[fab fa-buromobelexperte]]></config>
+            <config name="subtitle"><![CDATA[Manager information management ]]></config>
+        </comp>
+        <comp name="searchbar" theme="form/search/nor" wat-class="lud-bar-n clearfix" render="search" flag="i">
+            <config name="at-data-action"><![CDATA[/user/service/service/lud-core-human-user-teacher-data/i]]></config>
+            <config name="page-size"><![CDATA[20]]></config>
+            <config name="submit"><![CDATA[查询]]></config>
+            <config name="autosub"><![CDATA[1]]></config>
+            <detail control="input.normal" icon="fal fa-grip-vertical" name="w-l-name" title="教师姓名" ></detail>
+        </comp>
+    </service>
+
+    <!-- DataList -->
+    <service name="data" theme="content/content" cache="true">
+        <content theme="wrap/content" flag="i">
+            <item wat-class="lud-com-actionlist-tool"><![CDATA[${comp["actions"]}]]></item>
+            <item wat-class="lud-tb-g"><![CDATA[${comp["list"]}]]></item>
+            <item wat-class="lud-comp-pager" wat-style="height:6rem"><![CDATA[${comp["page"]}]]></item>
+        </content>
+        <comp name="actions" theme="action/btn/list-role"  flag="i">
+            <detail title="导出EXCEL" at-confirm="是否导出数据？这是一个很耗时的过程！" icon="fal fa-share-square" ></detail>
+        </comp>
+        <comp name="list" render="list" theme="datalist/table/list" data="data_list" flag="i">
+            <config name="at-merge"><![CDATA[0;1;2]]></config>
+            <config name="at-mergeclos"><![CDATA[0;1;2]]></config>
+            <detail title="工作单位"  th-colspan="3" td-v="0"><![CDATA[]]></detail>
+            <detail title="基本信息" th-colspan="8" td-v="0"><![CDATA[]]></detail>
+            <detail title="数据管理" th-class="nr" td-class="lud-cmcc-org" th-colspan="2" th-break="1" td-v="0"><![CDATA[]]></detail>
+            <detail width="12" title="工作单位"  ><![CDATA[${item["userdepartment_shortname"]}]]></detail>
+            <detail width="10" title="办公室" ><![CDATA[${item["office_content"]}]]></detail>
+            <detail width="10" title="职务"  ><![CDATA[${item["post_content"]}]]></detail>
+            <detail control="btn.check" edt="btn" width="5" title="ck"><![CDATA[${item.id}]]></detail>
+            <detail width="11" title="工号" td-class="tl b lud-cmcc-org" th-rowspan="2"><![CDATA[${item.userid}]]></detail>
+            <detail width="10" title="姓名"  td-class="tl lud-cmcc-blul"><![CDATA[${item.name}]]></detail>
+            <detail width="12" title="移动电话" td-class="lud-cmcc-blul"><![CDATA[${item["contactmobile"]}]]></detail>
+            <detail width="12" title="办公电话" td-class="lud-cmcc-blul"><![CDATA[${item["officetelephone"]}]]></detail>
+            <detail width="18" title="电子信箱" td-class="tl lud-cmcc-blul" ><![CDATA[${item["contactemail"]}]]></detail>
+            <detail width="14" title="身份证号" td-class="lud-cmcc-blul fs1x" ><![CDATA[${item["cardid"]}]]></detail>
+            <detail title="权限"  td-class="tl lud-cmcc-org" th-rowspan="2" role="x" control="check.box"  data="rolelist"><![CDATA[${item.userrole}]]></detail>
+            <detail width="5" control="btn.btn" edt="btn" role="m" th-class="nr fs1x" title="详情" icon="fab fa-jsfiddle" ><![CDATA[]]></detail>
+            <detail width="4" control="btn.btn" edt="btn" role="d" th-class="nr fs1x" title="删除" cat-confirm="是否删除部门:${item.content}？"  icon="far fa-minus-circle" cat-lud-exeu="/user/service/exe/lud-core-human-department-type-delete/i?id=${item.id}"><![CDATA[]]></detail>
+        </comp>
+        <comp name="page" theme="datalist/pager/normal" flag="i">
+            <config name="data"><![CDATA[data]]></config>
+        </comp>
+        <data name="data" type="jdbc" query="lud-core.lud_user_info_query" result="page" fields="def,department,office,post" autowhere="1" limits="def,usergroup" args="usergroup=teacher" flag="i"></data>
+        <data name="rolelist" type="jdbc" query="lud-core.lud_user_role_query" result="list" fields="codec" limits="groups"  args="usergroup=teacher" flag="i"></data>
+    </service>
+</configuration>

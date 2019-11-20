@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <!-- 资源文件 -->
+    <service name="index" theme="content/content" cache="true">
+        <content theme="wrap/content" flag="i">
+            <item wat-class="color-pur" wat-lud-render="/user/service/service/mudl-user-center-public-comp-nav/i"></item>
+            <item wat-class="lud-cmbx-p3x lud-cmcb-whitel"><![CDATA[${comp["navs"]}]]></item>
+        </content>
+        <comp name="navs" theme="nav/tab/static" flag="i">
+            <config name="at-lud-oclick"><![CDATA[li:first]]></config>
+            <config name="at-lud-tab"><![CDATA[c]]></config>
+            <config name="at-class"><![CDATA[lud-comp-nav-tab-nor b]]></config>
+            <config name="cat-class"><![CDATA[lud-cmbx-ptb1x]]></config>
+            <detail title="系统概览" icon="fab fa-critical-role"><![CDATA[/user/service/service/lud-core-system-system-main-main/i]]></detail>
+            <detail title="部署分布" icon="fab fa-mendeley"><![CDATA[/user/service/service/lud-core-system-system-deploy-index/v]]></detail>
+            <detail title="JVM监测" icon="fab fa-java"><![CDATA[/user/service/service/lud-core-system-system-main-main/i]]></detail>
+            <detail title="DUBBO服务" icon="fab fa-skyatlas"><![CDATA[/user/service/service/lud-core-system-system-main-main/i]]></detail>
+            <detail title="运行平台" icon="fab fa-node-js"><![CDATA[/user/service/service/lud-core-system-system-main-main/i]]></detail>
+        </comp>
+    </service>
+</configuration>

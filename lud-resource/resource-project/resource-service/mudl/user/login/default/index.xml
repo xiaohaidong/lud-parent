@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <!-- content：内容页 -->
+    <service name="content" theme="spliter/left-right" acl="public" cache="true" lat-class="lud-lysp-lr clearfix lud-lyps-md lud-cmbx-ptb2x" llat-class="left" llat-style="width:86.5rem" lrat-class="right" lrat-style="width:32rem">
+        <!-- left content -->
+        <content name="left" theme="wrap/content" for="left" flag="i">
+            <item wat-class="lud-cmcb-whitel lud-cmbx-p3x lud-ele-img-wap"><![CDATA[${comp["banner"]}]]></item>
+            <item wat-class="lud-cmcb-whitel lud-cmbx-p3x lud-cmbx-pt1x"><![CDATA[${comp["title"]}]]></item>
+        </content>
+        <comp name="banner" theme="element/images/normal">
+            <config name="at-src"><![CDATA[/web-userfile/project/${project.company}/${project.project}/website/default/banner.jpg]]></config>
+        </comp>
+        <comp name="title" theme="view/title/binder/title-bind-content">
+            <config name="wat-class"><![CDATA[clearfix]]></config>
+            <config name="tat-class"><![CDATA[lud-comp-title-n lftb bb]]></config>
+            <config name="at-class"><![CDATA[lud-comp-nav lud-comp-nav-x lud-comp-nav-subt]]></config>
+            <config name="at-lud-tab"><![CDATA[c]]></config>
+            <config name="at-lud-oclick"><![CDATA[li:first]]></config>
+            <config name="title"><![CDATA[<h2 class="main">新闻通知 · 热点资讯<span>News && Notes</span><span>System DateTime:${.now}</span><a href="/?bin=/web/service/service/mudl-user-login-note-note-channel/i?groupx=news">更多...</a></h2>]]></config>
+            <config name="data"><![CDATA[notelinks]]></config>
+            <config name="text"><![CDATA[${item.name}]]></config>
+            <config name="url"><![CDATA[/web/service/service/mudl-user-login-note-note-list/t?code=${item.code}]]></config>
+        </comp>
+        
+        <!-- right content -->
+        <content name="right" theme="wrap/content" for="right" flag="i">
+            <item wat-id="user_login" wat-class="lud-cmcb-whitel lud-cmbx-p3x" wat-style="padding-top:4rem"><![CDATA[${comp["userlogin"]}]]></item>
+            <item wat-id="user_getpass" wat-class="lud-cmcb-whitel lud-cmbx-p3x h" wat-style="padding-top:4rem"><![CDATA[${comp["getpassword"]}]]></item>
+            <item wat-class="lud-cmcb-whitel lud-cmbx-p3x" wat-style="margin-top:2rem;padding-bottom:0;overflow:hidden"><![CDATA[${comp["links.title"]}]]></item>
+            <item wat-style="padding-top:0" wat-class="lud-cmcb-whitel lud-cmbx-p3x clearfix"><![CDATA[${comp["links"]}]]></item>
+        </content>
+        <comp name="userlogin" theme="mudl/login/default">
+            <config name="at-class"><![CDATA[lud-ele-form-txtform lud-ele-form-s1x]]></config>
+            <config name="at-style"><![CDATA[padding-left:2.2rem;width:26rem;margin-top:1rem]]></config>
+            <config name="at-data-action"><![CDATA[/web/service/exe/mudl-user-login-login-login-login/i]]></config>
+            <config name="usergroup"><![CDATA[usergroupx]]></config>
+            <config name="selected"><![CDATA[<#if item.sort=="1">selected="selected"</#if>]]></config>
+        </comp>
+        <comp name="getpassword" theme="mudl/login/getpass">
+            <config name="at-class"><![CDATA[lud-ele-form-txtform lud-ele-form-s1x]]></config>
+            <config name="at-style"><![CDATA[padding-left:2.2rem;width:26rem;margin-top:1rem]]></config>
+            <config name="at-data-action"><![CDATA[/web/service/exe/service-lud-user-info-getpass/i]]></config>
+            <config name="usergroup"><![CDATA[usergroupx]]></config>
+            <config name="selected"><![CDATA[<#if item.sort=="1">selected="selected"</#if>]]></config>
+        </comp>
+        <comp name="links.title" theme="view/title/_include/title">
+            <config name="tat-class"><![CDATA[lud-comp-title-n lftb bb]]></config>
+            <config name="title"><![CDATA[<h2 class="main">快速连接<span>Navigation</span></h2>]]></config>
+        </comp>
+        <comp name="links" theme="nav/link/pic">
+            <config name="at-class"><![CDATA[lud-comp-nav-x lud-comp-nav-backc bigx2 fs]]></config>
+            <config name="data"><![CDATA[links]]></config>
+            <config name="render"><![CDATA[<#if item["postion"]=="picture"><div class="lud-ele-img-wap"><a href="${item.url}" target="_blank"><img src="${item.picture}" /></a></div></#if>]]></config>
+        </comp>
+        <data name="notelinks" type="jdbc" query="lud-core.lud_project_note_group_query" result="list" fields="def" limits="project,groupx" args="groupx=news" flag="i"></data>
+        <data name="project" type="redis" result="map" query="com.lud.business.project/{project}" flag="i"></data>
+        <data name="config" type="redis" result="map" query="com.lud.business.project.config/{project}" flag="i"></data>
+        <data name="usergroupx" type="redis" result="list" query="com.lud.business.usergroups/{project}" flag="i"></data>
+        <data name="links" type="jdbc" result="list" query="lud-core.lud_project_link_query" limits="project" flag="i"></data>
+    </service>    
+</configuration>

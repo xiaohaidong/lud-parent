@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <item name="code"><![CDATA[100001]]></item>
+    <item name="login.theme"><![CDATA[default]]></item>
+    <item name="login.theme.color"><![CDATA[lu-cmcb-blu]]></item>
+    <item name="login.theme.logo"><![CDATA[/web-userfile/project/1007/100701/logo-web.png]]></item>
+    <item name="copyright.cn"><![CDATA[湖北省宜昌市夷陵区童贩村]]></item>
+    <item name="copyright.en"><![CDATA[Tong Trafficking Village, Yiling District, Yichang City, Hubei Province © 2017-2019  ]]></item>
+    <item name="copyright.address"><![CDATA[湖北省宜昌市夷陵区童贩村(邮政编码：610000) ]]></item>
+    <item name="copyright.contact"><![CDATA[TEL +86-028-87600114/86+18084815085]]></item>
+</configuration>

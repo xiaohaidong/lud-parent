@@ -1,0 +1,144 @@
+﻿/*
+ * Copyright 2018-2019 the original author or authors.
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+.lud-msgbox-cover {
+    background-color: #000;
+    z-index: 2;
+    display: none;
+    opacity: 0.5;
+}
+
+.lud-msgbox-boxs {
+    z-index: 3;
+    width: 0;
+    height: 0;
+    overflow: visible;
+}
+
+.lud-msgbox {
+    position: absolute;
+    box-shadow: 0.1rem 0.1rem 0.5rem #000;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    border:0.1rem solid #000;
+}
+/***/
+.lud-msgbox > .toolbar {
+    height: 4rem;
+    overflow: hidden;
+    line-height: 4rem;
+    padding-left: 1rem;
+    overflow: hidden;
+    opacity: 0.9;
+    color: #fff;
+}
+.lud-msgbox > .toolbar:hover {
+    opacity:1;
+}
+.lud-msgbox > .toolbar > .oprs {
+    float: right;
+}
+.lud-msgbox > .toolbar > .oprs .tool {
+    float: left;
+    padding: 0 1.5rem;
+    cursor: pointer;
+    line-height: 2.8rem;
+}
+.lud-msgbox > .toolbar > .title {
+    float: left;
+    font-weight:bold;
+}
+.lud-msgbox > .toolbar > .title i {
+    padding-right: 1rem;
+}
+
+.lud-msgbox > .content {
+    background-color:#fff;
+    overflow:hidden;
+    margin:0;
+    padding:0;
+}
+
+/***/
+.lud-msgbox > .actionbar {
+    height: 5rem;
+    padding:0 1rem;
+}
+.lud-msgbox > .actionbar > ul.action {
+    height: 5rem;
+}
+.lud-msgbox > .actionbar > ul.action li {
+    height: 5rem;
+    text-align: center;
+    float: left;
+    padding:0 1.5rem;
+    cursor: pointer;
+}
+
+.lud-msgbox > .actionbar > ul.action li label.i {
+    font-size: 1.8rem;
+    display: block;
+    padding-top: 0.8rem;
+}
+
+.lud-msgbox > .actionbar > ul.action li label.t {
+    display: block;
+    font-size: 1.2rem;
+}
+
+/*
+    经典颜色
+*/
+.lud-boxskin-classic > .toolbar {
+    color: #fff;
+}
+.lud-boxskin-classic {
+    background-color: #0369a8;
+}
+.lud-boxskin-classic > .toolbar > .oprs {
+    border-bottom: 1px solid #025487;
+    border-left: 1px solid #025487;
+}
+.lud-boxskin-classic > .toolbar > .oprs .tool {
+    border-bottom: 1px solid #047cc8;
+    border-left: 1px solid #047cc8;
+    border-right: 1px solid #025487;
+}
+.lud-boxskin-classic > .toolbar > .oprs .tool:last-child {
+    border-right:none;
+}
+.lud-boxskin-classic > .toolbar > .oprs .tool:hover {
+    background-color: #9b0404;
+    color: #fff;
+    border-bottom: 1px solid #9b0404;
+    border-left: 1px solid #9b0404;
+}
+
+.lud-boxskin-classic > .actionbar > ul.action li {
+    margin-right:0.4rem;
+    color:#c3d6e2;
+}
+.lud-boxskin-classic > .actionbar > ul.action li:hover {
+    background-color: #ecf0f5;
+    color: #0369a8;
+}
+.lud-boxskin-classic > .actionbar > ul.action li.actived {
+    background-color: #ecf0f5;
+    color: #000000;
+}
+.lud-boxskin-classic > .content {
+    background-color: #ecf0f5;
+    position:relative;
+}

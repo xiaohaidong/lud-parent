@@ -1,0 +1,11 @@
+<#include "/view-service/comp/view/title/include/title.html"/>
+<#if config["subtitle-data"]>
+<#noparse><#assign</#noparse> data=${config["subtitle-data"]}>
+    <div class="clearfix" lud-render-target="#${compid}_content">
+        <ul lud-tab="c" lud-oclick="li:first" <#list config?keys as key><#if key?starts_with("subtitle-attr-")> ${key?substring(14)}="${config[key]}"</#if></#list>>
+            <#noparse><#list data as item></#noparse>
+                <li lud-oclick-render="${config["subtitle-url"]}">${config["subtitle-text"]}</li>
+            <#noparse></#list></#noparse>
+        </ul>
+    </div>
+</#if>

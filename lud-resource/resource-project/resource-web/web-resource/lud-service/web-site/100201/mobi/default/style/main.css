@@ -1,0 +1,57 @@
+﻿html {
+    background-color: #fff;
+}
+
+#head {
+    width: 100%;
+    text-align: center;
+}
+
+#head img {
+    width: 100%;
+}
+
+#navigation ul {
+    width: 100%;
+    display: block;
+    padding: 1rem 0.5rem;
+    box-shadow: 0 3px 3px 0 #EEE;
+}
+
+#navigation ul li {
+    width: 19.5%;
+    height: 8rem;
+    overflow: hidden;
+    display: block;
+    float: left;
+    padding: 0 1rem;
+    border-right: 1px dotted #ddd;
+}
+
+#navigation ul li:last-child {
+    border: none;
+}
+
+#navigation ul li i {
+    width: 6rem;
+    height: 5rem;
+    text-align: center;
+    font-size: 5rem;
+    display: block;
+    line-height: 6rem;
+    margin: 0 auto;
+    border-radius: 1rem;
+}
+
+#navigation ul li label {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 0.5rem;
+    font-weight: bold;
+}
+
+#content {
+    padding: 0 1rem;
+}

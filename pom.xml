@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>pom</packaging>
+    <groupId>com.wrics</groupId>
+    <artifactId>lud-parent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>lud-test-util</module>
+        <module>lud-test-web</module>
+        <module>lud-util-content</module>
+        <module>lud-util-comm</module>
+        <module>lud-util-spring</module>
+        <module>lud-util-dubbo</module>
+        <module>lud-service-core-api</module>
+        <module>lud-service-core</module>
+        <module>lud-service-open</module>
+        <module>lud-service-open-api</module>
+        <module>lud-service-business-api</module>
+        <module>lud-service-business</module>
+        <module>lud-service-smartcampus-api</module>
+        <module>lud-service-smartcampus</module>
+        <module>lud-util-web</module>
+        <module>lud-web-business-core</module>
+        <module>lud-web-business-smartcampus</module>
+        <module>lud-web-business-iot</module>
+        <module>lud-web-server</module>
+        <module>lud-iot-api</module>
+        <module>lud-iot-util</module>
+        <module>lud-iot-server</module>
+        <module>lud-iot-client</module>
+        <module>lud-iot-business-core-api</module>
+        <module>lud-iot-business-core-client</module>
+        <module>lud-iot-business-core-server</module>
+        <module>lud-web-api</module>
+    </modules>
+    <properties>
+        <argLine>-Dfile.encoding=UTF-8</argLine>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- com -->
+        <com.alibaba.fastjson.version>1.2.62</com.alibaba.fastjson.version>
+        <com.alibaba.druid.version>1.1.20</com.alibaba.druid.version>
+        <com.aliyun.core.version>4.1.0</com.aliyun.core.version>
+        <com.google.zxing.version>3.4.0</com.google.zxing.version>
+        <com.oshi.core.version>4.0.0</com.oshi.core.version>
+        <!-- commons -->
+        <commons.lang.version>3.8.1</commons.lang.version>
+        <commons.fileupload.version>1.4</commons.fileupload.version>
+        <commons.pool2.version>2.6.0</commons.pool2.version>
+
+        <!-- jdbc -->
+        <jdbc.mysql.version>8.0.13</jdbc.mysql.version>
+        <jdbc.sqlserver.version>7.0.0.jre8</jdbc.sqlserver.version>
+        <jdbc.oracle.version>11.2.0.3</jdbc.oracle.version>
+        <jdbc.postsql.version>42.2.4</jdbc.postsql.version>
+        <jdbc.sqlite.version>3.23.1</jdbc.sqlite.version>
+
+        <!-- nosql -->
+        <nosql.redis.clients.version>3.0.0</nosql.redis.clients.version>
+        <nosql.mongodb.clients.version>3.9.1</nosql.mongodb.clients.version>
+        <nosql.zookeeper.server.version>3.4.13</nosql.zookeeper.server.version>
+        <nosql.zookeeper.client.version>0.11</nosql.zookeeper.client.version>
+        <nosql.rabbitmq.client.version>5.5.1</nosql.rabbitmq.client.version>
+
+        <!-- log -->
+        <log.logging.version>1.2</log.logging.version>
+        <log.log4j.version>2.11.1</log.log4j.version>
+        <log.slf4j.version>1.7.28</log.slf4j.version>
+
+        <!-- org -->
+        <org.apache.poi.version>4.0.1</org.apache.poi.version>
+        <org.apache.dubbo.version>2.7.3</org.apache.dubbo.version>
+        <org.apache.logging.log4j.version>2.11.2</org.apache.logging.log4j.version>
+        <org.apache.curator>4.2.0</org.apache.curator>
+        <org.apache.httpcomponents.httpclient>4.5.10</org.apache.httpcomponents.httpclient>
+        <org.dom4j.version>2.1.0</org.dom4j.version>
+        <org.fusesource.mqtt>1.16</org.fusesource.mqtt>
+        <org.lombok.version>1.18.4</org.lombok.version>
+        <org.freemarker.version>2.3.29</org.freemarker.version>
+        <org.spring.version>5.2.0.RELEASE</org.spring.version>
+
+        <!-- web -->
+        <web.servlet.version>3.1.0</web.servlet.version>
+        <web.websocket.version>1.1</web.websocket.version>
+        <web.netty.version>4.1.42.Final</web.netty.version>
+
+        <!-- test -->
+        <test.junit.version>4.12</test.junit.version>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${org.lombok.version}</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

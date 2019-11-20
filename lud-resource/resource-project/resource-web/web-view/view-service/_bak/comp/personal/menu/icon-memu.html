@@ -1,0 +1,6 @@
+<#noparse><#assign</#noparse> data=${config.data}>
+<div <#if config.id>id="${compid}"</#if> <#list config?keys as key><#if key?starts_with("wap-attr-")> ${key?substring(9)}="${config[key]}"</#if></#list>>
+    <#noparse><ul lud-tab="c" lud-oclick=".item_4:first"  lud-render-target="</#noparse>${config["render-target"]}<#noparse>"><#list data as item></#noparse>
+    ${config.item}
+    <#noparse></#list></ul></#noparse>
+</div>

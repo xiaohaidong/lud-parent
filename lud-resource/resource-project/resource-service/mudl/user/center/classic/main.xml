@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <!-- 内容项 -->
+    <service name="content" theme="spliter/left-right" lrat-id="mudl_user_center_workspace" llat-class="lud-lycm-fl" lrat-class="lud-lycm-fr" acl="public" cache="true" lat-class="clearfix lud-lyps-md lud-cmbx-ptb2x" lrat-style="width:86.6rem" llat-style="width:32rem">
+        <content theme="wrap/content" for="left" flag="i">
+            <item wat-class="lud-cmcb-whitel  lud-view-card "><![CDATA[${comp["card"]}]]></item>
+            <item wat-id="lud_user_center_menu" wat-class="lud-cmcb-whitel lud-comp-iconmenu lud-comp-iconmenu3x lud-cmbx-plr3x lud-cmbx-pb2x clearfix"></item>
+        </content>
+        <comp name="card" theme="mudl/user/card/normal">
+            <config name="title"><![CDATA[用户信息卡片]]></config>
+            <config name="subtitle"><![CDATA[User Infomation Card]]></config>
+            <config name="card-img"><![CDATA[/web-resource/add-on/lud/images/pictures/pannelt/21.jpg]]></config>
+            <config name="card-content"><![CDATA[
+                <ul class="lud-comp-kvlist">
+                    <li><span>账号：</span>${userinfo.user.userid}</li>
+                    <li><span>姓名：</span>${userinfo.user.name}</li>
+                    <li><span>部门：</span>${userinfo.user.departmentName}</li>
+                    <li><span>组别：</span>${userinfo.user.groupName}</li>
+                </ul>
+            ]]></config>
+        </comp>
+        <data name="userinfo" type="null" result="map" invoke="com.lud.web.business.core.render.user.center.main.getUserInfo" flag="i"></data>
+    </service>
+</configuration>

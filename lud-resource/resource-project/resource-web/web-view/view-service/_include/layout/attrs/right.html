@@ -1,0 +1,1 @@
+<#list config?keys as key><#if key?starts_with("lrat-")> ${key?substring(5)}="${config[key]}"</#if></#list>

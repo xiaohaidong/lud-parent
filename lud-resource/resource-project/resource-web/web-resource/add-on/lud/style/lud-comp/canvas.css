@@ -1,0 +1,127 @@
+﻿/*
+ * Copyright 2018-2019 the original author or authors.
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+.lud-cv-pannel {
+    padding: 2rem;
+    border-radius: 0.3rem;
+    border: 1px solid #DDDDAA;
+    background-color: #fffff6;
+}
+.lud-cv-n {
+    position: relative;
+}
+.lud-cv-n div.nodes {
+    position:absolute;
+    width:100%;
+    height:100%;
+    z-index:2;
+}
+.lud-cv-n div.canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.lud-cv-n div.node {
+    font-size: 1.2rem;
+    font-family: Calibri,"宋体";
+    position: absolute;
+    cursor: pointer;
+    border-radius: 1rem;
+    text-align: center;
+    padding: 0.5rem 1.5rem 0.5rem 1rem;
+    overflow: hidden;
+    border:0.3rem solid #EEE;
+}
+.lud-cv-n div.node > div.icon {
+    font-size: 2.4rem;
+    position:relative;
+}
+.lud-cv-n div.node > label {
+    position: absolute;
+    height: 33%;
+    width: 1.6rem;
+    background-color: #FFF;
+    border-top-left-radius: 0.3rem;
+    border-bottom-left-radius: 0.3rem;
+    display: block;
+    right: -1rem;
+    top: 30%;
+    box-shadow: inset 0.1rem 0.1rem 0.2rem #000;
+    overflow: hidden;
+    background-color: #EEE;
+}
+.lud-cv-n div.node > label span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0.2rem 0.2rem 0.3rem #000;
+}
+.lud-cv-n div.node > label span.status-1 {
+    background-color: #00ff21;
+}
+.lud-cv-n div.node > label span.status-0 {
+    background-color: #ff0000;
+}
+.lud-cv-n div.node > label span.status-9 {
+    background-color: #AAA;
+}
+.lud-cv-n div.description {
+    position: absolute;
+    bottom: 1rem;
+    right: 0;
+    width: 36rem;
+}
+.lud-cv-n div.description table {
+    font-family:Calibri,"仿宋";
+    width:100%;
+}
+.lud-cv-n div.description table td {
+    border: 1px dashed #000;
+    text-align: left;
+    padding: 0.5rem 1rem;
+}
+.lud-cv-n div.description table tr:first-child td {
+    border-top:none;
+}
+.lud-cv-n div.description table tr td:first-child {
+    border-left: none;
+}
+ .lud-cv-n div.description table tr td:last-child{
+    border-right:none;
+}
+.lud-cv-n div.description table td.title {
+    font-size: 2rem;
+    padding: 1rem 1rem 0.5rem 1rem;
+    font-weight: bold;
+}
+.lud-cv-n div.description table td.tt {
+    width:10rem;
+}
+.lud-cv-n>div.nodes {
+    width:100%;
+    height:100%;
+}
+.lud-comp-map-wrap {
+    overflow:hidden;
+    border:1px solid #CCC;
+}
+.lud-comp-map {
+    height: 100%;
+    width: 100%;
+}
+.anchorBL {
+    display:none;
+}

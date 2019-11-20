@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <!-- head：头部文件 -->
+    <service name="head" layout="content/none" acl="public" cache="true">
+        <content theme="normal/none" flag="i"><![CDATA[${comp["link"]}${comp["logo"]}${comp["apps"]}]]></content>
+        <comp name="link" theme="head/view-link/data">
+            <config name="css">lud-color-b-dd lud-color-f-ll</config>
+            <config name="data"><![CDATA[
+            <div class="lud-layout-f-r  lud-size-plr-20 lud-color-b-ddd"><a href="/">注销登录</a></div>
+            <ul class="lud-comp-ul-hx spliter-3d" style="padding-top:15px;opacity:0.9"><#list project.links as item><#if item.postion=="top-link">
+                <li class="lud-size-plr-15" style="height:12px;line-height:12px;"><a href="${item.url}">${item.text}</a></li>
+                </#if></#list>
+            </ul>
+            ]]></config>
+        </comp>
+        <comp name="logo" theme="head/view-logo/userinfo">
+            <config name="css">lud-color-b-ll</config>
+            <config name="logo">/web-userfile/project/${project.company}/${project.code}/usercenter/swnec/logo.png</config>
+            <config name="banner">/web-userfile/project/${project.company}/${project.code}/usercenter/swnec/banner.jpg</config>
+            <config name="company">${project.config["project.copyright.cn"]}</config>
+            <config name="project">${project.name}</config>
+            <config name="projecten">${project.enname}</config>
+        </comp>
+        <comp name="apps" theme="applist/line/begin-line">
+            <config name="css">${project.config["project.login.theme.color"]} lud-color-f-ll</config>
+            <config name="target">#lud_user_center_content_menu</config>
+            <config name="action"><![CDATA[/web/service/service/user-center-swnec-menu/i?code=${app.code}]]></config>
+            <config name="applist">apps.applist</config>
+            <config name="approle">apps.roleapp</config>
+        </comp>
+        <data name="project" type="redis" result="map" query="com.lud.business.runtime.project/{project}" flag="i"></data>
+        <data name="apps" type="null" result="map" invoke="com.lud.web.business.core.render.user.center.main.getApplicationList" flag="i"></data>
+    </service>
+
+    <!-- foot：底部文件 -->
+    <service name="foot" layout="content/none" acl="public" cache="true">
+        <content theme="normal/none" flag="i"><![CDATA[${comp["content"]}]]></content>
+        <comp name="content" theme="foot/normal">
+            <config name="css">${project.config["project.login.theme.color"]} lud-color-f-ll</config>
+            <config name="copyright.cn">${project.config["project.copyright.cn"]}</config>
+            <config name="copyright.en">${project.config["project.copyright.en"]}</config>
+            <config name="copyright.project.en">${project.enname}</config>
+            <config name="copyright.address">${project.config["project.copyright.address"]}</config>
+            <config name="copyright.contact">${project.config["project.copyright.contact"]}</config>
+        </comp>
+        <data name="project" type="redis" result="map" query="com.lud.business.runtime.project/{project}" flag="i"></data>
+    </service>
+
+    <!-- content：内容页 -->
+    <service name="content" layout="content/none" acl="public" cache="true">
+        <content name="wap" theme="normal/div" flag="i" for="content" class="content lud-view-mid lud-size-ptb-15"><![CDATA[
+            <div class="lud-layout-f-r" style="width:300px;margin-bottom:20px;" id="lud_user_center_content_menu"></div>
+            <div style="margin-right:315px;" id="lud_user_center_content_content"></div>
+        ]]></content>
+    </service>
+
+    <service name="menu" layout="content/none" acl="public" cache="true">
+        <content theme="normal/none" flag="i"><![CDATA[${comp["menu"]} ${comp["fastmenu"]}]]></content>
+        <comp name="menu" theme="pannel/content/titlecontent">
+            <config name="css"><![CDATA[lud-view-pannel-normal lud-size-p-20 lud-color-b-ll]]></config>
+            <config name="title"><![CDATA[<label>${app.appinfo.name}</label><span>${app.appinfo.title}</span>]]></config>
+            <config name="pic"><![CDATA[${app.appinfo.picture}]]></config>
+            <config name="content"><![CDATA[
+            <div class="clearfix">
+            <ul class="lud-comp-ul-normal clearfix" ludc-tab="nc" lude-fc="li.second" ludc-target="#lud_user_center_content_content">
+                <#list app.menus as item>
+                    <#if item.code?length==2>
+                    <li class="first"><i class="${item.icon}"></i>${item.name} <span>${item.enname}</span></li>
+                    <#else>
+                    <li class="second" lude-url="${item.url}">${item.name}</li>
+                    </#if>
+                </#list>
+                <li class="first"><i class="fab fa-buromobelexperte" />学习乐园 <span>Learning </span></li>
+                    <li class="second">所有课程</li>
+                    <li class="second">作业列表</li>
+                    <li class="second">学籍信息</li>
+                    <li class="second">超星课程</li>
+                    <li class="second">教务管理</li> 
+                    <li class="second">期末考试</li>      
+      
+                    <li class="first"><i class="fab fa-buromobelexperte" />教务管理 <span>Educational </span></li>   
+                    <li class="second">成绩查询</li> 
+                    <li class="second">平时成绩</li> 
+                    <li class="second">网上成绩</li>
+                    <li class="second">课程补考</li> 
+                    <li class="second">成人学位</li> 
+                    <li class="second">外语资格审核 </li> 
+                    <li class="second">英语四六级报名</li> 
+                         
+    
+                    <li class="first"><i class="fab fa-buromobelexperte" />毕业相关 <span>Graduation</span> </li> 
+                    <li class="second">毕业答辩 </li> 
+                    <li class="second">学位申请</li> 
+                    <li class="second">毕业设计补考</li> 
+                    <li class="second">毕业登记</li> 
+                    <li class="second">毕业自审</li> 
+                    <li class="second">学位自审</li> 
+                    <li class="second">离校流程</li> 
+            </ul>
+            </div>
+            ]]></config>
+        </comp>
+        <data name="app" type="null" result="map" invoke="com.lud.web.business.core.render.user.center.main.getApplication" flag="i"></data>
+    </service>
+</configuration>

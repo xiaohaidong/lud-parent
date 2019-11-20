@@ -1,0 +1,5 @@
+[11:20:42:405] [DEBUG] - com.alibaba.druid.pool.DruidDataSource.getConnectionDirect(DruidDataSource.java:1449) - skip not validate connection.
+[11:20:42:431] [DEBUG] - com.alibaba.druid.pool.DruidDataSource.getConnectionDirect(DruidDataSource.java:1449) - skip not validate connection.
+[11:20:42:432] [DEBUG] - com.alibaba.druid.pool.DruidDataSource.getConnectionDirect(DruidDataSource.java:1449) - skip not validate connection.
+[11:20:42:434] [DEBUG] - com.alibaba.druid.pool.DruidDataSource.getConnectionDirect(DruidDataSource.java:1449) - skip not validate connection.
+[11:20:42:435] [DEBUG] - com.alibaba.druid.pool.DruidDataSource.getConnectionDirect(DruidDataSource.java:1449) - skip not validate connection.

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <!-- 部门类型管理 -->
+    <service name="index" theme="spliter/left-right" cache="true">
+        <config name="lat-class"><![CDATA[clearfix lud-cmbx-pt1x]]></config>
+        <config name="llat-class"><![CDATA[1eft]]></config>
+        <config name="llat-style"><![CDATA[float:left;width:48rem]]></config>
+        <config name="lrat-class"><![CDATA[right]]></config>
+        <config name="lrat-style"><![CDATA[margin-left:50rem]]></config>
+        <!-- 左侧工作区 -->
+        <content theme="wrap/content" for="left" flag="i">
+            <item wat-class="lud-comp-title-s"><![CDATA[${comp["title.1"]}]]></item>
+            <item wat-class="lud-chart-pannel-wrap" wat-lud-ep="1"><![CDATA[${comp["chart.1"]}]]></item>
+            <item wat-class="lud-chart-pannel-wrap lud-cmbx-mt2x" wat-lud-ep="1"><![CDATA[${comp["chart.2"]}]]></item>
+        </content>
+        <comp name="title.1" theme="view/title/simple/s" flag="i">
+            <config name="title"><![CDATA[用户类别统计表]]></config>
+            <config name="icon"><![CDATA[fab fa-hubspot]]></config>
+            <config name="subtitle"><![CDATA[截止到:${.now}]]></config>
+        </comp>
+        <comp name="chart.1" theme="chart/echart/pie/pie" flag="i">
+            <config name="at-class"><![CDATA[lud-chart-pannel]]></config>
+            <config name="at-style"><![CDATA[height:24rem;]]></config>
+            <config name="title"><![CDATA[用户类别统计表]]></config>
+            <config name="skin"><![CDATA[s]]></config>
+            <config name="data"><![CDATA[chart]]></config>
+            <config name="datax"><![CDATA[${item["content"]}]]></config>
+            <config name="datay"><![CDATA[${item["usergroup_count"]}]]></config>
+        </comp>
+        <comp name="chart.2" theme="chart/echart/bar/bar" flag="i">
+            <config name="at-class"><![CDATA[lud-chart-pannel]]></config>
+            <config name="at-style"><![CDATA[height:24rem;]]></config>
+            <config name="title"><![CDATA[用户类别统计表]]></config>
+            <config name="skin"><![CDATA[s]]></config>
+            <config name="data"><![CDATA[chart]]></config>
+            <config name="datax"><![CDATA[${item["content"]}]]></config>
+            <config name="datay"><![CDATA[${item["usergroup_count"]}]]></config>
+        </comp>
+        <data name="chart" type="jdbc" query="lud-core.lud_user_group_query" result="list" fields="codec,userc" limits="project" flag="i"></data>
+        <!-- 右侧工作区 -->
+        <content theme="wrap/content" for="right" flag="i">
+            <item wat-class="lud-comp-title-s"><![CDATA[${comp["title.g"]}]]></item>
+            <item><![CDATA[${comp["searchbar"]}]]></item>
+        </content>
+        <comp name="title.g" theme="view/title/simple/s" flag="i">
+            <config name="title"><![CDATA[用户类别信息管理]]></config>
+            <config name="icon"><![CDATA[fab fa-buromobelexperte]]></config>
+            <config name="subtitle"><![CDATA[Department category information management ]]></config>
+        </comp>
+        <comp name="searchbar" theme="form/search/nor" wat-class="lud-bar-n clearfix" render="search" flag="i">
+            <config name="at-data-action"><![CDATA[/user/service/service/lud-core-human-user-group-data/i]]></config>
+            <config name="page-size"><![CDATA[10]]></config>
+            <config name="submit"><![CDATA[查询]]></config>
+            <config name="autosub"><![CDATA[1]]></config>
+            <detail control="input.normal" icon="fal fa-grip-vertical" name="w-l-groupname" title="类别名称" ></detail>
+        </comp>
+    </service>
+
+    <!-- DataList -->
+    <service name="data" theme="content/content" cache="true">
+        <content theme="wrap/content" flag="i">
+            <item wat-class="lud-com-actionlist-tool"><![CDATA[${comp["actions"]}]]></item>
+            <item wat-class="lud-tb-g"><![CDATA[${comp["list"]}]]></item>
+            <item wat-class="lud-comp-pager" wat-style="height:6rem"><![CDATA[${comp["page"]}]]></item>
+        </content>
+        <comp name="actions" theme="action/btn/list-role"  flag="i">
+            <detail title="导出EXCEL" at-confirm="是否导出数据？这是一个很耗时的过程！" icon="fal fa-share-square" ></detail>
+        </comp>
+        <comp name="list" render="list" theme="datalist/table/list" data="data_list" flag="i">
+            <detail control="btn.check" edt="btn" width="5" title="ck" ><![CDATA[${item.id}]]></detail>
+            <detail width="10" name="code" title="编码" ><![CDATA[${item.usergroup}]]></detail>
+            <detail title="类别名称" name="content" role="m" td-class="tl"  control="input.normal" cat-lud-update="/user/service/exe/lud-core-human-user-group-update/groupname" cat-key="${item.id}"><![CDATA[${item.groupname}]]></detail>
+            <detail width="5" title="排序" name="sort" role="m" td-class="tl"  control="input.normal" cat-lud-update="/user/service/exe/lud-core-human-user-group-update/sort" cat-key="${item.id}"><![CDATA[${item.sort}]]></detail>
+            <detail width="8" title="使用主题" td-class="lud-cmcc-org"><![CDATA[${item["theme"]}]]></detail>
+            <detail width="5" control="btn.btn" edt="btn" role="m" title="详情" icon="fab fa-jsfiddle" ><![CDATA[]]></detail>
+        </comp>
+        <comp name="page" theme="datalist/pager/normal" flag="i">
+            <config name="data"><![CDATA[data]]></config>
+        </comp>
+        <data name="data" type="jdbc" query="lud-core.lud_user_group_query" autowhere="1" result="page" fields="def,userc" limits="project" flag="i"></data>
+    </service>
+    
+    <!-- 更新  -->
+    <service name="update">
+        <command name="lud-core.lud_user_group_updategroupname" flag="groupname" islist="false" args="groupname:value,ovalue,id:key"><![CDATA[lud.comp.form.fresh(target);]]></command>
+        <command name="lud-core.lud_user_group_updatesort" flag="sort" islist="false" args="sort:value,ovalue,id:key"><![CDATA[lud.comp.form.fresh(target);]]></command>
+    </service>
+</configuration>

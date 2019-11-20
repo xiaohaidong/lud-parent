@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <service name="login" acl="public">
+        <data name="user" type="jdbc" query="lud-core.lud_user_info_login" args="userid,usergroup" result="map" limits="def" fields="def,group,department" flag="i"></data>
+        <command flag="i" invoke="com.lud.web.business.core.render.web.login.main.userLogin" islist="false" dataname="user"><![CDATA[window.location.href="/user/service/render-core/user-center/main";]]></command>
+    </service>
+    <service name="logout" acl="public">
+        <command flag="i" invoke="com.lud.web.business.core.render.user.center.main.userLogout" islist="false"><![CDATA[window.location.href="/";]]></command>
+    </service>
+</configuration>

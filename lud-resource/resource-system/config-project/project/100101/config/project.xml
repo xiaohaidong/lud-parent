@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <item name="code"><![CDATA[100101]]></item>
+    <item name="login.theme"><![CDATA[default]]></item>
+    <item name="login.theme.color"><![CDATA[lu-cmcb-blud]]></item>
+    <item name="copyright.cn"><![CDATA[新疆丝路鸿途软件科技有限公司]]></item>
+    <item name="copyright.en"><![CDATA[Xinjiang Silk Road Software Technology Co., Ltd. ]]></item>
+    <item name="copyright.address"><![CDATA[新疆乌鲁木齐经济技术开发区喀纳斯湖北路455号新疆软件园创智大厦5楼5001室、5002室 ]]></item>
+    <item name="copyright.contact"><![CDATA[TEL +(86) 0991-5269955 ]]></item>
+</configuration>

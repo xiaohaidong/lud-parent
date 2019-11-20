@@ -1,0 +1,76 @@
+[12:00:01:531] [INFO] - com.lud.test.util.web.context.ContextResultTest.test(ContextResultTest.java:32) - org.springframework.mock.web.MockHttpServletRequest@2bc7db89
+[12:00:01:531] [INFO] - com.lud.test.util.web.context.ContextResultTest.test(ContextResultTest.java:33) - 
+[12:00:01:531] [INFO] - com.lud.test.util.web.context.ContextResultTest.test(ContextResultTest.java:34) - localhost
+[12:00:01:547] [INFO] - com.lud.test.util.web.context.ContextResultTest.test(ContextResultTest.java:35) - {}
+[12:00:01:547] [INFO] - com.lud.test.web.WebUtilBaseTest.testvoid(WebUtilBaseTest.java:96) - Begin test
+[12:00:01:594] [INFO] - com.lud.test.util.web.context.HttpSessionUtilTest.testContextRequest(HttpSessionUtilTest.java:44) - {"domain":"localhost","flag":"","menu":"","project":"","service":"","token":"","userGroup":"","userGroupKey":"","userid":""}
+[12:00:01:594] [INFO] - com.lud.test.util.web.context.HttpSessionUtilTest.testContextResult(HttpSessionUtilTest.java:55) - {"action":"","code":"cd","message":"cddd","result":false}
+[12:00:01:594] [INFO] - com.lud.test.web.WebUtilBaseTest.testvoid(WebUtilBaseTest.java:96) - Begin test
+[12:00:01:609] [INFO] - com.lud.test.util.web.context.ViewFactoryTest.test(ViewFactoryTest.java:37) - sunqinqiu您好！
+[12:00:01:609] [INFO] - com.lud.test.web.WebUtilBaseTest.testvoid(WebUtilBaseTest.java:96) - Begin test
+[12:00:01:656] [INFO] - com.lud.test.web.WebUtilBaseTest.testvoid(WebUtilBaseTest.java:96) - Begin test
+[12:00:01:703] [INFO] - com.lud.test.util.web.view.WebViewControllerTest.test(WebViewControllerTest.java:35) - /view-render/web-login/main.html
+[12:00:01:719] [INFO] - com.lud.test.util.web.view.WebViewControllerTest.test(WebViewControllerTest.java:36) - /view-render/test/main.html
+[12:00:01:734] [INFO] - com.lud.test.web.WebUtilBaseTest.testvoid(WebUtilBaseTest.java:96) - Begin test
+[12:00:01:750] [INFO] - com.lud.test.util.web.view.WebViewDataServiceTest.test(WebViewDataServiceTest.java:40) - []
+[12:00:01:750] [INFO] - com.lud.test.web.WebUtilBaseTest.testvoid(WebUtilBaseTest.java:96) - Begin test
+[12:00:03:890] [INFO] - com.lud.test.util.web.view.WebViewManagerTest.test(WebViewManagerTest.java:39) - 
+[12:00:03:890] [INFO] - com.lud.test.web.WebUtilBaseTest.testvoid(WebUtilBaseTest.java:96) - Begin test
+[12:00:03:906] [INFO] - com.lud.test.web.WebUtilBaseTest.testvoid(WebUtilBaseTest.java:96) - Begin test
+[12:00:46:485] [INFO] - com.lud.test.util.web.context.ContextResultTest.test(ContextResultTest.java:32) - org.springframework.mock.web.MockHttpServletRequest@2bc7db89
+[12:00:46:486] [INFO] - com.lud.test.util.web.context.ContextResultTest.test(ContextResultTest.java:33) - 
+[12:00:46:486] [INFO] - com.lud.test.util.web.context.ContextResultTest.test(ContextResultTest.java:34) - localhost
+[12:00:46:486] [INFO] - com.lud.test.util.web.context.ContextResultTest.test(ContextResultTest.java:35) - {}
+[12:00:46:486] [INFO] - com.lud.test.web.WebUtilBaseTest.testvoid(WebUtilBaseTest.java:96) - Begin test
+[12:00:46:517] [INFO] - com.lud.test.util.web.context.HttpSessionUtilTest.testContextRequest(HttpSessionUtilTest.java:44) - {"domain":"localhost","flag":"","menu":"","project":"","service":"","token":"","userGroup":"","userGroupKey":"","userid":""}
+[12:00:46:533] [INFO] - com.lud.test.util.web.context.HttpSessionUtilTest.testContextResult(HttpSessionUtilTest.java:55) - {"action":"","code":"cd","message":"cddd","result":false}
+[12:00:46:533] [INFO] - com.lud.test.web.WebUtilBaseTest.testvoid(WebUtilBaseTest.java:96) - Begin test
+[12:00:46:549] [INFO] - com.lud.test.util.web.context.ViewFactoryTest.test(ViewFactoryTest.java:37) - sunqinqiu您好！
+[12:00:46:549] [INFO] - com.lud.test.web.WebUtilBaseTest.testvoid(WebUtilBaseTest.java:96) - Begin test
+[12:00:46:580] [INFO] - com.lud.test.web.WebUtilBaseTest.testvoid(WebUtilBaseTest.java:96) - Begin test
+[12:00:46:595] [INFO] - com.lud.test.util.web.view.WebViewControllerTest.test(WebViewControllerTest.java:35) - /view-render/web-login/main.html
+[12:00:46:611] [INFO] - com.lud.test.util.web.view.WebViewControllerTest.test(WebViewControllerTest.java:36) - /view-render/test/main.html
+[12:00:46:611] [INFO] - com.lud.test.web.WebUtilBaseTest.testvoid(WebUtilBaseTest.java:96) - Begin test
+[12:00:46:627] [INFO] - com.lud.test.util.web.view.WebViewDataServiceTest.test(WebViewDataServiceTest.java:40) - []
+[12:00:46:642] [INFO] - com.lud.test.web.WebUtilBaseTest.testvoid(WebUtilBaseTest.java:96) - Begin test
+[12:00:48:017] [INFO] - com.lud.test.util.web.view.WebViewManagerTest.test(WebViewManagerTest.java:39) - 
+[12:00:48:017] [INFO] - com.lud.test.web.WebUtilBaseTest.testvoid(WebUtilBaseTest.java:96) - Begin test
+[12:00:48:048] [INFO] - com.lud.test.web.WebUtilBaseTest.testvoid(WebUtilBaseTest.java:96) - Begin test
+[14:39:01:339] [INFO] - com.lud.test.util.web.context.ContextResultTest.test(ContextResultTest.java:32) - org.springframework.mock.web.MockHttpServletRequest@2bc7db89
+[14:39:01:370] [INFO] - com.lud.test.util.web.context.ContextResultTest.test(ContextResultTest.java:33) - 
+[14:39:01:370] [INFO] - com.lud.test.util.web.context.ContextResultTest.test(ContextResultTest.java:34) - localhost
+[14:39:01:371] [INFO] - com.lud.test.util.web.context.ContextResultTest.test(ContextResultTest.java:35) - {}
+[14:39:01:377] [INFO] - com.lud.test.web.WebUtilBaseTest.testvoid(WebUtilBaseTest.java:96) - Begin test
+[14:39:01:402] [INFO] - com.lud.test.util.web.context.HttpSessionUtilTest.testContextRequest(HttpSessionUtilTest.java:44) - {"domain":"localhost","flag":"","menu":"","project":"","service":"","token":"","userGroup":"","userGroupKey":"","userid":""}
+[14:39:01:407] [INFO] - com.lud.test.util.web.context.HttpSessionUtilTest.testContextResult(HttpSessionUtilTest.java:55) - {"action":"","code":"cd","message":"cddd","result":false}
+[14:39:01:414] [INFO] - com.lud.test.web.WebUtilBaseTest.testvoid(WebUtilBaseTest.java:96) - Begin test
+[14:39:01:428] [INFO] - com.lud.test.util.web.context.ViewFactoryTest.test(ViewFactoryTest.java:37) - sunqinqiu您好！
+[14:39:01:431] [INFO] - com.lud.test.web.WebUtilBaseTest.testvoid(WebUtilBaseTest.java:96) - Begin test
+[14:39:01:462] [INFO] - com.lud.test.web.WebUtilBaseTest.testvoid(WebUtilBaseTest.java:96) - Begin test
+[14:39:01:482] [INFO] - com.lud.test.util.web.view.WebViewControllerTest.test(WebViewControllerTest.java:35) - /view-render/web-login/main.html
+[14:39:01:499] [INFO] - com.lud.test.util.web.view.WebViewControllerTest.test(WebViewControllerTest.java:36) - /view-render/test/main.html
+[14:39:01:584] [INFO] - com.lud.test.web.WebUtilBaseTest.testvoid(WebUtilBaseTest.java:96) - Begin test
+[14:39:01:611] [INFO] - com.lud.test.util.web.view.WebViewDataServiceTest.test(WebViewDataServiceTest.java:40) - []
+[14:39:01:615] [INFO] - com.lud.test.web.WebUtilBaseTest.testvoid(WebUtilBaseTest.java:96) - Begin test
+[14:39:03:805] [INFO] - com.lud.test.util.web.view.WebViewManagerTest.test(WebViewManagerTest.java:39) - 
+[14:39:03:808] [INFO] - com.lud.test.web.WebUtilBaseTest.testvoid(WebUtilBaseTest.java:96) - Begin test
+[14:39:03:834] [INFO] - com.lud.test.web.WebUtilBaseTest.testvoid(WebUtilBaseTest.java:96) - Begin test
+[14:39:34:861] [INFO] - com.lud.test.util.web.context.ContextResultTest.test(ContextResultTest.java:32) - org.springframework.mock.web.MockHttpServletRequest@2bc7db89
+[14:39:34:864] [INFO] - com.lud.test.util.web.context.ContextResultTest.test(ContextResultTest.java:33) - 
+[14:39:34:865] [INFO] - com.lud.test.util.web.context.ContextResultTest.test(ContextResultTest.java:34) - localhost
+[14:39:34:866] [INFO] - com.lud.test.util.web.context.ContextResultTest.test(ContextResultTest.java:35) - {}
+[14:39:34:881] [INFO] - com.lud.test.web.WebUtilBaseTest.testvoid(WebUtilBaseTest.java:96) - Begin test
+[14:39:34:933] [INFO] - com.lud.test.util.web.context.HttpSessionUtilTest.testContextRequest(HttpSessionUtilTest.java:44) - {"domain":"localhost","flag":"","menu":"","project":"","service":"","token":"","userGroup":"","userGroupKey":"","userid":""}
+[14:39:34:953] [INFO] - com.lud.test.util.web.context.HttpSessionUtilTest.testContextResult(HttpSessionUtilTest.java:55) - {"action":"","code":"cd","message":"cddd","result":false}
+[14:39:34:971] [INFO] - com.lud.test.web.WebUtilBaseTest.testvoid(WebUtilBaseTest.java:96) - Begin test
+[14:39:34:994] [INFO] - com.lud.test.util.web.context.ViewFactoryTest.test(ViewFactoryTest.java:37) - sunqinqiu您好！
+[14:39:35:000] [INFO] - com.lud.test.web.WebUtilBaseTest.testvoid(WebUtilBaseTest.java:96) - Begin test
+[14:39:35:051] [INFO] - com.lud.test.web.WebUtilBaseTest.testvoid(WebUtilBaseTest.java:96) - Begin test
+[14:39:35:082] [INFO] - com.lud.test.util.web.view.WebViewControllerTest.test(WebViewControllerTest.java:35) - /view-render/web-login/main.html
+[14:39:35:098] [INFO] - com.lud.test.util.web.view.WebViewControllerTest.test(WebViewControllerTest.java:36) - /view-render/test/main.html
+[14:39:35:116] [INFO] - com.lud.test.web.WebUtilBaseTest.testvoid(WebUtilBaseTest.java:96) - Begin test
+[14:39:35:135] [INFO] - com.lud.test.util.web.view.WebViewDataServiceTest.test(WebViewDataServiceTest.java:40) - []
+[14:39:35:138] [INFO] - com.lud.test.web.WebUtilBaseTest.testvoid(WebUtilBaseTest.java:96) - Begin test
+[14:39:37:676] [INFO] - com.lud.test.util.web.view.WebViewManagerTest.test(WebViewManagerTest.java:39) - 
+[14:39:37:678] [INFO] - com.lud.test.web.WebUtilBaseTest.testvoid(WebUtilBaseTest.java:96) - Begin test
+[14:39:37:704] [INFO] - com.lud.test.web.WebUtilBaseTest.testvoid(WebUtilBaseTest.java:96) - Begin test

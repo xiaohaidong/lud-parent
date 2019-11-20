@@ -1,0 +1,474 @@
+[11:05:06:258] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hmset(RedisServiceImp.java:282) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:06:315] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hmsset(RedisServiceImp.java:302) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:06:316] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hget(RedisServiceImp.java:210) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:06:319] [ERROR] - com.lud.util.comm.io.XML.<init>(XML.java:67) - 构建XML模型出现错误
+org.dom4j.DocumentException: \lud-resource (拒绝访问。)
+	at org.dom4j.io.SAXReader.read(SAXReader.java:252) ~[dom4j-2.1.0.jar:?]
+	at com.lud.util.comm.io.XML.<init>(XML.java:64) ~[lud-util-comm-1.0-SNAPSHOT.jar:?]
+	at com.lud.util.comm.io.XMLUtil.resolveRootConfigByGroup(XMLUtil.java:77) ~[lud-util-comm-1.0-SNAPSHOT.jar:?]
+	at com.lud.service.core.config.ResourceServiceImp.resolveMessage(ResourceServiceImp.java:109) ~[classes/:?]
+	at com.lud.service.core.config.ResourceServiceImp.run(ResourceServiceImp.java:53) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_192]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_192]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_192]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_192]
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:279) ~[spring-core-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:263) ~[spring-core-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at com.lud.util.spring.util.SpringServiceInvoker.lambda$run$0(SpringServiceInvoker.java:86) ~[lud-util-spring-1.0-SNAPSHOT.jar:?]
+	at java.util.ArrayList.forEach(ArrayList.java:1257) ~[?:1.8.0_192]
+	at com.lud.util.spring.util.SpringServiceInvoker.run(SpringServiceInvoker.java:82) ~[lud-util-spring-1.0-SNAPSHOT.jar:?]
+	at com.lud.util.spring.util.SpringPreloadService.runPreload(SpringPreloadService.java:70) ~[lud-util-spring-1.0-SNAPSHOT.jar:?]
+	at com.lud.util.spring.util.SpringContextReger.setApplicationContext(SpringContextReger.java:46) ~[lud-util-spring-1.0-SNAPSHOT.jar:?]
+	at org.springframework.context.support.ApplicationContextAwareProcessor.invokeAwareInterfaces(ApplicationContextAwareProcessor.java:123) ~[spring-context-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.context.support.ApplicationContextAwareProcessor.postProcessBeforeInitialization(ApplicationContextAwareProcessor.java:100) ~[spring-context-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:416) ~[spring-beans-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1795) ~[spring-beans-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) [spring-beans-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) [spring-beans-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) [spring-beans-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879) [spring-beans-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878) [spring-context-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) [spring-context-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:128) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:275) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:243) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252) [surefire-junit4-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141) [surefire-junit4-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112) [surefire-junit4-2.12.4.jar:2.12.4]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_192]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_192]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_192]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_192]
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189) [surefire-api-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165) [surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85) [surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115) [surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75) [surefire-booter-2.12.4.jar:2.12.4]
+Caused by: java.io.FileNotFoundException: \lud-resource (拒绝访问。)
+	at java.io.FileInputStream.open0(Native Method) ~[?:1.8.0_192]
+	at java.io.FileInputStream.open(FileInputStream.java:195) ~[?:1.8.0_192]
+	at java.io.FileInputStream.<init>(FileInputStream.java:138) ~[?:1.8.0_192]
+	at org.dom4j.io.SAXReader.read(SAXReader.java:229) ~[dom4j-2.1.0.jar:?]
+	... 65 more
+[11:05:06:327] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hmset(RedisServiceImp.java:282) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:06:327] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hmsset(RedisServiceImp.java:302) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:06:327] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hget(RedisServiceImp.java:210) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:06:328] [ERROR] - com.lud.util.comm.io.XML.<init>(XML.java:67) - 构建XML模型出现错误
+org.dom4j.DocumentException: \lud-resource (拒绝访问。)
+	at org.dom4j.io.SAXReader.read(SAXReader.java:252) ~[dom4j-2.1.0.jar:?]
+	at com.lud.util.comm.io.XML.<init>(XML.java:64) ~[lud-util-comm-1.0-SNAPSHOT.jar:?]
+	at com.lud.util.comm.io.XMLUtil.resolveRootConfigByGroup(XMLUtil.java:77) ~[lud-util-comm-1.0-SNAPSHOT.jar:?]
+	at com.lud.service.core.config.ResourceServiceImp.resolveError(ResourceServiceImp.java:99) ~[classes/:?]
+	at com.lud.service.core.config.ResourceServiceImp.run(ResourceServiceImp.java:54) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_192]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_192]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_192]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_192]
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:279) ~[spring-core-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:263) ~[spring-core-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at com.lud.util.spring.util.SpringServiceInvoker.lambda$run$0(SpringServiceInvoker.java:86) ~[lud-util-spring-1.0-SNAPSHOT.jar:?]
+	at java.util.ArrayList.forEach(ArrayList.java:1257) ~[?:1.8.0_192]
+	at com.lud.util.spring.util.SpringServiceInvoker.run(SpringServiceInvoker.java:82) ~[lud-util-spring-1.0-SNAPSHOT.jar:?]
+	at com.lud.util.spring.util.SpringPreloadService.runPreload(SpringPreloadService.java:70) ~[lud-util-spring-1.0-SNAPSHOT.jar:?]
+	at com.lud.util.spring.util.SpringContextReger.setApplicationContext(SpringContextReger.java:46) ~[lud-util-spring-1.0-SNAPSHOT.jar:?]
+	at org.springframework.context.support.ApplicationContextAwareProcessor.invokeAwareInterfaces(ApplicationContextAwareProcessor.java:123) ~[spring-context-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.context.support.ApplicationContextAwareProcessor.postProcessBeforeInitialization(ApplicationContextAwareProcessor.java:100) ~[spring-context-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:416) ~[spring-beans-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1795) ~[spring-beans-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) [spring-beans-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) [spring-beans-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) [spring-beans-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879) [spring-beans-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878) [spring-context-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) [spring-context-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:128) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:275) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:243) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:123) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:118) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252) [surefire-junit4-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141) [surefire-junit4-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112) [surefire-junit4-2.12.4.jar:2.12.4]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_192]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_192]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_192]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_192]
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189) [surefire-api-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165) [surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85) [surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115) [surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75) [surefire-booter-2.12.4.jar:2.12.4]
+Caused by: java.io.FileNotFoundException: \lud-resource (拒绝访问。)
+	at java.io.FileInputStream.open0(Native Method) ~[?:1.8.0_192]
+	at java.io.FileInputStream.open(FileInputStream.java:195) ~[?:1.8.0_192]
+	at java.io.FileInputStream.<init>(FileInputStream.java:138) ~[?:1.8.0_192]
+	at org.dom4j.io.SAXReader.read(SAXReader.java:229) ~[dom4j-2.1.0.jar:?]
+	... 65 more
+[11:05:06:369] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hmset(RedisServiceImp.java:282) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:06:370] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hmsset(RedisServiceImp.java:302) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:06:371] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hget(RedisServiceImp.java:210) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:06:382] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hget(RedisServiceImp.java:210) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:06:784] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hset(RedisServiceImp.java:321) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:324] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hmset(RedisServiceImp.java:282) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:324] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hmsset(RedisServiceImp.java:302) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:324] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hget(RedisServiceImp.java:210) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:325] [ERROR] - com.lud.util.comm.io.XML.<init>(XML.java:67) - 构建XML模型出现错误
+org.dom4j.DocumentException: \lud-resource (拒绝访问。)
+	at org.dom4j.io.SAXReader.read(SAXReader.java:252) ~[dom4j-2.1.0.jar:?]
+	at com.lud.util.comm.io.XML.<init>(XML.java:64) [lud-util-comm-1.0-SNAPSHOT.jar:?]
+	at com.lud.util.comm.io.XMLUtil.resolveRootConfigByGroup(XMLUtil.java:77) [lud-util-comm-1.0-SNAPSHOT.jar:?]
+	at com.lud.service.core.config.ResourceServiceImp.resolveMessage(ResourceServiceImp.java:109) [classes/:?]
+	at com.lud.service.core.config.ResourceServiceImp.run(ResourceServiceImp.java:53) [classes/:?]
+	at com.lud.test.service.core.config.ResourceServiceTest.test(ResourceServiceTest.java:39) [test-classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_192]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_192]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_192]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_192]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:74) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:84) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252) [surefire-junit4-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141) [surefire-junit4-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112) [surefire-junit4-2.12.4.jar:2.12.4]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_192]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_192]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_192]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_192]
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189) [surefire-api-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165) [surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85) [surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115) [surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75) [surefire-booter-2.12.4.jar:2.12.4]
+Caused by: java.io.FileNotFoundException: \lud-resource (拒绝访问。)
+	at java.io.FileInputStream.open0(Native Method) ~[?:1.8.0_192]
+	at java.io.FileInputStream.open(FileInputStream.java:195) ~[?:1.8.0_192]
+	at java.io.FileInputStream.<init>(FileInputStream.java:138) ~[?:1.8.0_192]
+	at org.dom4j.io.SAXReader.read(SAXReader.java:229) ~[dom4j-2.1.0.jar:?]
+	... 42 more
+[11:05:14:328] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hmset(RedisServiceImp.java:282) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:328] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hmsset(RedisServiceImp.java:302) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:328] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hget(RedisServiceImp.java:210) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:329] [ERROR] - com.lud.util.comm.io.XML.<init>(XML.java:67) - 构建XML模型出现错误
+org.dom4j.DocumentException: \lud-resource (拒绝访问。)
+	at org.dom4j.io.SAXReader.read(SAXReader.java:252) ~[dom4j-2.1.0.jar:?]
+	at com.lud.util.comm.io.XML.<init>(XML.java:64) [lud-util-comm-1.0-SNAPSHOT.jar:?]
+	at com.lud.util.comm.io.XMLUtil.resolveRootConfigByGroup(XMLUtil.java:77) [lud-util-comm-1.0-SNAPSHOT.jar:?]
+	at com.lud.service.core.config.ResourceServiceImp.resolveError(ResourceServiceImp.java:99) [classes/:?]
+	at com.lud.service.core.config.ResourceServiceImp.run(ResourceServiceImp.java:54) [classes/:?]
+	at com.lud.test.service.core.config.ResourceServiceTest.test(ResourceServiceTest.java:39) [test-classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_192]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_192]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_192]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_192]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:74) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:84) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252) [surefire-junit4-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141) [surefire-junit4-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112) [surefire-junit4-2.12.4.jar:2.12.4]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_192]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_192]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_192]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_192]
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189) [surefire-api-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165) [surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85) [surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115) [surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75) [surefire-booter-2.12.4.jar:2.12.4]
+Caused by: java.io.FileNotFoundException: \lud-resource (拒绝访问。)
+	at java.io.FileInputStream.open0(Native Method) ~[?:1.8.0_192]
+	at java.io.FileInputStream.open(FileInputStream.java:195) ~[?:1.8.0_192]
+	at java.io.FileInputStream.<init>(FileInputStream.java:138) ~[?:1.8.0_192]
+	at org.dom4j.io.SAXReader.read(SAXReader.java:229) ~[dom4j-2.1.0.jar:?]
+	... 42 more
+[11:05:14:333] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hmset(RedisServiceImp.java:282) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:333] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hmsset(RedisServiceImp.java:302) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:349] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hget(RedisServiceImp.java:210) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:380] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hget(RedisServiceImp.java:210) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:381] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hget(RedisServiceImp.java:210) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:381] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hget(RedisServiceImp.java:210) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:381] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hget(RedisServiceImp.java:210) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:382] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hget(RedisServiceImp.java:210) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:383] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hget(RedisServiceImp.java:210) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:383] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hget(RedisServiceImp.java:210) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:384] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hget(RedisServiceImp.java:210) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:384] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hget(RedisServiceImp.java:210) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:384] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hget(RedisServiceImp.java:210) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:403] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hget(RedisServiceImp.java:210) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:487] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hget(RedisServiceImp.java:210) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:488] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hget(RedisServiceImp.java:210) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:489] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hget(RedisServiceImp.java:210) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:491] [ERROR] - com.lud.util.comm.io.XML.<init>(XML.java:67) - 构建XML模型出现错误
+org.dom4j.DocumentException: \lud-resource (拒绝访问。)
+	at org.dom4j.io.SAXReader.read(SAXReader.java:252) ~[dom4j-2.1.0.jar:?]
+	at com.lud.util.comm.io.XML.<init>(XML.java:64) [lud-util-comm-1.0-SNAPSHOT.jar:?]
+	at com.lud.util.comm.io.XMLUtil.resolveConfig(XMLUtil.java:59) [lud-util-comm-1.0-SNAPSHOT.jar:?]
+	at com.lud.util.comm.io.XMLUtil.resolveConfig(XMLUtil.java:46) [lud-util-comm-1.0-SNAPSHOT.jar:?]
+	at com.lud.service.core.mongo.MongoServerManager.getMongoConfig(MongoServerManager.java:108) [classes/:?]
+	at com.lud.service.core.mongo.MongoServerManager.getMongoClient(MongoServerManager.java:89) [classes/:?]
+	at com.lud.service.core.mongo.MongoServiceImp.getDataBaseList(MongoServiceImp.java:163) [classes/:?]
+	at com.lud.test.service.core.mongo.MongoServiceTest.test(MongoServiceTest.java:49) [test-classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_192]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_192]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_192]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_192]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:74) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:84) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.2.0.RELEASE.jar:5.2.0.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252) [surefire-junit4-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141) [surefire-junit4-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112) [surefire-junit4-2.12.4.jar:2.12.4]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_192]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_192]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_192]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_192]
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189) [surefire-api-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165) [surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85) [surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115) [surefire-booter-2.12.4.jar:2.12.4]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75) [surefire-booter-2.12.4.jar:2.12.4]
+Caused by: java.io.FileNotFoundException: \lud-resource (拒绝访问。)
+	at java.io.FileInputStream.open0(Native Method) ~[?:1.8.0_192]
+	at java.io.FileInputStream.open(FileInputStream.java:195) ~[?:1.8.0_192]
+	at java.io.FileInputStream.<init>(FileInputStream.java:138) ~[?:1.8.0_192]
+	at org.dom4j.io.SAXReader.read(SAXReader.java:229) ~[dom4j-2.1.0.jar:?]
+	... 44 more
+[11:05:14:755] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hget(RedisServiceImp.java:210) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:758] [ERROR] - com.lud.service.core.mongo.MongoServiceImp.getDataBaseList(MongoServiceImp.java:172) - ERROR[1001.0001]java.lang.IllegalArgumentException: state should be: connectionPerHost must be > 0
+[11:05:14:759] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hget(RedisServiceImp.java:210) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:760] [ERROR] - com.lud.service.core.mongo.MongoServiceImp.getCollection(MongoServiceImp.java:120) - ERROR[1001.0006]java.lang.IllegalArgumentException: state should be: connectionPerHost must be > 0
+[11:05:14:761] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hget(RedisServiceImp.java:210) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:762] [ERROR] - com.lud.service.core.mongo.MongoServiceImp.getCollections(MongoServiceImp.java:148) - ERROR[1001.0005]java.lang.IllegalArgumentException: state should be: connectionPerHost must be > 0
+[11:05:14:765] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hget(RedisServiceImp.java:210) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:765] [ERROR] - com.lud.service.core.mongo.MongoServiceImp.getDBInfo(MongoServiceImp.java:211) - ERROR[1001.0001]java.lang.IllegalArgumentException: state should be: connectionPerHost must be > 0
+[11:05:14:843] [ERROR] - com.lud.service.core.redis.RedisServiceImp.set(RedisServiceImp.java:339) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:844] [ERROR] - com.lud.service.core.redis.RedisServiceImp.expire(RedisServiceImp.java:94) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:845] [ERROR] - com.lud.service.core.redis.RedisServiceImp.get(RedisServiceImp.java:111) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:846] [ERROR] - com.lud.service.core.redis.RedisServiceImp.exists(RedisServiceImp.java:76) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:847] [ERROR] - com.lud.service.core.redis.RedisServiceImp.ttl(RedisServiceImp.java:393) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:847] [ERROR] - com.lud.service.core.redis.RedisServiceImp.del(RedisServiceImp.java:59) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:848] [ERROR] - com.lud.service.core.redis.RedisServiceImp.setbit(RedisServiceImp.java:357) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:848] [ERROR] - com.lud.service.core.redis.RedisServiceImp.getbit(RedisServiceImp.java:145) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:849] [ERROR] - com.lud.service.core.redis.RedisServiceImp.del(RedisServiceImp.java:59) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:849] [ERROR] - com.lud.service.core.redis.RedisServiceImp.setrange(RedisServiceImp.java:376) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:850] [ERROR] - com.lud.service.core.redis.RedisServiceImp.getrange(RedisServiceImp.java:164) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:851] [ERROR] - com.lud.service.core.redis.RedisServiceImp.type(RedisServiceImp.java:410) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:851] [ERROR] - com.lud.service.core.redis.RedisServiceImp.del(RedisServiceImp.java:59) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:851] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hmset(RedisServiceImp.java:282) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:852] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hmsset(RedisServiceImp.java:302) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:852] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hset(RedisServiceImp.java:321) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:852] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hset(RedisServiceImp.java:321) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:852] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hget(RedisServiceImp.java:210) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:853] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hincrby(RedisServiceImp.java:229) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:853] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hget(RedisServiceImp.java:210) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:854] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hmget(RedisServiceImp.java:247) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:857] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hmgetAll(RedisServiceImp.java:264) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:926] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hdel(RedisServiceImp.java:182) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:926] [ERROR] - com.lud.service.core.redis.RedisServiceImp.del(RedisServiceImp.java:59) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:926] [ERROR] - com.lud.service.core.redis.RedisServiceImp.getAllKeys(RedisServiceImp.java:128) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:928] [ERROR] - com.lud.service.core.redis.RedisServiceImp.set(RedisServiceImp.java:339) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:928] [ERROR] - com.lud.service.core.redis.RedisServiceImp.expire(RedisServiceImp.java:94) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:928] [ERROR] - com.lud.service.core.redis.RedisServiceImp.del(RedisServiceImp.java:59) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:928] [ERROR] - com.lud.service.core.redis.RedisServiceImp.del(RedisServiceImp.java:59) - redis.clients.jedis.exceptions.JedisExhaustedPoolException: Could not get a resource since the pool is exhausted
+[11:05:14:929] [ERROR] - com.lud.service.core.redis.RedisServiceImp.set(RedisServiceImp.java:339) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[11:05:14:929] [ERROR] - com.lud.service.core.redis.RedisServiceImp.expire(RedisServiceImp.java:94) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[11:05:14:930] [ERROR] - com.lud.service.core.redis.RedisServiceImp.get(RedisServiceImp.java:111) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[11:05:14:930] [ERROR] - com.lud.service.core.redis.RedisServiceImp.exists(RedisServiceImp.java:76) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[11:05:14:931] [ERROR] - com.lud.service.core.redis.RedisServiceImp.ttl(RedisServiceImp.java:393) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[11:05:14:931] [ERROR] - com.lud.service.core.redis.RedisServiceImp.del(RedisServiceImp.java:59) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[11:05:14:933] [ERROR] - com.lud.service.core.redis.RedisServiceImp.setbit(RedisServiceImp.java:357) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[11:05:14:933] [ERROR] - com.lud.service.core.redis.RedisServiceImp.getbit(RedisServiceImp.java:145) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[11:05:14:934] [ERROR] - com.lud.service.core.redis.RedisServiceImp.setrange(RedisServiceImp.java:376) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[11:05:14:935] [ERROR] - com.lud.service.core.redis.RedisServiceImp.getrange(RedisServiceImp.java:164) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[11:05:14:936] [ERROR] - com.lud.service.core.redis.RedisServiceImp.type(RedisServiceImp.java:410) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[11:05:14:937] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hmset(RedisServiceImp.java:282) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[11:05:14:937] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hmsset(RedisServiceImp.java:302) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[11:05:14:937] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hset(RedisServiceImp.java:321) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[11:05:14:938] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hset(RedisServiceImp.java:321) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[11:05:14:939] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hget(RedisServiceImp.java:210) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[11:05:14:939] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hincrby(RedisServiceImp.java:229) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[11:05:14:939] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hget(RedisServiceImp.java:210) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[11:05:14:941] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hmget(RedisServiceImp.java:247) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[11:05:14:942] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hmgetAll(RedisServiceImp.java:264) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[11:05:14:943] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hdel(RedisServiceImp.java:182) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[11:05:14:943] [ERROR] - com.lud.service.core.redis.RedisServiceImp.getAllKeys(RedisServiceImp.java:128) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[12:45:28:958] [ERROR] - com.lud.service.core.data.jdbc.JDBCServiceImp.queryForInt(JDBCServiceImp.java:117) - ERROR[1002.0002.1]JDBC:Query Int Errororg.springframework.jdbc.IncorrectResultSetColumnCountException: Incorrect column count: expected 1, actual 17
+[12:45:29:049] [ERROR] - com.lud.service.core.data.jdbc.JDBCServiceImp.queryForValue(JDBCServiceImp.java:175) - ERROR[1002.0002.2]JDBC:Query Value Errororg.springframework.jdbc.IncorrectResultSetColumnCountException: Incorrect column count: expected 1, actual 17
+[12:45:29:180] [ERROR] - com.lud.service.core.data.jdbc.JDBCServiceImp.update(JDBCServiceImp.java:196) - ERROR[1002.0003]JDBC:Update Errororg.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [update lud_runtime_version set updator=updator]; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: 对象名 'lud_runtime_version' 无效。
+[12:45:29:182] [ERROR] - com.lud.service.core.data.jdbc.JDBCServiceImp.update(JDBCServiceImp.java:196) - ERROR[1002.0003]JDBC:Update Errororg.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [update lud_runtime_version set updator='1' where id=?]; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: 对象名 'lud_runtime_version' 无效。
+[12:45:29:186] [ERROR] - com.lud.service.core.data.jdbc.JDBCServiceImp.execute(JDBCServiceImp.java:70) - ERROR[1002.0005]JDBC:Execute Errororg.springframework.jdbc.BadSqlGrammarException: StatementCallback; bad SQL grammar [update lud_runtime_version set updator=updator]; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: 对象名 'lud_runtime_version' 无效。
+[12:45:29:189] [ERROR] - com.lud.service.core.data.jdbc.JDBCServiceImp.queryForList(JDBCServiceImp.java:138) - ERROR[1002.0002]JDBC:Query Errororg.springframework.jdbc.UncategorizedSQLException: PreparedStatementCallback; uncategorized SQLException for SQL [select * from lud_runtime_version where  id=?  order by id limit 1]; SQL state [S0001]; error code [102]; 'limit' 附近有语法错误。; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: 'limit' 附近有语法错误。
+[12:45:29:201] [ERROR] - com.lud.service.core.data.jdbc.JDBCServiceImp.queryForInt(JDBCServiceImp.java:117) - ERROR[1002.0002.1]JDBC:Query Int Errororg.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [select count(*) from lud_application_info id in(?)]; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: 关键字 'in' 附近有语法错误。
+[12:45:29:220] [ERROR] - com.lud.service.core.data.jdbc.JDBCServiceImp.queryForList(JDBCServiceImp.java:138) - ERROR[1002.0002]JDBC:Query Errororg.springframework.jdbc.UncategorizedSQLException: PreparedStatementCallback; uncategorized SQLException for SQL [select t.* from (select row_number() OVER( ) AS rownumber,id from lud_database_version)  t where t.rownumber>? and t.rownumber <= ?]; SQL state [S0001]; error code [4112]; 排名函数 "row_number" 必须有 ORDER BY 子句。; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: 排名函数 "row_number" 必须有 ORDER BY 子句。
+[12:45:29:228] [ERROR] - com.lud.service.core.data.jdbc.JDBCServiceImp.queryForInt(JDBCServiceImp.java:117) - ERROR[1002.0002.1]JDBC:Query Int Errororg.springframework.dao.EmptyResultDataAccessException: Incorrect result size: expected 1, actual 0
+[12:45:29:235] [ERROR] - com.lud.service.core.data.jdbc.JDBCServiceImp.queryForValue(JDBCServiceImp.java:175) - ERROR[1002.0002.2]JDBC:Query Value Errororg.springframework.dao.EmptyResultDataAccessException: Incorrect result size: expected 1, actual 0
+[12:45:29:241] [ERROR] - com.lud.service.core.data.jdbc.JDBCServiceImp.update(JDBCServiceImp.java:196) - ERROR[1002.0003]JDBC:Update Errororg.springframework.dao.TransientDataAccessResourceException: PreparedStatementCallback; SQL [delete from lud_database_version where  id=?]; 索引 2 超出范围。; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: 索引 2 超出范围。
+[12:45:29:252] [ERROR] - com.lud.service.core.data.jdbc.JDBCServiceImp.insertIdentity(JDBCServiceImp.java:96) - ERROR[1002.0004]JDBC:Insert Errororg.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [insert into lud_runtime_version(code) values(?)]; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: 对象名 'lud_runtime_version' 无效。
+[12:45:30:049] [ERROR] - com.lud.service.core.mongo.MongoServiceImp.getDataBaseList(MongoServiceImp.java:172) - ERROR[1001.0001]MongoDB:获取数据库列表错误java.lang.NullPointerException
+[12:45:30:051] [ERROR] - com.lud.service.core.mongo.MongoServiceImp.getCollection(MongoServiceImp.java:120) - ERROR[1001.0006]MongoDB:查找单个库错误java.lang.NullPointerException
+[12:45:30:052] [ERROR] - com.lud.service.core.mongo.MongoServiceImp.getCollections(MongoServiceImp.java:148) - ERROR[1001.0005]MongoDB:查找所有库错误java.lang.NullPointerException
+[12:45:30:053] [ERROR] - com.lud.service.core.mongo.MongoServiceImp.getCollections(MongoServiceImp.java:148) - ERROR[1001.0005]MongoDB:查找所有库错误java.lang.NullPointerException
+[12:45:30:054] [ERROR] - com.lud.service.core.mongo.MongoServiceImp.getDBInfo(MongoServiceImp.java:211) - ERROR[1001.0001]MongoDB:获取数据库列表错误java.lang.NullPointerException
+[12:45:30:120] [ERROR] - com.lud.service.core.redis.RedisServiceImp.set(RedisServiceImp.java:339) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[12:45:30:120] [ERROR] - com.lud.service.core.redis.RedisServiceImp.expire(RedisServiceImp.java:94) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[12:45:30:121] [ERROR] - com.lud.service.core.redis.RedisServiceImp.get(RedisServiceImp.java:111) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[12:45:30:121] [ERROR] - com.lud.service.core.redis.RedisServiceImp.exists(RedisServiceImp.java:76) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[12:45:30:121] [ERROR] - com.lud.service.core.redis.RedisServiceImp.ttl(RedisServiceImp.java:393) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[12:45:30:121] [ERROR] - com.lud.service.core.redis.RedisServiceImp.del(RedisServiceImp.java:59) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[12:45:30:122] [ERROR] - com.lud.service.core.redis.RedisServiceImp.setbit(RedisServiceImp.java:357) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[12:45:30:122] [ERROR] - com.lud.service.core.redis.RedisServiceImp.getbit(RedisServiceImp.java:145) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[12:45:30:122] [ERROR] - com.lud.service.core.redis.RedisServiceImp.setrange(RedisServiceImp.java:376) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[12:45:30:123] [ERROR] - com.lud.service.core.redis.RedisServiceImp.getrange(RedisServiceImp.java:164) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[12:45:30:123] [ERROR] - com.lud.service.core.redis.RedisServiceImp.type(RedisServiceImp.java:410) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[12:45:30:123] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hmset(RedisServiceImp.java:282) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[12:45:30:124] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hmsset(RedisServiceImp.java:302) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[12:45:30:124] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hset(RedisServiceImp.java:321) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[12:45:30:124] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hset(RedisServiceImp.java:321) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[12:45:30:124] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hget(RedisServiceImp.java:210) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[12:45:30:124] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hincrby(RedisServiceImp.java:229) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[12:45:30:125] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hget(RedisServiceImp.java:210) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[12:45:30:126] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hmget(RedisServiceImp.java:247) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[12:45:30:126] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hmgetAll(RedisServiceImp.java:264) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[12:45:30:133] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hdel(RedisServiceImp.java:182) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[12:45:30:134] [ERROR] - com.lud.service.core.redis.RedisServiceImp.getAllKeys(RedisServiceImp.java:128) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[12:46:05:040] [ERROR] - com.lud.service.core.data.jdbc.JDBCServiceImp.queryForInt(JDBCServiceImp.java:117) - ERROR[1002.0002.1]JDBC:Query Int Errororg.springframework.jdbc.IncorrectResultSetColumnCountException: Incorrect column count: expected 1, actual 17
+[12:46:05:046] [ERROR] - com.lud.service.core.data.jdbc.JDBCServiceImp.queryForValue(JDBCServiceImp.java:175) - ERROR[1002.0002.2]JDBC:Query Value Errororg.springframework.jdbc.IncorrectResultSetColumnCountException: Incorrect column count: expected 1, actual 17
+[12:46:05:130] [ERROR] - com.lud.service.core.data.jdbc.JDBCServiceImp.update(JDBCServiceImp.java:196) - ERROR[1002.0003]JDBC:Update Errororg.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [update lud_runtime_version set updator=updator]; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: 对象名 'lud_runtime_version' 无效。
+[12:46:05:133] [ERROR] - com.lud.service.core.data.jdbc.JDBCServiceImp.update(JDBCServiceImp.java:196) - ERROR[1002.0003]JDBC:Update Errororg.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [update lud_runtime_version set updator='1' where id=?]; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: 对象名 'lud_runtime_version' 无效。
+[12:46:05:138] [ERROR] - com.lud.service.core.data.jdbc.JDBCServiceImp.execute(JDBCServiceImp.java:70) - ERROR[1002.0005]JDBC:Execute Errororg.springframework.jdbc.BadSqlGrammarException: StatementCallback; bad SQL grammar [update lud_runtime_version set updator=updator]; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: 对象名 'lud_runtime_version' 无效。
+[12:46:05:146] [ERROR] - com.lud.service.core.data.jdbc.JDBCServiceImp.queryForList(JDBCServiceImp.java:138) - ERROR[1002.0002]JDBC:Query Errororg.springframework.jdbc.UncategorizedSQLException: PreparedStatementCallback; uncategorized SQLException for SQL [select * from lud_runtime_version where  id=?  order by id limit 1]; SQL state [S0001]; error code [102]; 'limit' 附近有语法错误。; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: 'limit' 附近有语法错误。
+[12:46:05:170] [ERROR] - com.lud.service.core.data.jdbc.JDBCServiceImp.queryForInt(JDBCServiceImp.java:117) - ERROR[1002.0002.1]JDBC:Query Int Errororg.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [select count(*) from lud_application_info id in(?)]; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: 关键字 'in' 附近有语法错误。
+[12:46:05:187] [ERROR] - com.lud.service.core.data.jdbc.JDBCServiceImp.queryForList(JDBCServiceImp.java:138) - ERROR[1002.0002]JDBC:Query Errororg.springframework.jdbc.UncategorizedSQLException: PreparedStatementCallback; uncategorized SQLException for SQL [select t.* from (select row_number() OVER( ) AS rownumber,id from lud_database_version)  t where t.rownumber>? and t.rownumber <= ?]; SQL state [S0001]; error code [4112]; 排名函数 "row_number" 必须有 ORDER BY 子句。; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: 排名函数 "row_number" 必须有 ORDER BY 子句。
+[12:46:05:199] [ERROR] - com.lud.service.core.data.jdbc.JDBCServiceImp.queryForInt(JDBCServiceImp.java:117) - ERROR[1002.0002.1]JDBC:Query Int Errororg.springframework.dao.EmptyResultDataAccessException: Incorrect result size: expected 1, actual 0
+[12:46:05:204] [ERROR] - com.lud.service.core.data.jdbc.JDBCServiceImp.queryForValue(JDBCServiceImp.java:175) - ERROR[1002.0002.2]JDBC:Query Value Errororg.springframework.dao.EmptyResultDataAccessException: Incorrect result size: expected 1, actual 0
+[12:46:05:237] [ERROR] - com.lud.service.core.data.jdbc.JDBCServiceImp.update(JDBCServiceImp.java:196) - ERROR[1002.0003]JDBC:Update Errororg.springframework.dao.TransientDataAccessResourceException: PreparedStatementCallback; SQL [delete from lud_database_version where  id=?]; 索引 2 超出范围。; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: 索引 2 超出范围。
+[12:46:05:251] [ERROR] - com.lud.service.core.data.jdbc.JDBCServiceImp.insertIdentity(JDBCServiceImp.java:96) - ERROR[1002.0004]JDBC:Insert Errororg.springframework.jdbc.BadSqlGrammarException: PreparedStatementCallback; bad SQL grammar [insert into lud_runtime_version(code) values(?)]; nested exception is com.microsoft.sqlserver.jdbc.SQLServerException: 对象名 'lud_runtime_version' 无效。
+[12:46:06:057] [ERROR] - com.lud.service.core.mongo.MongoServiceImp.getDataBaseList(MongoServiceImp.java:172) - ERROR[1001.0001]MongoDB:获取数据库列表错误java.lang.NullPointerException
+[12:46:06:058] [ERROR] - com.lud.service.core.mongo.MongoServiceImp.getCollection(MongoServiceImp.java:120) - ERROR[1001.0006]MongoDB:查找单个库错误java.lang.NullPointerException
+[12:46:06:059] [ERROR] - com.lud.service.core.mongo.MongoServiceImp.getCollections(MongoServiceImp.java:148) - ERROR[1001.0005]MongoDB:查找所有库错误java.lang.NullPointerException
+[12:46:06:060] [ERROR] - com.lud.service.core.mongo.MongoServiceImp.getCollections(MongoServiceImp.java:148) - ERROR[1001.0005]MongoDB:查找所有库错误java.lang.NullPointerException
+[12:46:06:060] [ERROR] - com.lud.service.core.mongo.MongoServiceImp.getDBInfo(MongoServiceImp.java:211) - ERROR[1001.0001]MongoDB:获取数据库列表错误java.lang.NullPointerException
+[12:46:06:121] [ERROR] - com.lud.service.core.redis.RedisServiceImp.set(RedisServiceImp.java:339) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[12:46:06:121] [ERROR] - com.lud.service.core.redis.RedisServiceImp.expire(RedisServiceImp.java:94) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[12:46:06:122] [ERROR] - com.lud.service.core.redis.RedisServiceImp.get(RedisServiceImp.java:111) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[12:46:06:122] [ERROR] - com.lud.service.core.redis.RedisServiceImp.exists(RedisServiceImp.java:76) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[12:46:06:123] [ERROR] - com.lud.service.core.redis.RedisServiceImp.ttl(RedisServiceImp.java:393) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[12:46:06:123] [ERROR] - com.lud.service.core.redis.RedisServiceImp.del(RedisServiceImp.java:59) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[12:46:06:123] [ERROR] - com.lud.service.core.redis.RedisServiceImp.setbit(RedisServiceImp.java:357) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[12:46:06:123] [ERROR] - com.lud.service.core.redis.RedisServiceImp.getbit(RedisServiceImp.java:145) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[12:46:06:124] [ERROR] - com.lud.service.core.redis.RedisServiceImp.setrange(RedisServiceImp.java:376) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[12:46:06:124] [ERROR] - com.lud.service.core.redis.RedisServiceImp.getrange(RedisServiceImp.java:164) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[12:46:06:124] [ERROR] - com.lud.service.core.redis.RedisServiceImp.type(RedisServiceImp.java:410) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[12:46:06:125] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hmset(RedisServiceImp.java:282) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[12:46:06:125] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hmsset(RedisServiceImp.java:302) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[12:46:06:125] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hset(RedisServiceImp.java:321) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[12:46:06:125] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hset(RedisServiceImp.java:321) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[12:46:06:126] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hget(RedisServiceImp.java:210) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[12:46:06:126] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hincrby(RedisServiceImp.java:229) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[12:46:06:126] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hget(RedisServiceImp.java:210) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[12:46:06:126] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hmget(RedisServiceImp.java:247) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[12:46:06:127] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hmgetAll(RedisServiceImp.java:264) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[12:46:06:134] [ERROR] - com.lud.service.core.redis.RedisServiceImp.hdel(RedisServiceImp.java:182) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+[12:46:06:134] [ERROR] - com.lud.service.core.redis.RedisServiceImp.getAllKeys(RedisServiceImp.java:128) - redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool

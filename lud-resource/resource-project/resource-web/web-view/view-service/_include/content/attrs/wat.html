@@ -1,0 +1,1 @@
+<#list item?keys as key><#if key?starts_with("wat-")> ${key?substring(4)}="${item[key]}"</#if></#list>

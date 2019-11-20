@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.wrics</groupId>
+        <artifactId>lud-parent</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <artifactId>lud-web-server</artifactId>
+    <packaging>war</packaging>
+    <name>lud-web-server Maven Webapp</name>
+    <url>http://maven.apache.org</url>
+    <properties>
+        <failOnMissingWebXml>false</failOnMissingWebXml>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.wrics</groupId>
+            <artifactId>lud-web-business-core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.wrics</groupId>
+            <artifactId>lud-web-business-smartcampus</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.wrics</groupId>
+            <artifactId>lud-web-business-iot</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <!-- WEB -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>${web.servlet.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-web</artifactId>
+            <version>${org.apache.logging.log4j.version}</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <finalName>lud-web-server</finalName>
+    </build>
+</project>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <item name="ip">192.168.0.161</item>
+    <item name="port">5672</item>
+    <item name="user">admin</item>
+    <item name="pwd">xjslhtwrics</item>
+</configuration>

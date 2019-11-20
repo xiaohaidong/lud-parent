@@ -1,0 +1,12 @@
+<#noparse><#assign</#noparse> list=${config["data"]}>
+<div <#if config.id>id="${compid}"</#if> <#list config?keys as key><#if key?starts_with("wap-attr")> ${key?substring(9)}="${config[key]}"</#if></#list>>
+    <#noparse><#list list as item></#noparse>
+    <div class="item" <#list config?keys as key><#if key?starts_with("item-attr")> ${key?substring(10)}="${config[key]}"</#if></#list>>
+        <div class="picture lud-ele-img-wap" style="width:${config["picture-width"]}"><img src="${config.picture}"/></div>
+        <div class="text" style="margin-left:${config["picture-width"]}">
+            <#list 2..9 as i><#if config["h"+i]>
+            <h3 <#list config?keys as key><#if key?starts_with("h"+i+"-attr-")> ${key?substring(8)}="${config[key]}"</#if></#list>>${config["h"+i]}</h3></#if>
+            </#list>
+        </div>
+    </div><#noparse></#list></#noparse>
+</div>

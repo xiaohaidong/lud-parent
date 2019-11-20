@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <querys>
+        <item>
+            <fileds>
+                <filed name="def"><![CDATA[*]]></filed>
+            </fileds>
+            <limits>
+                <limit name="def"><![CDATA[ 1=1 ]]></limit>
+            </limits>
+        </item>
+    </querys>
+    <commands>
+        <item name="update">
+            <cmd args="cost,project"><![CDATA[update {t} set fee=fee-? where project=?]]></cmd>
+        </item>
+    </commands>
+</configuration>

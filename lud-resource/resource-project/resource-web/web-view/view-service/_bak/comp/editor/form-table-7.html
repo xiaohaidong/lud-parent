@@ -1,0 +1,15 @@
+<div class="lud-edt-form lud-edt-form-7">
+<table>
+	<thead><tr><#list 0..9 as i><th></th></#list></tr>
+	</thead>
+	<tbody>
+		<tr>
+			<#list detail as dts>
+			<td class="txt ${dts.thclass}" <#list dts?keys as key><#if key?starts_with("th-")> ${key?substring(3)}="${dts[key]}"</#if></#list>>${dts.title}</td>
+			<td class="con ${dts.tdclass}" <#list dts?keys as key><#if key?starts_with("td-")> ${key?substring(3)}="${dts[key]}"</#if></#list>>${dts.text}</td>
+			<#if dts.break?contains(flag)></tr><tr></#if>
+			</#list>
+		</tr>
+	</tbody>
+</table>
+</div>

@@ -1,0 +1,12 @@
+<#include "/view-service/comp/view/title/_include/title.html"/>
+<#if config["data"]>
+<#noparse><#assign</#noparse> data=${config["data"]}>
+    <div lud-render-target="#${compid}_comp_content" <#include "/view-service/_include/comp/attrs/wat.html"/>>
+        <ul <#include "/view-service/_include/comp/attrs/at.html"/>>
+            <#noparse><#list data as item></#noparse>
+                <li lud-render-click="${config["url"]}">${config["text"]}</li>
+            <#noparse></#list></#noparse>
+        </ul>
+    </div>
+</#if>
+<div <#include "/view-service/_include/comp/attrs/cat.html"/>>content</div>

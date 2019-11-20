@@ -1,0 +1,12 @@
+<#noparse><#assign</#noparse> leftdata=${config["left-data"]}>
+<#noparse><#assign</#noparse> rightdata=${config["right-data"]}>
+<div <#if config.id>id="${compid}"</#if> <#list config?keys as key><#if key?starts_with("wap-attr")> ${key?substring(9)}="${config[key]}"</#if></#list>>
+    <div class="lud-lyps-md lud-cmbx-h100">
+        <ul class="lud-lycm-fl lud-comp-nav-x ${config["left-class"]}" <#if config.id>id="${compid}_left_nav"</#if> <#list config?keys as key><#if key?starts_with("left-attr")> ${key?substring(10)}="${config[key]}"</#if></#list>>
+            <#noparse><#list leftdata as item></#noparse>${config["left-data-render"]}<#noparse></#list></#noparse>
+        </ul>
+         <ul class="lud-lycm-fr lud-comp-nav-x ${config["right-class"]}" <#if config.id>id="${compid}_right_nav"</#if> <#list config?keys as key><#if key?starts_with("right-attr")> ${key?substring(11)}="${config[key]}"</#if></#list>>
+            <#noparse><#list rightdata as item></#noparse>${config["right-data-render"]}<#noparse></#list></#noparse>
+        </ul>
+    </div>
+</div>

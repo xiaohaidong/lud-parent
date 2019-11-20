@@ -1,0 +1,21 @@
+﻿.lud-comp-pictext {
+	
+}
+
+.lud-comp-pictext .item {
+	overflow: hidden;
+	margin-top: 1.5rem;
+}
+
+.lud-comp-pictext .item .picture {
+	float: left;
+}
+
+.lud-comp-pictext .item .text {
+	padding-left: 2rem;
+}
+
+.lud-comp-pictext .item .text h3, .lud-comp-pictext .item .text h6,
+	.lud-comp-pictext .item .text h5 {
+	overflow: hidden;
+}

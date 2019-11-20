@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/lud-iot-api/lud-iot-api.iml" filepath="$PROJECT_DIR$/lud-iot-api/lud-iot-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lud-iot-business-core-api/lud-iot-business-core-api.iml" filepath="$PROJECT_DIR$/lud-iot-business-core-api/lud-iot-business-core-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lud-iot-business-core-client/lud-iot-business-core-client.iml" filepath="$PROJECT_DIR$/lud-iot-business-core-client/lud-iot-business-core-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lud-iot-business-core-server/lud-iot-business-core-server.iml" filepath="$PROJECT_DIR$/lud-iot-business-core-server/lud-iot-business-core-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lud-iot-client/lud-iot-client.iml" filepath="$PROJECT_DIR$/lud-iot-client/lud-iot-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lud-iot-server/lud-iot-server.iml" filepath="$PROJECT_DIR$/lud-iot-server/lud-iot-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lud-iot-util/lud-iot-util.iml" filepath="$PROJECT_DIR$/lud-iot-util/lud-iot-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lud-parent.iml" filepath="$PROJECT_DIR$/lud-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lud-service-business/lud-service-business.iml" filepath="$PROJECT_DIR$/lud-service-business/lud-service-business.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lud-service-business-api/lud-service-business-api.iml" filepath="$PROJECT_DIR$/lud-service-business-api/lud-service-business-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lud-service-core/lud-service-core.iml" filepath="$PROJECT_DIR$/lud-service-core/lud-service-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lud-service-core-api/lud-service-core-api.iml" filepath="$PROJECT_DIR$/lud-service-core-api/lud-service-core-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lud-service-open/lud-service-open.iml" filepath="$PROJECT_DIR$/lud-service-open/lud-service-open.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lud-service-open-api/lud-service-open-api.iml" filepath="$PROJECT_DIR$/lud-service-open-api/lud-service-open-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lud-service-smartcampus/lud-service-smartcampus.iml" filepath="$PROJECT_DIR$/lud-service-smartcampus/lud-service-smartcampus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lud-service-smartcampus-api/lud-service-smartcampus-api.iml" filepath="$PROJECT_DIR$/lud-service-smartcampus-api/lud-service-smartcampus-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lud-test-util/lud-test-util.iml" filepath="$PROJECT_DIR$/lud-test-util/lud-test-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lud-test-web/lud-test-web.iml" filepath="$PROJECT_DIR$/lud-test-web/lud-test-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lud-util-comm/lud-util-comm.iml" filepath="$PROJECT_DIR$/lud-util-comm/lud-util-comm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lud-util-content/lud-util-content.iml" filepath="$PROJECT_DIR$/lud-util-content/lud-util-content.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lud-util-dubbo/lud-util-dubbo.iml" filepath="$PROJECT_DIR$/lud-util-dubbo/lud-util-dubbo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lud-util-spring/lud-util-spring.iml" filepath="$PROJECT_DIR$/lud-util-spring/lud-util-spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lud-util-web/lud-util-web.iml" filepath="$PROJECT_DIR$/lud-util-web/lud-util-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lud-web-api/lud-web-api.iml" filepath="$PROJECT_DIR$/lud-web-api/lud-web-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lud-web-business-core/lud-web-business-core.iml" filepath="$PROJECT_DIR$/lud-web-business-core/lud-web-business-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lud-web-business-iot/lud-web-business-iot.iml" filepath="$PROJECT_DIR$/lud-web-business-iot/lud-web-business-iot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lud-web-business-smartcampus/lud-web-business-smartcampus.iml" filepath="$PROJECT_DIR$/lud-web-business-smartcampus/lud-web-business-smartcampus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lud-web-server/lud-web-server.iml" filepath="$PROJECT_DIR$/lud-web-server/lud-web-server.iml" />
+    </modules>
+  </component>
+</project>

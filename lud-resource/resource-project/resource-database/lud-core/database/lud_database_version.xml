@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <querys>
+        <item order="project">
+            <fileds>
+                <filed name="def"></filed>
+                <filed name="cache"><![CDATA[project,name,company,enname,version]]></filed>
+            </fileds>
+            <limits>
+                <limit name="def"><![CDATA[ 1=1 ]]></limit>
+            </limits>
+        </item>
+    </querys>
+    <commands>
+        <item name="updatetest">
+            <cmd args=""><![CDATA[ update {t} set updator='1' where 1=2]]></cmd>
+        </item>
+    </commands>
+</configuration>

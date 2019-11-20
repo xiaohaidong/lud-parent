@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <querys>
+        <item order="sort">
+            <fileds>
+                <filed name="def"></filed>
+                <filed name="count"><![CDATA[ count(*) ]]></filed>
+            </fileds>
+            <limits>
+                <limit name="def"><![CDATA[ 1=1 ]]></limit>
+                <limit name="clientid" args="clientid"><![CDATA[ clientid=? ]]></limit>
+            </limits>
+        </item>
+    </querys>
+    <commands>
+        <item name="rege">
+            <cmd args="clientid,token,ip,mac,os,date,date"><![CDATA[insert into {t}(clientid,token,ip,mac,os,regedate,lastrun,isrun) values (?,?,?,?,?,?,?,'1')]]></cmd>
+        </item>
+        <item name="update">
+            <cmd args="date,clientid"><![CDATA[update {t} set lastrun=?,isrun='1' where clientid=?]]></cmd>
+        </item>
+    </commands>
+</configuration>

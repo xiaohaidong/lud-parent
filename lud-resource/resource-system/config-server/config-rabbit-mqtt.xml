@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <item name="ip">169.254.0.4</item>
+    <item name="port">1833</item>
+    <item name="user">admin</item>
+    <item name="pwd">admin</item>
+</configuration>

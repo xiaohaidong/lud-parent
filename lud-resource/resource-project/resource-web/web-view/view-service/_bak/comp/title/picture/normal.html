@@ -1,0 +1,4 @@
+<div <#if config.id>id="${compid}"</#if> <#list config?keys as key><#if key?starts_with("wap-attr-")> ${key?substring(9)}="${config[key]}"</#if></#list>>
+    <div class="lud-comp-title-picture lud-ele-img-wap"><img src="${config["picture"]}" /></div>
+    <#include "/view-service/comp/title/include/title.html"/>
+</div>

@@ -1,0 +1,24 @@
+<div <#if config.id>id="${compid}"</#if> <#list config?keys as key><#if key?starts_with("wap-attr")> ${key?substring(9)}="${config[key]}"</#if></#list>>
+    <table>
+    <thead>
+    	<tr>
+    		<#assign texts=config["header-title"]?split("|")>
+		    <#list config["header-width"]?split("|") as w>
+		    	<th style="width:${w}rem">${texts[w_index]}</th>
+		    </#list>
+	    </tr>
+    </thead>
+    <tbody>
+	    <#list detail as item>
+	    	<tr>
+	    		<#assign rowspan=item["rowspan"]?split("|")>
+	    		<#assign colspan=item["colspan"]?split("|")>
+	    		<#assign class=item["class"]?split("|")>
+		    	<#list item["text"]?split("|") as c>
+			    	<td <#if rowspan[c_index]>rowspan="${rowspan[c_index]}"</#if> <#if colspan[c_index]>colspan="${colspan[c_index]}"</#if> <#if class[c_index]>class="${class[c_index]}"</#if>>${c}</th>
+			    </#list>
+	    	</tr>
+	    </#list>
+    </tbody>
+    </table>
+</div>

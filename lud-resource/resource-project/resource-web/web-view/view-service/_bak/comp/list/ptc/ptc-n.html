@@ -1,0 +1,6 @@
+<#noparse><#assign</#noparse> list=${config["data"]}>
+<div <#if config.id>id="${compid}"</#if> <#list config?keys as key><#if key?starts_with("wap-attr")> ${key?substring(9)}="${config[key]}"</#if></#list>>
+     <#noparse><#list list as item></#noparse>
+	 	<div class="item"><h4>${config["item-title"]}</h4><h5>${config["item-content"]}</h5></div>
+	 <#noparse></#list></#noparse>
+</div>

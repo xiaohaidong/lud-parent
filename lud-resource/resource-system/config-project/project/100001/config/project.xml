@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <item name="code"><![CDATA[100001]]></item>
+    <item name="login.theme"><![CDATA[default]]></item>
+    <item name="login.theme.color"><![CDATA[lu-cmcb-red]]></item>
+    <item name="copyright.cn"><![CDATA[成都市奥赛尔科技技术有限公司]]></item>
+    <item name="copyright.en"><![CDATA[Sichuan Chengdu Osel Technology Co., Ltd. ]]></item>
+    <item name="copyright.address"><![CDATA[四川省成都市金牛区长青路88号金美国际A栋2单元908#(邮政编码：610000) ]]></item>
+    <item name="copyright.contact"><![CDATA[TEL +86-028-87600114/86+18084815085]]></item>
+</configuration>

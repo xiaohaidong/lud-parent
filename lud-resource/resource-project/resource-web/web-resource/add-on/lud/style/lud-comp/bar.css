@@ -1,0 +1,52 @@
+/*
+ * Copyright 2018-2019 the original author or authors.
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+.lud-bar-n {
+    height: 3.6rem;
+    line-height: 2.5rem;
+    padding: 0.4rem 1rem;
+    border: 1px solid #CCC;
+    background-color: #F5F5F5;
+    overflow:hidden;
+}
+.lud-bar-n > form > .item {
+    float:left;
+    margin-right:0.5rem;
+}
+.lud-bar-n > form > .item > div {
+    float:left;
+}
+.lud-bar-n > form > .item .txt span {
+    font-weight: bold;
+}
+.lud-bar-n > form  i {
+    padding-right:0.3rem;
+}
+.lud-bar-n > form > .item input[type=text] {
+    padding: 0.4rem;
+    border: 1px solid #CCC;
+    width: 10rem;
+}
+.lud-bar-n > form > .submit {
+    background-color: #303643;
+    color: #fff;
+    float: left;
+    padding: 0 0.5rem;
+    cursor: pointer;
+    border-radius: 0.2rem;
+}
+.lud-bar-n > form > .submit:hover {
+    background-color: #ff6a00;
+}

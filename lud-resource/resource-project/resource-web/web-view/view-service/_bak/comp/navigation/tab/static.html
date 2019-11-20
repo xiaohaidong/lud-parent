@@ -1,0 +1,6 @@
+<div id="${compid}_tab_nav" lud-render-target="#${compid}_tab_content" <#list config?keys as key><#if key?starts_with("attr-")> ${key?substring(5)}="${config[key]}"</#if></#list>>
+    <ul lud-oclick="li:first" lud-tab="c" <#list config?keys as key><#if key?starts_with("ul-attr-")> ${key?substring(8)}="${config[key]}"</#if></#list>><#list detail as item>
+    	<li lud-render-click="${item["text"]}"><i class="${item["icon"]}"></i> ${item["title"]}</li></#list>
+    </ul>
+</div>
+<div id="${compid}_tab_content" <#list config?keys as key><#if key?starts_with("con-attr-")> ${key?substring(9)}="${config[key]}"</#if></#list>></div>

@@ -1,0 +1,1 @@
+id="${compid}_comp_wrap" <#list config?keys as key><#if key?starts_with("wat-")> ${key?substring(4)}="${config[key]}"</#if></#list>

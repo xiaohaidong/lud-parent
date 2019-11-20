@@ -1,0 +1,124 @@
+﻿form {
+    display: block;
+}
+
+.lud-ele-form-s1x [type=text], [type=password], .lud-ele-form-s1x select {
+    padding: 0.6rem 1rem;
+    border: 1px solid #AAA;
+    width: 100%;
+    font-size: 1.4rem;
+    font-family: Calibri, "宋体";
+}
+
+.lud-ele-form-s1x [type=text]:hover, [type=password]:hover, .lud-ele-form-s1x select:hover {
+    background-color: #e3fbfb;
+    border: 1px solid #3ad4d4;
+    width: 100%;
+}
+
+.lud-ele-form-txtform .text {
+    height: 3.2rem;
+    padding-top: 1rem;
+}
+
+.lud-ele-form-txtform .text span {
+    color: #ff6a00;
+    font-size: 1.2rem;
+    padding-left: 1rem;
+}
+
+.lud-ele-form-search {
+    padding-top: 1.5rem;
+}
+
+.lud-ele-form-search .item {
+    float: left;
+    padding-right: 0.5rem;
+    vertical-align: bottom;
+}
+
+.lud-ele-form-search .item input[type=input] {
+    padding: 0.3rem 0.6rem;
+    border: 1px solid #000;
+    border-radius: 0.2rem;
+}
+
+.lud-ele-form-search .item span {
+    font-weight: bold;
+}
+
+.lud-ele-form-search .item i {
+    color: #303643;
+    padding-right: 0.5rem;
+}
+
+.lud-ele-form-search .item div.txt {
+    float: left;
+    padding-top: 0.3rem;
+}
+
+.lud-ele-form-search .item div.ctl {
+    float: left;
+}
+
+.lud-ele-form-search .submit {
+    background-color: #303643;
+    color: #fff;
+    float: left;
+    padding: 0.3rem 0.6rem;
+    cursor: pointer;
+}
+
+.lud-ele-form-search .submit:hover {
+    background-color: #ff6a00;
+}
+
+
+.lud-select-wrap {
+    padding: 0.5rem 0;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+}
+.lud-select-wrap .value {
+    height: 2.2rem;
+    line-height: 2.2rem;
+}
+.lud-select-wrap .select {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    line-height: 2.2rem;
+    cursor: pointer;
+    width: 100%;
+    display: none;
+    border: 1px solid #000;
+    padding-bottom:1rem;
+    font-size:1.2rem;
+}
+.lud-select-wrap .select input {
+    border: none;
+    padding: 0.5rem 1rem;
+    background-color: #FFF;
+    border-bottom: 1px solid #000;
+    width: 100%;
+}
+.lud-select-wrap .select ul {
+    padding-top: 1rem;
+    max-height: 20rem;
+    overflow-y:scroll;
+    overflow-x:hidden;
+}
+.lud-select-wrap .select li {
+    padding:0 1rem;
+}
+.lud-select-wrap .select li:hover {
+    background-color: #ff6a00;
+    color: #fff;
+}
+.lud-select-wrap .select li.actived {
+    background-color:#035fb3;
+    color:#fff;
+}

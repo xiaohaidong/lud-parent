@@ -1,0 +1,6 @@
+[10:31:21:978] [ERROR] - com.lud.test.util.EntityClassTester.testEntity(EntityClassTester.java:95) - class java.lang.Class测试失败!java.lang.IllegalArgumentException
+[10:31:41:022] [ERROR] - com.lud.test.util.EntityClassTester.testEntity(EntityClassTester.java:95) - class java.lang.Class测试失败!java.lang.IllegalArgumentException
+[11:47:33:165] [ERROR] - com.lud.test.util.EntityClassTester.testEntity(EntityClassTester.java:95) - class java.lang.Class测试失败!java.lang.IllegalArgumentException
+[11:47:48:479] [ERROR] - com.lud.test.util.EntityClassTester.testEntity(EntityClassTester.java:95) - class java.lang.Class测试失败!java.lang.IllegalArgumentException
+[14:36:56:707] [ERROR] - com.lud.test.util.EntityClassTester.testEntity(EntityClassTester.java:95) - class java.lang.Class测试失败!java.lang.IllegalArgumentException
+[14:37:08:914] [ERROR] - com.lud.test.util.EntityClassTester.testEntity(EntityClassTester.java:95) - class java.lang.Class测试失败!java.lang.IllegalArgumentException

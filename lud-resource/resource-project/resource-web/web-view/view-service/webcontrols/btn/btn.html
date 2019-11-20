@@ -1,0 +1,1 @@
+<label  <#list cfg?keys as key><#if key?starts_with("cat-")> ${key?substring(4)}="${cfg[key]}"</#if></#list>><i class="${cfg["icon"]}"/></label>

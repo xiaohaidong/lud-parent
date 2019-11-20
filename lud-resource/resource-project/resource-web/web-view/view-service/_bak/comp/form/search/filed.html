@@ -1,0 +1,10 @@
+<form id="lud_${compid}_form" lud-render-target="#lud_${compid}_content" <#list config?keys as key><#if key?starts_with("form-attr-")> ${key?substring(10)}="${config[key]}"</#if></#list>>
+    <input type="hidden" name="pager-size" value="${config["page-size"]}" />
+    <input type="hidden" name="pager-index" value="1" />
+    <input type="hidden" name="pager-order" value="${config["page-order"]}" /><#list detail as item>
+    <input type="hidden" name="${item.name}" value="${item.text}" />
+    </#list>
+</form>
+<div id="lud_${compid}_content" data-forform="#lud_${compid}_form" <#list config?keys as key><#if key?starts_with("cont-attr-")> ${key?substring(10)}="${config[key]}"</#if></#list>>
+    
+</div>

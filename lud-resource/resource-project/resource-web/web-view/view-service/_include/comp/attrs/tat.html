@@ -1,0 +1,1 @@
+id="${compid}_comp_title" <#list config?keys as key><#if key?starts_with("tat-")> ${key?substring(4)}="${config[key]}"</#if></#list>

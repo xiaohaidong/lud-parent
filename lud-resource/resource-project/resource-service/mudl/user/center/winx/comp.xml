@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <!-- head：头部文件 -->
+    <service name="head" theme="content/content">
+        <content theme="wrap/content" flag="i">
+            <item wat-class="lud-msgbox-cover lud-lyps-full"></item>
+            <item wat-class="lud-msgbox-boxs"></item>
+            <item wat-id="mudl_user_center_winx_comp_head_workspace" wat-class="lud-lyps-full"><![CDATA[${comp["workspace"]}]]></item>
+        </content>
+        <comp name="workspace" theme="mudl/user/winx/workspace"></comp>
+    </service>
+    <!-- 应用程序 -->
+    <service name="apps" theme="content/content">
+        <content theme="wrap/content" flag="i">
+            <item wat-class="applist"><![CDATA[${comp["apps"]}]]></item>
+        </content>
+        <comp name="apps" theme="mudl/user/winx/apps">
+            <config name="data"><![CDATA[apps.list]]></config>
+        </comp>
+        <data name="apps" type="null" result="map" invoke="com.lud.web.business.core.render.user.center.main.getApplicationList" flag="i"></data>
+    </service>
+    <!-- content：菜单页 -->
+    <service name="menu" theme="content/content">
+        <content theme="wrap/content" for="left" flag="i">
+            <item><![CDATA[${comp["user.menu"]}]]></item>
+        </content>
+        <comp name="user.menu" theme="mudl/user/winx/menu">
+            <config name="menurender"><![CDATA[<#if item.code?length==2><li class="item-2" data-code="${item.code}"><i class="${item.icon}"></i> ${item.name}<span><i class="fal fa-angle-double-right"></i></span></li></#if><#if item.code?length==4><li class="item-4" lud-render-click="${item.url}" lud-menu="${app.code}:${item.code}" data-code="${item.code}"><i class="${item.icon}"></i> ${item.name}</li></#if>]]></config>
+            <config name="menu"><![CDATA[app.menulist]]></config>
+            <config name="app"><![CDATA[app.application]]></config>
+            <config name="app-icon"><![CDATA[${app.icon}]]></config>
+            <config name="app-name"><![CDATA[${app.name}]]></config>
+            <config name="app-title"><![CDATA[${app.title}]]></config>
+        </comp>
+        <data name="app" type="null" result="map" invoke="com.lud.web.business.core.render.user.center.main.getApplication" flag="i"></data>
+    </service>
+    <service name="foot" theme="content/content"></service>
+</configuration>

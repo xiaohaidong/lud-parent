@@ -1,0 +1,18 @@
+<div class="lud-comp-title-n lftb">
+    <h2 class="main">忘记密码<span>Get Password</span></h2>
+</div>
+<form <#include "/view-service/_include/comp/attrs/at.html"/>>
+	<div class="text">账号 <span>[User ID]:</span></div>
+    <div class="ctrl"><input type="text" value="" name="userid"/></div>
+    <div class="text">姓名 <span>[User Name]:</span></div>
+    <div class="ctrl"><input type="text" value="" name="name"/></div>
+    <div class="text">身份证号 <span>[CardID]:</span></div>
+    <div class="ctrl"><input type="text" value="" name="cardid"/></div>
+    <div class="text">接收密码手机 <span>[Mobile]:</span></div>
+    <div class="ctrl"><input type="text" value="" name="tel"/></div>
+    <div class="lud-cmbx-pt1x lud-cmcc-org fs1x">大部分用户的初始化密码为身份证号后6位，如无法登录请尝试000000登录，如果仍无法登录请尝试找回密码。</div>
+    <div class="lud-ele-btngroup clearfix" style="padding:2rem 0">
+        <lable class="lud-ele-btn lud-cmcb-red" lud-exe="1">找回密码</lable>
+        <lable class="lud-ele-btn lud-cmcb-grayl" onclick="$('#user_getpass').slideUp(function(){$('#user_login').slideDown();});">返回登录(?)</lable>
+    </div>
+</form>

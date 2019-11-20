@@ -1,0 +1,16 @@
+[12:08:44:793] [DEBUG] - oshi.software.os.windows.WindowsOSVersionInfoEx.init(WindowsOSVersionInfoEx.java:80) - Initialized OSVersionInfoEx
+[12:08:46:110] [DEBUG] - oshi.util.platform.windows.PerfCounterWildcardQuery.localize(PerfCounterWildcardQuery.java:154) - Localized PhysicalDisk to PhysicalDisk
+[12:08:46:416] [DEBUG] - oshi.util.platform.windows.PerfCounterWildcardQuery.localize(PerfCounterWildcardQuery.java:154) - Localized Processor Information to Processor Information
+[12:08:46:461] [DEBUG] - oshi.hardware.platform.windows.WindowsCentralProcessor.<init>(WindowsCentralProcessor.java:230) - Initialized Processor
+[12:09:11:570] [DEBUG] - oshi.software.os.windows.WindowsOSVersionInfoEx.init(WindowsOSVersionInfoEx.java:80) - Initialized OSVersionInfoEx
+[12:09:12:852] [DEBUG] - oshi.util.platform.windows.PerfCounterWildcardQuery.localize(PerfCounterWildcardQuery.java:154) - Localized PhysicalDisk to PhysicalDisk
+[12:09:13:073] [DEBUG] - oshi.util.platform.windows.PerfCounterWildcardQuery.localize(PerfCounterWildcardQuery.java:154) - Localized Processor Information to Processor Information
+[12:09:13:104] [DEBUG] - oshi.hardware.platform.windows.WindowsCentralProcessor.<init>(WindowsCentralProcessor.java:230) - Initialized Processor
+[14:49:15:240] [DEBUG] - oshi.software.os.windows.WindowsOSVersionInfoEx.init(WindowsOSVersionInfoEx.java:80) - Initialized OSVersionInfoEx
+[14:49:16:839] [DEBUG] - oshi.util.platform.windows.PerfCounterWildcardQuery.localize(PerfCounterWildcardQuery.java:154) - Localized PhysicalDisk to PhysicalDisk
+[14:49:17:088] [DEBUG] - oshi.util.platform.windows.PerfCounterWildcardQuery.localize(PerfCounterWildcardQuery.java:154) - Localized Processor Information to Processor Information
+[14:49:17:120] [DEBUG] - oshi.hardware.platform.windows.WindowsCentralProcessor.<init>(WindowsCentralProcessor.java:230) - Initialized Processor
+[14:49:20:599] [DEBUG] - oshi.software.os.windows.WindowsOSVersionInfoEx.init(WindowsOSVersionInfoEx.java:80) - Initialized OSVersionInfoEx
+[14:49:22:430] [DEBUG] - oshi.util.platform.windows.PerfCounterWildcardQuery.localize(PerfCounterWildcardQuery.java:154) - Localized PhysicalDisk to PhysicalDisk
+[14:49:22:707] [DEBUG] - oshi.util.platform.windows.PerfCounterWildcardQuery.localize(PerfCounterWildcardQuery.java:154) - Localized Processor Information to Processor Information
+[14:49:22:739] [DEBUG] - oshi.hardware.platform.windows.WindowsCentralProcessor.<init>(WindowsCentralProcessor.java:230) - Initialized Processor

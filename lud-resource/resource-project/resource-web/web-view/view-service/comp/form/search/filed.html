@@ -1,0 +1,10 @@
+<form lud-render-target="#${compid}_comp_content"  <#include "/view-service/_include/comp/attrs/at.html"/> >
+    <input type="hidden" name="pager-size" value="${config["page-size"]}" />
+    <input type="hidden" name="pager-index" value="1" />
+    <input type="hidden" name="pager-order" value="${config["page-order"]}" /><#list detail as item>
+    <input type="hidden" name="${item.name}" value="${item.text}" />
+    </#list>
+</form>
+<div <#include "/view-service/_include/comp/attrs/cat.html"/> data-forform="#${compid}_comp" >
+    
+</div>

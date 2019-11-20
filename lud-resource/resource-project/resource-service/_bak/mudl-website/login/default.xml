@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <!-- head：头部文件 -->
+    <service name="head" layout="content/empty" acl="public" cache="true">
+        <content theme="normal/empty" flag="i">
+            <item><![CDATA[${comp["navigation"]}]]></item>
+            <item><![CDATA[${comp["logo"]}]]></item>
+        </content>
+        <comp name="navigation" theme="navigation/horizontal/full-wap-if">
+            <config name="wap-attr-class"><![CDATA[lud-cmcb-bla lud-cmcc-whitel lud-cmbx-h3x ]]></config>
+            <config name="left-class"><![CDATA[border ]]></config>
+            <config name="left-data"><![CDATA[links]]></config>
+            <config name="left-data-render"><![CDATA[<#if item["postion"]=="nav-l"><li><a <#if item.target>target="${item.target}"</#if> href="${item.url}">${item.text}</a></li></#if>]]></config>
+            <config name="right-class"><![CDATA[back lstn]]></config>
+            <config name="right-data"><![CDATA[links]]></config>
+            <config name="right-data-render"><![CDATA[<#if item["postion"]=="nav-r"><li><a <#if item.target>target="${item.target}"</#if> href="${item.url}">${item.text}</a></li></#if>]]></config>
+        </comp>
+        <comp name="logo" theme="module/logo/normal">
+            <config name="wap-attr-class"><![CDATA[${config["project.login.theme.color"]} lud-cmcc-whitel]]></config>
+            <config name="logo"><![CDATA[/web-userfile/project/${project.company}/${project.project}/website/default/logo.png]]></config>
+            <config name="logo-height"><![CDATA[12rem]]></config>
+            <config name="logo-text"><![CDATA[true]]></config>
+            <config name="text-1"><![CDATA[${config["project.copyright.cn"]}]]></config>
+            <config name="text-2"><![CDATA[${project.name}]]></config>
+            <config name="text-3"><![CDATA[${project.enname}]]></config>
+            <config name="text-l"><![CDATA[10rem]]></config>
+            <config name="text-t"><![CDATA[3.2rem]]></config>
+            <config name="logo-link"><![CDATA[true]]></config>
+            <config name="link-r"><![CDATA[0]]></config>
+            <config name="link-t"><![CDATA[4.5rem]]></config>
+            <config name="link-data"><![CDATA[links]]></config>
+            <config name="link-render"><![CDATA[<#if item["postion"]=="nav-login-t"> <li><a href="${item.url}">${item.text}<br/>${item.entext}</a></li></#if>]]></config>
+        </comp>
+        <data name="project" type="redis" result="map" query="com.lud.business.project/{project}" flag="i"></data>
+        <data name="config" type="redis" result="map" query="com.lud.business.project.config/{project}" flag="i"></data>
+        <data name="links" type="jdbc" result="list" query="lud-core.lud_project_link_query" limits="project" flag="i"></data>
+    </service>
+
+    <!-- foot：底部文件 -->
+    <service name="foot" layout="content/empty" acl="public" cache="true">
+        <content theme="normal/empty" flag="i">
+            <item><![CDATA[${comp["foot"]}]]></item>
+        </content>
+        <comp name="foot" theme="content/pannel/wap">
+            <config name="wap-attr-class"><![CDATA[lud-cmbx-ptb3x ${config["project.login.theme.color"]} lud-cmcc-whitel]]></config>
+            <config name="attr-class"><![CDATA[lud-lyps-md l-2]]></config>
+            <config name="content"><![CDATA[
+                                    版权所有： © 2017-2019 ${config["project.copyright.cn"]}<br/>
+                  COPYRIGHT：${config["project.copyright.en"]} © 2017-2019  <br/>
+                  PROJECT：${project.enname}<br/>
+                                    通讯地址：${config["project.copyright.address"]}<br/>
+                                    联系方式：${config["project.copyright.contact"]}<br/>
+                                    最佳环境：WINDOWS8及以上操作系统，IE9+，分辨率1920*1080 
+            ]]></config>
+        </comp>
+        <data name="project" type="redis" result="map" query="com.lud.business.project/{project}" flag="i"></data>
+        <data name="config" type="redis" result="map" query="com.lud.business.project.config/{project}" flag="i"></data>
+    </service>
+
+    <!-- content：内容页 -->
+    <service name="content" layout="spliter/content-rl" acl="public" cache="true">
+        <config name="left-width"><![CDATA[86.5rem]]></config>
+        <config name="right-width"><![CDATA[32rem]]></config>
+        <config name="wap-class"><![CDATA[lud-lyps-md lud-cmbx-ptb2x]]></config>
+        <content theme="normal/empty" for="left" flag="i">
+            <item><![CDATA[${comp["content.banner"]}]]></item>
+            <item><![CDATA[${comp["content.newstitle"]}]]></item>
+        </content>
+        <content theme="normal/empty" for="right" flag="i">
+            <item><![CDATA[${comp["right.userlogin"]}]]></item>
+            <item><![CDATA[${comp["right.links.title"]}]]></item>
+            <item><![CDATA[${comp["right.links"]}]]></item>
+        </content>
+        <comp name="content.banner" theme="element/image/wap">
+            <config name="wap-attr-class"><![CDATA[lud-cmcb-whitel lud-cmbx-p3x lud-ele-img-wap]]></config>
+            <config name="picture"><![CDATA[/web-userfile/project/${project.company}/${project.project}/website/default/banner.jpg]]></config>
+        </comp>
+        <comp name="content.newstitle" theme="title/normal/title-bind-content">
+            <config name="wap-attr-class"><![CDATA[lud-cmcb-whitel lud-cmbx-p3x lud-cmbx-pt1x]]></config>
+            <config name="title-attr-class"><![CDATA[lud-comp-title-n lftb bb]]></config>
+            <config name="title-main"><![CDATA[<h2 class="main">新闻通知 · 热点资讯<span>News && Notes</span><span>System DateTime:${.now}</span><a href="/?bin=/web/service/service/mudl-website-login-default-news/i">更多...</a></h2>]]></config>
+            <config name="subtitle-attr-class"><![CDATA[lud-comp-nav lud-comp-nav-x lud-comp-nav-subt]]></config>
+            <config name="subtitle-data"><![CDATA[notelinks]]></config>
+            <config name="subtitle-text"><![CDATA[${item.name}]]></config>
+            <config name="subtitle-url"><![CDATA[/web/service/service/user-login-default-note-list/t?code=${item.code}]]></config>
+        </comp>
+        <comp name="right.userlogin" theme="module/userlogin/default">
+            <config name="wap-attr-class"><![CDATA[lud-cmcb-whitel lud-cmbx-p3x]]></config>
+            <config name="wap-attr-style"><![CDATA[padding-top:4rem]]></config>
+            <config name="form-attr-class"><![CDATA[lud-ele-form-txtform lud-ele-form-s1x]]></config>
+            <config name="form-attr-style"><![CDATA[padding-left:2.2rem;width:26rem;margin-top:1rem]]></config>
+            <config name="form-attr-data-action"><![CDATA[/web/service/exe/service-lud-user-info-login/login]]></config>
+            <config name="usergroup"><![CDATA[usergroups]]></config>
+            <config name="selected"><![CDATA[<#if item.sort=="1">selected="selected"</#if>]]></config>
+        </comp>
+        <comp name="right.links.title" theme="title/normal/title">
+            <config name="wap-attr-class"><![CDATA[lud-cmcb-whitel lud-cmbx-p3x]]></config>
+            <config name="wap-attr-style"><![CDATA[margin-top:2rem;padding-bottom:0;overflow:hidden]]></config>
+            <config name="title-attr-class"><![CDATA[lud-comp-title-n lftb bb]]></config>
+            <config name="title-main"><![CDATA[<h2 class="main">快速连接<span>Navigation</span></h2>]]></config>
+        </comp>
+        <comp name="right.links" theme="navigation/flex/background">
+            <config name="wap-attr-class"><![CDATA[lud-cmcb-whitel lud-cmbx-p3x clearfix ]]></config>
+            <config name="wap-attr-style"><![CDATA[padding-top:0 ]]></config>
+            <config name="link-attr-class"><![CDATA[lud-comp-nav-x lud-comp-nav-backc bigx2 fs]]></config>
+            <config name="link-data"><![CDATA[links]]></config>
+            <config name="link-data-render"><![CDATA[<#if item["postion"]=="nav-login-r"><li class="${item["css"]}" style="background-image:url(/web-resource/add-on/lud/images/icon/16-white/${(item_index+1)%10}.png)"><a <#if item.target>target="${item.target}"</#if> href="${item.url}">${item.text}</a></li></#if>]]></config>
+        </comp>
+        <data name="notelinks" type="jdbc" query="lud-core.lud_project_notegroup_query" result="list" fields="def" limits="project,groups_news" flag="i"></data>
+        <data name="project" type="redis" result="map" query="com.lud.business.project/{project}" flag="i"></data>
+        <data name="config" type="redis" result="map" query="com.lud.business.project.config/{project}" flag="i"></data>
+        <data name="usergroups" type="redis" result="list" query="com.lud.business.usergroups/{project}" flag="i"></data>
+        <data name="links" type="jdbc" result="list" query="lud-core.lud_project_link_query" limits="project" flag="i"></data>
+    </service>
+
+    <!-- 新闻页 -->
+    <service name="news" layout="spliter/content-rl" acl="public" cache="true">
+        <config name="left-width"><![CDATA[86.5rem]]></config>
+        <config name="right-width"><![CDATA[32rem]]></config>
+        <config name="wap-class"><![CDATA[lud-lyps-md lud-cmbx-ptb2x]]></config>
+        <content theme="normal/empty" for="left" flag="i">
+            <item><![CDATA[${comp["news.pic"]}]]></item>
+            <item><![CDATA[${comp["news.title"]}]]></item>
+            <item><![CDATA[${comp["news.form"]}]]></item>
+        </content>
+        <content theme="normal/empty" for="right" flag="i">
+            <item><![CDATA[${comp["news.datetitle"]}]]></item>
+            <item><![CDATA[${comp["news.date"]}]]></item>
+        </content>
+        <comp name="news.pic" theme="element/image/wap">
+            <config name="wap-attr-class"><![CDATA[lud-cmcb-whitel lud-cmbx-p3x lud-ele-img-wap]]></config>
+            <config name="picture"><![CDATA[/web-userfile/project/${project.company}/${project.code}/website/default/news.jpg]]></config>
+        </comp>
+        <comp name="news.title" theme="title/normal/title-bind-form">
+            <config name="wap-attr-class"><![CDATA[lud-cmcb-whitel lud-cmbx-p3x lud-cmbx-pbn  lud-cmbx-pt1x]]></config>
+            <config name="title-attr-class"><![CDATA[lud-comp-title-n lftb bb]]></config>
+            <config name="title-main"><![CDATA[<h2 class="main">新闻通知 · 热点资讯<span>News && Notes</span></h2>]]></config>
+            <config name="subtitle-attr-class"><![CDATA[lud-comp-nav lud-comp-nav-x lud-comp-nav-subt]]></config>
+            <config name="subtitle-attr-data-forform"><![CDATA[#lud_mudl_website_login_default_news_news_form_form]]></config>
+            <config name="subtitle-attr-data-forinput"><![CDATA[code]]></config>
+            <config name="subtitle-data"><![CDATA[notelinks]]></config>
+            <config name="subtitle-text"><![CDATA[${item.name}]]></config>
+            <config name="subtitle-value"><![CDATA[${item.code}]]></config>
+        </comp>
+        <comp name="news.form" theme="form/search/filed">
+            <config name="cont-attr-class"><![CDATA[lud-cmcb-whitel lud-cmbx-p3x lud-cmbx-ptn]]></config>
+            <config name="form-attr-data-action"><![CDATA[/web/service/service/service-lud-project-note-list/p]]></config>
+            <config name="page-size"><![CDATA[10]]></config>
+            <detail name="code"></detail>
+        </comp>
+        <comp name="news.datetitle" theme="title/picture/normal">
+            <config name="wap-attr-class"><![CDATA[lud-cmcb-whitel lud-cmbx-p3x lud-cmbx-pbn]]></config>
+            <config name="title-attr-class"><![CDATA[lud-comp-title-n lud-comp-title-n-p lftb ]]></config>
+            <config name="title-main"><![CDATA[<h2 class="main">最新资讯<span>News Timeline</span></h2>]]></config>
+            <config name="picture"><![CDATA[/web-userfile/project/${project.company}/${project.code}/website/default/picture/1.jpg]]></config>
+        </comp>
+        <comp name="news.date" theme="content/timeline/date">
+            <config name="wap-attr-class"><![CDATA[lud-cmcb-whitel lud-cmbx-p3x  lud-comp-timeline-note]]></config>
+            <config name="data"><![CDATA[notes]]></config>
+            <config name="date"><![CDATA[item.adddate?string("yyyy-MM-dd")]]></config>
+            <config name="title"><![CDATA[<a href="/?bin=/web/service/service/mudl-website-login-default-newsread/i?id=${item.id}">${item.title}</a>]]></config>
+        </comp>
+        <data name="notelinks" type="jdbc" query="lud-core.lud_project_notegroup_query" result="list" fields="def" limits="project,groups_news" flag="i"></data>
+        <data name="notes" type="jdbc" query="lud-core.lud_project_note_query" top="8" result="list" fields="list" limits="project,public" flag="i" order="adddate"></data>
+        <data name="project" type="redis" result="map" query="com.lud.business.runtime.project/{project}" flag="i"></data>
+    </service>
+
+
+    <service name="regulation" layout="spliter/content-rl" acl="public" cache="true">
+        <config name="left-width"><![CDATA[86.5rem]]></config>
+        <config name="right-width"><![CDATA[32rem]]></config>
+        <config name="wap-class"><![CDATA[lud-lyps-md lud-cmbx-ptb2x]]></config>
+        <content theme="normal/empty" for="left" flag="i">
+            <item><![CDATA[${comp["news.pic"]}]]></item>
+            <item><![CDATA[${comp["news.title"]}]]></item>
+            <item><![CDATA[${comp["news.form"]}]]></item>
+        </content>
+        <content theme="normal/empty" for="right" flag="i">
+            <item><![CDATA[${comp["news.datetitle"]}]]></item>
+            <item><![CDATA[${comp["news.date"]}]]></item>
+        </content>
+        <comp name="news.pic" theme="element/image/wap">
+            <config name="wap-attr-class"><![CDATA[lud-cmcb-whitel lud-cmbx-p3x lud-ele-img-wap]]></config>
+            <config name="picture"><![CDATA[/web-userfile/project/${project.company}/${project.code}/website/default/news.jpg]]></config>
+        </comp>
+        <comp name="news.title" theme="title/normal/title-bind-form">
+            <config name="wap-attr-class"><![CDATA[lud-cmcb-whitel lud-cmbx-p3x lud-cmbx-pbn lud-cmbx-pt1x]]></config>
+            <config name="title-attr-class"><![CDATA[lud-comp-title-n lftb bb]]></config>
+            <config name="title-main"><![CDATA[<h2 class="main">规章制度<span>Regulations</span></h2>]]></config>
+            <config name="subtitle-attr-class"><![CDATA[lud-comp-nav lud-comp-nav-x lud-comp-nav-subt]]></config>
+            <config name="subtitle-attr-data-forform"><![CDATA[#lud_mudl_website_login_default_news_news_form_form]]></config>
+            <config name="subtitle-attr-data-forinput"><![CDATA[code]]></config>
+            <config name="subtitle-data"><![CDATA[notelinks]]></config>
+            <config name="subtitle-text"><![CDATA[${item.name}]]></config>
+            <config name="subtitle-value"><![CDATA[${item.code}]]></config>
+        </comp>
+        <comp name="news.form" theme="form/search/filed">
+            <config name="cont-attr-class"><![CDATA[lud-cmcb-whitel lud-cmbx-p3x lud-cmbx-ptn]]></config>
+            <config name="form-attr-data-action"><![CDATA[/web/service/service/service-lud-project-note-list/p]]></config>
+            <config name="page-size"><![CDATA[10]]></config>
+            <detail name="code"></detail>
+        </comp>
+        <comp name="news.datetitle" theme="title/picture/normal">
+            <config name="wap-attr-class"><![CDATA[lud-cmcb-whitel lud-cmbx-p3x lud-cmbx-pbn]]></config>
+            <config name="title-attr-class"><![CDATA[lud-comp-title-n lud-comp-title-n-p lftb ]]></config>
+            <config name="title-main"><![CDATA[<h2 class="main">最新资讯<span>News Timeline</span></h2>]]></config>
+            <config name="picture"><![CDATA[/web-userfile/project/${project.company}/${project.code}/website/default/picture/1.jpg]]></config>
+        </comp>
+        <comp name="news.date" theme="content/timeline/date">
+            <config name="wap-attr-class"><![CDATA[lud-cmcb-whitel lud-cmbx-p3x  lud-comp-timeline-note]]></config>
+            <config name="data"><![CDATA[notes]]></config>
+            <config name="date"><![CDATA[item.adddate?string("yyyy-MM-dd")]]></config>
+            <config name="title"><![CDATA[<a href="/?bin=/web/service/service/mudl-website-login-default-newsread/i?id=${item.id}">${item.title}</a>]]></config>
+        </comp>
+        <data name="notelinks" type="jdbc" query="lud-core.lud_project_notegroup_query" result="list" fields="def" limits="project,groups_news" flag="i"></data>
+        <data name="notes" type="jdbc" query="lud-core.lud_project_note_query" top="8" result="list" fields="list" limits="project,public" flag="i" order="adddate"></data>
+        <data name="project" type="redis" result="map" query="com.lud.business.runtime.project/{project}" flag="i"></data>
+    </service>
+
+    <!-- 新闻阅读 -->
+    <service name="newsread" layout="spliter/content-rl" acl="public" cache="true">
+        <config name="left-width"><![CDATA[86.5rem]]></config>
+        <config name="right-width"><![CDATA[32rem]]></config>
+        <config name="wap-class"><![CDATA[lud-lyps-md lud-cmbx-ptb2x]]></config>
+        <content theme="normal/empty" for="left" flag="i">
+            <item><![CDATA[${comp["content.read"]}]]></item>
+        </content>
+        <content theme="normal/empty" for="right" flag="i">
+            <item><![CDATA[${comp["news.datetitle"]}]]></item>
+            <item><![CDATA[${comp["news.date"]}]]></item>
+        </content>
+        <comp name="content.read" theme="reader/article/normal">
+            <config name="wap-attr-class"><![CDATA[lud-cmcb-whitel lud-cmbx-p4x lud-ele-img-wap lud-comp-reader]]></config>
+            <config name="title"><![CDATA[${note.title}]]></config>
+            <config name="subtitle"><![CDATA[<label>发布时间：${note.adddate}</label>
+            <label>发布单位：${note.department}</label>]]></config>
+            <config name="content"><![CDATA[${note.content}]]></config>
+        </comp>
+        <comp name="news.datetitle" theme="title/picture/normal">
+            <config name="wap-attr-class"><![CDATA[lud-cmcb-whitel lud-cmbx-p3x lud-cmbx-pbn]]></config>
+            <config name="title-attr-class"><![CDATA[lud-comp-title-n lud-comp-title-n-p lftb ]]></config>
+            <config name="title-main"><![CDATA[<h2 class="main">最新资讯<span>News Timeline</span></h2>]]></config>
+            <config name="picture"><![CDATA[/web-userfile/project/${project.company}/${project.code}/website/default/picture/1.jpg]]></config>
+        </comp>
+        <comp name="news.date" theme="content/timeline/date">
+            <config name="wap-attr-class"><![CDATA[lud-cmcb-whitel lud-cmbx-p3x lud-comp-timeline-note]]></config>
+            <config name="data"><![CDATA[notes]]></config>
+            <config name="date"><![CDATA[item.adddate?string("yyyy-MM-dd")]]></config>
+            <config name="title"><![CDATA[<a href="/?bin=/web/service/service/mudl-website-login-default-newsread/i?id=${item.id}">${item.title}</a>]]></config>
+        </comp>
+        <data name="project" type="redis" result="map" query="com.lud.business.runtime.project/{project}" flag="i"></data>
+        <data name="notes" type="jdbc" query="lud-core.lud_project_note_query" top="8" result="list" fields="list" limits="project,public" flag="i" order="adddate"></data>
+        <data name="note" type="jdbc" query="lud-core.lud_project_note_query" result="map" fields="def" limits="id,public" args="id:id" flag="i"></data>
+    </service>
+</configuration>

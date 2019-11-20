@@ -1,0 +1,9 @@
+<div <#if config.id>id="${compid}_wap"</#if> <#list config?keys as key><#if key?starts_with("wap-attr")> ${key?substring(9)}="${config[key]}"</#if></#list>>
+	<div <#if config.id>id="${compid}"</#if> <#list config?keys as key><#if key?starts_with("attr")> ${key?substring(5)}="${config[key]}"</#if></#list>>
+	    <div class="content">
+		    <div class="title" nh="0">${config["title"]}<span>${config["subtitle"]}</span></div>
+		    <div class="description" nh="0">${config["content"]}</div>
+	    	<div ah="60" class="workcontent"><#list items as item>${item.text}</#list></div>
+	    </div>
+	</div>
+</div>

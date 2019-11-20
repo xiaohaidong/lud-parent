@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <application name="TeacherUserCenter">
+        <menu name="0101" data=""><![CDATA[A01,D02]]></menu>
+        <menu name="0102" data=""><![CDATA[A01,D02]]></menu>
+        <menu name="0103" data=""><![CDATA[A01,D02]]></menu>
+        <menu name="0201" data=""><![CDATA[A01,D02]]></menu>
+        <menu name="0202" data=""><![CDATA[A01,D02]]></menu>
+        <menu name="0203" data=""><![CDATA[A01,D02]]></menu>
+    </application>
+    <application name="SmartCampusVehicleService">
+        <menu name="0101" data=""><![CDATA[A01,D02]]></menu>
+        <menu name="0102" data=""><![CDATA[A01,D02]]></menu>
+        <menu name="0103" data=""><![CDATA[A01,D02]]></menu>
+    </application>
+</configuration>
